@@ -10,17 +10,21 @@
         android:id="@+id/agregarCuestionario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_white"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        app:useCompatPadding="true"
-        />
+        android:layout_alignParentBottom="true"
+        android:background="#494040"
+        android:backgroundTint="@color/purple_500"
+        android:src="@drawable/ic_white"
+        android:tint="@color/white"
+        app:backgroundTint="#673AB7"
+        app:rippleColor="@color/white"
+        app:useCompatPadding="true" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="117dp"/>
+        tools:layout_editor_absoluteY="117dp" />
 
 </RelativeLayout>

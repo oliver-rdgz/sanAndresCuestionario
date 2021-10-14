@@ -45,7 +45,19 @@ public class MainActivity extends AppCompatActivity {
         dialogBuilder = new AlertDialog.Builder(this);
         final View crearCuestionarioView = getLayoutInflater().inflate(R.layout.crear_cuestionario, null);
         dialogBuilder.setView(crearCuestionarioView);
+        cancelar = (Button) crearCuestionarioView.findViewById(R.id.cancelar_crear_cuestionario);
         dialog = dialogBuilder.create();
         dialog.show();
+        cancelarCrearCuestionario(cancelar);
+    }
+
+    public void cancelarCrearCuestionario(Button cancelar)
+    {
+        cancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+            }
+        });
     }
 }

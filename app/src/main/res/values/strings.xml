@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">SanAndresCustionario</string>
+    <string name="crear_cuestionario">CREAR CUESTIONARIO</string>
+    <string name="h_calle">Habitantes de la calle</string>
+    <string name="LGBTQI">LGBTQI+</string>
+    <string name="genero">Genero</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="icono_c_cuestionario"> icono crear cuestionario</string>
 </resources>
