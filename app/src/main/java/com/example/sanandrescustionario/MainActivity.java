@@ -3,6 +3,7 @@ package com.example.sanandrescustionario;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton agregarCuestionario;
     private AlertDialog.Builder dialogBuilder;
     private AlertDialog dialog;
-    private Button cHabitantesCalee, cLgbt, cGenero, cancelar;
+    private Button cHabitantesCalle, cLgbt, cGenero, cancelar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,5 +60,12 @@ public class MainActivity extends AppCompatActivity {
                 dialog.cancel();
             }
         });
+    }
+
+    public void irCuestionarioHCalle(View view)
+    {
+        Intent hCalle = new Intent(this, HabitantesCalle.class);
+        startActivity(hCalle);
+        dialog.cancel();
     }
 }
