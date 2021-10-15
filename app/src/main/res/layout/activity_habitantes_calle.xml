@@ -3,7 +3,122 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cuentionarioCalle"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:scrollbars="vertical"
-    tools:context=".HabitantesCalle" />
+    tools:context=".HabitantesCalle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="@string/h_calle"
+            android:textAlignment="center"
+            android:textColor="#070707"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/labelNombreH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/editTextNombreH"
+            android:text="@string/nombre"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editTextNombreH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="@string/vacio"
+            tools:ignore="DuplicateSpeakableTextCheck"
+            tools:text="@string/vacio" />
+
+        <TextView
+            android:id="@+id/labelIdentificacionH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/editTextIdentificacionH"
+            android:text="@string/Identificacion"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editTextIdentificacionH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:minHeight="48dp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:id="@+id/labelEdadH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/editTextEdadH"
+            android:text="@string/edad"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editTextEdadH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:inputType="number"
+            android:minHeight="48dp"
+            tools:ignore="DuplicateSpeakableTextCheck"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:id="@+id/labelSexoH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sSexoH"
+            android:text="@string/sexo"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sSexoH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/guardarFormH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="crearHabitanteCalles"
+            android:text="@string/guardar" />
+    </LinearLayout>
+</ScrollView>

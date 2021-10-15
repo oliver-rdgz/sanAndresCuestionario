@@ -1,4 +1,5 @@
 <resources>
+    <string name="vacio"></string>
     <string name="app_name">SanAndresCustionario</string>
     <string name="crear_cuestionario">CREAR CUESTIONARIO</string>
     <string name="h_calle">Habitantes de la calle</string>
@@ -6,4 +7,11 @@
     <string name="genero">Genero</string>
     <string name="cancelar">Cancelar</string>
     <string name="icono_c_cuestionario"> icono crear cuestionario</string>
+    <string name="nombre">NOMBRE</string>
+    <string name="Identificacion">NÚMERO DE IDENTIFICACIÓN</string>
+    <string name="edad">EDAD</string>
+    <string name="sexo">SEXO</string>
+    <string name="masculino">Masculino</string>
+    <string name="femenino">Femenino</string>
+    <string name="guardar">GUARDAR</string>
 </resources>
