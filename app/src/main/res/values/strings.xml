@@ -17,4 +17,9 @@
     <string name="estadoCivil">ESTADO CIVIL</string>
     <string name="generoSexual">GÉNERO</string>
     <string name="religion">RELIGIÓN</string>
+    <string name="grupoEtnico">GRUPO ETNICO/CULTURAL</string>
+    <string name="procedencia">¿CÚAL ES SU LUGAR DE PROCEDENCIA?</string>
+    <string name="viveActualmente">¿DÓNDE VIVE ACTUALMENTE? (Ciudad/Municipio/Corregimiento)</string>
+    <string name="situacionFamiliar">SITUACIÓN FAMILIAR</string>
+    <string name="tienesHijo">¿TIENE HIJOS?</string>
 </resources>

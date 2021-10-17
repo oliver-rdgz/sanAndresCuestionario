@@ -28,4 +28,15 @@
         <item>Ateísmo</item>
         <item>Otra</item>
     </string-array>
+
+    <string-array name="grupoEtnico">
+        <item>Continental</item>
+        <item>Raízales</item>
+        <item>otro</item>
+    </string-array>
+    
+    <string-array name="tieneHijos">
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
 </resources>

@@ -60,7 +60,34 @@ public class HabitantesCalle extends AppCompatActivity {
             editText = (EditText) findViewById(R.id.eGeneroOH);
             hc.h_genero = editText.getText().toString();
         }
-        Toast.makeText(this, hc.h_genero, Toast.LENGTH_LONG).show();
+        if(findViewById(R.id.eReligionOH).getVisibility()== View.VISIBLE)
+        {
+            editText = (EditText) findViewById(R.id.eReligionOH);
+            hc.h_religion = editText.getText().toString();
+        }
+        if(findViewById(R.id.eGrupoetnicoH).getVisibility()== View.VISIBLE)
+        {
+            editText = (EditText) findViewById(R.id.eGrupoetnicoH);
+            hc.h_grupoEC = editText.getText().toString();
+        }
+        editText = (EditText) findViewById(R.id.eProcedenciaH);
+        hc.h_LProcedencia = editText.getText().toString();
+        editText = (EditText) findViewById(R.id.eViveActualmenteH);
+        hc.h_viveActualmente = editText.getText().toString();
+        if(findViewById(R.id.eTieneHijoH).getVisibility()== View.VISIBLE)
+        {
+            editText = (EditText) findViewById(R.id.eTieneHijoH);
+            if(editText.getText().toString().equals(""))
+            {
+                hc.h_CuantosHijos=0;
+            }
+            else
+            {
+                hc.h_CuantosHijos =Integer.parseInt(editText.getText().toString()) ;
+            }
+
+        }
+        Toast.makeText(this, hc.h_CuantosHijos+"", Toast.LENGTH_LONG).show();
     }
 
     public void  crearHabitanteCalles(View view)
@@ -152,6 +179,7 @@ public class HabitantesCalle extends AppCompatActivity {
                 hc.h_genero="";
             }
         });
+        spinnerReligion();
     }
 
     private void spinnerReligion()
@@ -163,7 +191,75 @@ public class HabitantesCalle extends AppCompatActivity {
         religion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String religionSeleccionado = parent.getItemAtPosition(position).toString();
+                if(religionSeleccionado.equals("Otra"))
+                {
+                    findViewById(R.id.eReligionOH).setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    findViewById(R.id.eReligionOH).setVisibility(View.GONE);
+                    hc.h_religion =parent.getItemAtPosition(position).toString();
+                }
 
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_religion="";
+            }
+        });
+        spinnerGrupoEtnico();
+    }
+
+    private void spinnerGrupoEtnico()
+    {
+        Spinner grupoEtnico = (Spinner) findViewById(R.id.sGrupoEtnicoH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.grupoEtnico,
+                android.R.layout.simple_spinner_item);
+        grupoEtnico.setAdapter(adapter);
+        grupoEtnico.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String grupoEtnicoSeleccionado = parent.getItemAtPosition(position).toString();
+                if(grupoEtnicoSeleccionado.equals("otro"))
+                {
+                    findViewById(R.id.eGrupoetnicoH).setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    findViewById(R.id.eGrupoetnicoH).setVisibility(View.GONE);
+                    hc.h_grupoEC =parent.getItemAtPosition(position).toString();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_grupoEC ="";
+            }
+        });
+        spinnerTieneHijos();
+    }
+
+    private void spinnerTieneHijos()
+    {
+        Spinner tieneHijos = (Spinner) findViewById(R.id.sTienesHijoH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.tieneHijos,
+                android.R.layout.simple_spinner_item);
+        tieneHijos.setAdapter(adapter);
+        tieneHijos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String tieneHijoSeleccionado = parent.getItemAtPosition(position).toString();
+                hc.h_tienesHijos= tieneHijoSeleccionado;
+                if(tieneHijoSeleccionado.equals("Si"))
+                {
+                    findViewById(R.id.eTieneHijoH).setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    findViewById(R.id.eTieneHijoH).setVisibility(View.GONE);
+                }
             }
 
             @Override
@@ -171,6 +267,7 @@ public class HabitantesCalle extends AppCompatActivity {
 
             }
         });
+
     }
 
 
