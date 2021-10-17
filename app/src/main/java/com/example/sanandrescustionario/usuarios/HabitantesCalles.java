@@ -17,6 +17,7 @@ public class HabitantesCalles {
     public  String  h_nivelEscolaridad="";
     public  String  h_actualmenteTrabaja="";
     public  String  h_dondeTrabaja="";
+    public  String  h_sinoTrabaja="";
     public  String  h_trabajaArtesania="";
     public  String  h_trabajaComercio="";
     public  String  h_trabajaTurismo="";

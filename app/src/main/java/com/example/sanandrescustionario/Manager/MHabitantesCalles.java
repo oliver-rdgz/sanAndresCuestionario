@@ -31,6 +31,7 @@ public class MHabitantesCalles {
         values.put(SQLITECuestionario.h_nivelEscolaridad,hc.h_nivelEscolaridad);
         values.put(SQLITECuestionario.h_actualmenteTrabaja,hc.h_actualmenteTrabaja);
         values.put(SQLITECuestionario.h_dondeTrabaja,hc.h_dondeTrabaja);
+        values.put(SQLITECuestionario.h_sinoTrabaja,hc.h_sinoTrabaja);
         values.put(SQLITECuestionario.h_trabajaArtesania,hc.h_trabajaArtesania);
         values.put(SQLITECuestionario.h_trabajaComercio,hc.h_trabajaComercio);
         values.put(SQLITECuestionario.h_trabajaTurismo,hc.h_trabajaTurismo);

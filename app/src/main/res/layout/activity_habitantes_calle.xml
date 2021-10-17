@@ -314,6 +314,87 @@
             android:inputType="number"
             android:minHeight="48dp" />
 
+        <TextView
+            android:id="@+id/lNivelEscolaridadH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sNivelEscolaridadH"
+            android:text="@string/nivelEscolaridad"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sNivelEscolaridadH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lTrabajandoH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sTrabajandoH"
+            android:text="@string/actualmenteTrabajando"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sTrabajandoH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lETrabajaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eETrabajaH"
+            android:text="@string/eTrabaja"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eETrabajaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lSinoTrabajaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eSinoTrabajaH"
+            android:text="@string/sinoTrabaja"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eSinoTrabajaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
         <Button
             android:id="@+id/guardarFormH"
             android:layout_width="match_parent"

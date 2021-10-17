@@ -87,7 +87,11 @@ public class HabitantesCalle extends AppCompatActivity {
             }
 
         }
-        Toast.makeText(this, hc.h_CuantosHijos+"", Toast.LENGTH_LONG).show();
+        editText = (EditText) findViewById(R.id.eETrabajaH);
+        hc.h_dondeTrabaja = editText.getText().toString();
+        editText = (EditText) findViewById(R.id.eSinoTrabajaH);
+        hc.h_sinoTrabaja = editText.getText().toString();
+        Toast.makeText(this, hc.h_sinoTrabaja+"", Toast.LENGTH_LONG).show();
     }
 
     public void  crearHabitanteCalles(View view)
@@ -95,7 +99,7 @@ public class HabitantesCalle extends AppCompatActivity {
         if(view.getId() == R.id.guardarFormH)
         {
             objetoHAbitanteCalle();
-            /*managerHabitantes.open();
+            managerHabitantes.open();
           long id = managerHabitantes.crearHabitanteCalle(hc);
             String mensaje="";
             if (id!=-1){
@@ -105,7 +109,7 @@ public class HabitantesCalle extends AppCompatActivity {
             }
             Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show();
             System.out.println(mensaje);
-            System.out.println(id);*/
+            System.out.println(id);
            /* Cursor cursor = managerHabitantes.getHabitante();
             cursor.moveToFirst();
             System.out.println(cursor.getInt(0));
@@ -267,7 +271,46 @@ public class HabitantesCalle extends AppCompatActivity {
 
             }
         });
+        spinnerNivelEscolaridad();
+    }
 
+    private void spinnerNivelEscolaridad()
+    {
+        Spinner nivelEscolaridad = (Spinner) findViewById(R.id.sNivelEscolaridadH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.nivelEscolaridad,
+                android.R.layout.simple_spinner_item);
+        nivelEscolaridad.setAdapter(adapter);
+        nivelEscolaridad.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                hc.h_nivelEscolaridad = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_nivelEscolaridad ="";
+            }
+        });
+        spinnerActualmenteTrabajando();
+    }
+
+    private void spinnerActualmenteTrabajando()
+    {
+        Spinner actualmenteTrabajando = (Spinner) findViewById(R.id.sTrabajandoH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        actualmenteTrabajando.setAdapter(adapter);
+        actualmenteTrabajando.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                hc.h_actualmenteTrabaja = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_actualmenteTrabaja="";
+            }
+        });
     }
 
 

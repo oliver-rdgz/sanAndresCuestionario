@@ -30,6 +30,7 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
     public  static  final String  h_nivelEscolaridad="nivelEscolaridad";
     public  static  final String  h_actualmenteTrabaja="actualmenteTrabaja";
     public  static  final String  h_dondeTrabaja="dondeTrabaja";
+    public  static  final String  h_sinoTrabaja="sinoTrabaja";
     public  static  final String  h_trabajaArtesania="trabajaArtesania";
     public  static  final String  h_trabajaComercio="trabajaComercio";
     public  static  final String  h_trabajaTurismo="trabajaTurismo";
@@ -75,6 +76,7 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
     public  static  final String  l_nivelEscolaridad="nivelEscolaridad";
     public  static  final String  l_actualmenteTrabaja="actualmenteTrabaja";
     public  static  final String  l_dondeTrabaja="dondeTrabaja";
+    public  static  final String  l_sinoTrabaja="sinoTrabaja";
     public  static  final String  l_trabajaArtesania="trabajaArtesania";
     public  static  final String  l_trabajaComercio="trabajaComercio";
     public  static  final String  l_trabajaTurismo="trabajaTurismo";
@@ -123,6 +125,7 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
     public  static  final String  g_nivelEscolaridad="nivelEscolaridad";
     public  static  final String  g_actualmenteTrabaja="actualmenteTrabaja";
     public  static  final String  g_dondeTrabaja="dondeTrabaja";
+    public  static  final String  g_sinoTrabaja="sinoTrabaja";
     public  static  final String  g_trabajaArtesania="trabajaArtesania";
     public  static  final String  g_trabajaComercio="trabajaComercio";
     public  static  final String  g_trabajaTurismo="trabajaTurismo";
@@ -173,6 +176,7 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
             h_nivelEscolaridad+" text not null,"+
             h_actualmenteTrabaja+" text not null,"+
             h_dondeTrabaja+" text not null,"+
+            h_sinoTrabaja+" text not null,"+
             h_trabajaArtesania+" text not null,"+
             h_trabajaComercio+" text not null,"+
             h_trabajaTurismo+" text not null,"+
@@ -218,6 +222,7 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
             l_nivelEscolaridad+" text not null,"+
             l_actualmenteTrabaja+" text not null,"+
             l_dondeTrabaja+" text not null,"+
+            l_sinoTrabaja+" text not null,"+
             l_trabajaArtesania+" text not null,"+
             l_trabajaComercio+" text not null,"+
             l_trabajaTurismo+" text not null,"+
@@ -266,6 +271,7 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
             g_nivelEscolaridad+" text not null,"+
             g_actualmenteTrabaja+" text not null,"+
             g_dondeTrabaja+" text not null,"+
+            g_sinoTrabaja+" text not null,"+
             g_trabajaArtesania+" text not null,"+
             g_trabajaComercio+" text not null,"+
             g_trabajaTurismo+" text not null,"+

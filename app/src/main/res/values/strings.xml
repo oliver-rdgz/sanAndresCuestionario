@@ -22,4 +22,8 @@
     <string name="viveActualmente">¿DÓNDE VIVE ACTUALMENTE? (Ciudad/Municipio/Corregimiento)</string>
     <string name="situacionFamiliar">SITUACIÓN FAMILIAR</string>
     <string name="tienesHijo">¿TIENE HIJOS?</string>
+    <string name="nivelEscolaridad">NIVEL DE ESCOLARIDAD</string>
+    <string name="actualmenteTrabajando">¿ACTUALMENTE ESTÁ TRABAJANDO?</string>
+    <string name="eTrabaja">¿EN QUÉ EMPRESA U ORGANIZACIÓN TRABAJA?</string>
+    <string name="sinoTrabaja">SI NO TRABAJA EN UNA EMPRESA U ORGANIZACIÓN, ES UD. AUTÓNOMO/EMPREENDEDOR?</string>
 </resources>
