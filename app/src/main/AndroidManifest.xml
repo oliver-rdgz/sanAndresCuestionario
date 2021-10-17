@@ -12,6 +12,8 @@
         <activity
             android:name=".HabitantesCalle"
             android:exported="false" />
+        <activity android:name=".poblacionLGBTIQ">
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
