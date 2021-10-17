@@ -54,4 +54,41 @@
         <item>Si</item>
         <item>No</item>
     </string-array>
+
+    <string-array name="siNoOtro">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+        <item>OTRO</item>
+    </string-array>
+    
+    <string-array name="orientacionPolitica">
+        <item>Prefiero no opina</item>
+        <item>Derecha</item>
+        <item>Centro</item>
+        <item>Izquierda</item>
+        <item>Apolítico/ninguna</item>
+    </string-array>
+    
+    <string-array name="sai">
+        <item>Si</item>
+        <item>No</item>
+        <item>No se contestar a esa pregunta</item>
+    </string-array>
+
+    <string-array name="cFamiliares">
+        <item>una vez a la semana</item>
+        <item>mensualmente</item>
+        <item>a cada 3 meses</item>
+        <item>a cada 6 meses</item>
+        <item>una vez por año</item>
+        <item>nunca</item>
+    </string-array>
+    
+    <string-array name="contactoFamiliares">
+        <item>hermanos/as</item>
+        <item>madre</item>
+        <item>padre</item>
+        <item>hijos/as</item>
+    </string-array>
 </resources>

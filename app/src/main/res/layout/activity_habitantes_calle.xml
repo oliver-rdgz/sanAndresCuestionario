@@ -395,10 +395,289 @@
             android:inputType="textPersonName"
             android:minHeight="48dp" />
 
+        <TextView
+            android:id="@+id/lArtesaniaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sArtesaniaH"
+            android:text="@string/tArtesania"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sArtesaniaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lTComercio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sTComercioH"
+            android:text="@string/tComercio"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sTComercioH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lTTurismoH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sTTurismoH"
+            android:text="@string/tTurismo"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sTTurismoH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lAlimentosH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sAlimentosH"
+            android:text="@string/tAlimentos"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sAlimentosH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eAlimentosH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="¿Cuál?"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lOrientacionPoliticaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sOrientacionPoliticaH"
+            android:text="@string/orientacionPolitica"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sOrientacionPoliticaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lpercepcionH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/percepcionHabitantes"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lSaiH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sSaiH"
+            android:text="@string/sai"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sSaiH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lFCFamiliaresH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sFCFamiliaresH"
+            android:text="@string/cFamiliares"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sFCFamiliaresH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lContactoFamiliaresH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sContactoFamiliaresH"
+            android:text="@string/contactoFamiliares"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sContactoFamiliaresH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lRazonesCalleH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eRazonesCalleH"
+            android:text="@string/razonesCalle"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eRazonesCalleH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lSanandresAyudaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eSanandresAyudaH"
+            android:text="@string/sanandresAyuda"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eSanandresAyudaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lUnidadAtencionH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sUnidadAtencionH"
+            android:text="@string/unidadAtencion"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sUnidadAtencionH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lBeneficiarioH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sBeneficiarioH"
+            android:text="@string/beneficiarioPS"
+            android:textAllCaps="true"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sBeneficiarioH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eBeneficiarioH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="¿Cuál o cuales programas?"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
         <Button
             android:id="@+id/guardarFormH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
             android:onClick="crearHabitanteCalles"
             android:text="@string/guardar" />
 

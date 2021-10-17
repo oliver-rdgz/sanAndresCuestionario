@@ -91,7 +91,29 @@ public class HabitantesCalle extends AppCompatActivity {
         hc.h_dondeTrabaja = editText.getText().toString();
         editText = (EditText) findViewById(R.id.eSinoTrabajaH);
         hc.h_sinoTrabaja = editText.getText().toString();
-        Toast.makeText(this, hc.h_sinoTrabaja+"", Toast.LENGTH_LONG).show();
+        if(findViewById(R.id.eAlimentosH).getVisibility()== View.VISIBLE)
+        {
+            editText = (EditText) findViewById(R.id.eAlimentosH);
+            if(editText.getText().toString().equals(""))
+            {
+                hc.h_trabajaManejoAlimentos ="Otro";
+            }
+            else
+            {
+                hc.h_trabajaManejoAlimentos = editText.getText().toString();
+            }
+
+        }
+        editText = (EditText) findViewById(R.id.eRazonesCalleH);
+        hc.h_razonesCalle= editText.getText().toString();
+        editText= (EditText) findViewById(R.id.eSanandresAyudaH);
+        hc.h_sanAndresAyuda= editText.getText().toString();
+        if(findViewById(R.id.eBeneficiarioH).getVisibility() == View.VISIBLE)
+        {
+            editText= (EditText) findViewById(R.id.eBeneficiarioH);
+            hc.h_cualPrograma = editText.getText().toString();
+        }
+        Toast.makeText(this, hc.h_cualPrograma+"", Toast.LENGTH_LONG).show();
     }
 
     public void  crearHabitanteCalles(View view)
@@ -99,7 +121,7 @@ public class HabitantesCalle extends AppCompatActivity {
         if(view.getId() == R.id.guardarFormH)
         {
             objetoHAbitanteCalle();
-            managerHabitantes.open();
+           /* managerHabitantes.open();
           long id = managerHabitantes.crearHabitanteCalle(hc);
             String mensaje="";
             if (id!=-1){
@@ -109,7 +131,7 @@ public class HabitantesCalle extends AppCompatActivity {
             }
             Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show();
             System.out.println(mensaje);
-            System.out.println(id);
+            System.out.println(id);*/
            /* Cursor cursor = managerHabitantes.getHabitante();
             cursor.moveToFirst();
             System.out.println(cursor.getInt(0));
@@ -309,6 +331,222 @@ public class HabitantesCalle extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 hc.h_actualmenteTrabaja="";
+            }
+        });
+        spinnerTArtesania();
+    }
+
+    private void spinnerTArtesania()
+    {
+        Spinner tArtesania = (Spinner) findViewById(R.id.sArtesaniaH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        tArtesania.setAdapter(adapter);
+        tArtesania.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                hc.h_trabajaArtesania = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_trabajaArtesania ="";
+            }
+        });
+        spinnerTComercio();
+    }
+
+    private void spinnerTComercio()
+    {
+        Spinner tComercio = (Spinner) findViewById(R.id.sTComercioH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        tComercio.setAdapter(adapter);
+        tComercio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                hc.h_trabajaComercio = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_trabajaComercio ="";
+            }
+        });
+        spinnerTTurismo();
+    }
+
+    private void spinnerTTurismo()
+    {
+        Spinner tTurismo = (Spinner) findViewById(R.id.sTTurismoH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        tTurismo.setAdapter(adapter);
+        tTurismo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                hc.h_trabajaTurismo = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_trabajaTurismo ="";
+            }
+        });
+        spinnerTAlimentos();
+    }
+
+    private void spinnerTAlimentos()
+    {
+        Spinner tAlimentos = (Spinner) findViewById(R.id.sAlimentosH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNoOtro,
+                android.R.layout.simple_spinner_item);
+        tAlimentos.setAdapter(adapter);
+        tAlimentos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String alimentoSeleccionado = parent.getItemAtPosition(position).toString();
+                hc.h_trabajaManejoAlimentos= alimentoSeleccionado;
+                if (alimentoSeleccionado.equals("OTRO"))
+                {
+                    findViewById(R.id.eAlimentosH).setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    findViewById(R.id.eAlimentosH).setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_trabajaManejoAlimentos ="";
+            }
+        });
+        spinnerOrientacionPolitica();
+    }
+
+    private void spinnerOrientacionPolitica()
+    {
+        Spinner orientacionPolitica = (Spinner) findViewById(R.id.sOrientacionPoliticaH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.orientacionPolitica,
+                android.R.layout.simple_spinner_item);
+        orientacionPolitica.setAdapter(adapter);
+        orientacionPolitica.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                hc.h_orientacionPolitica = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_orientacionPolitica ="";
+            }
+        });
+        spinnerSai();
+    }
+
+    private void spinnerSai()
+    {
+        Spinner sai = (Spinner) findViewById(R.id.sSaiH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.sai,
+                android.R.layout.simple_spinner_item);
+        sai.setAdapter(adapter);
+        sai.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                hc.h_parientesSai = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_parientesSai ="";
+            }
+        });
+        spinnerconversacionFamiliares();
+    }
+
+    private void spinnerconversacionFamiliares()
+    {
+        Spinner cFamiliares = (Spinner) findViewById(R.id.sFCFamiliaresH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.cFamiliares,
+                android.R.layout.simple_spinner_item);
+        cFamiliares.setAdapter(adapter);
+        cFamiliares.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                hc.h_conversacionFamiliares = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_conversacionFamiliares ="";
+            }
+        });
+        spinnercontactoFamiliares();
+    }
+
+    private void spinnercontactoFamiliares()
+    {
+        Spinner cFamiliares = (Spinner) findViewById(R.id.sContactoFamiliaresH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.contactoFamiliares,
+                android.R.layout.simple_spinner_item);
+        cFamiliares.setAdapter(adapter);
+        cFamiliares.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                hc.h_familiaresContacto = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_familiaresContacto ="";
+            }
+        });
+        spinnerUnidadesAtencion();
+    }
+
+    private void spinnerUnidadesAtencion()
+    {
+        Spinner unidadesAtencion = (Spinner) findViewById(R.id.sUnidadAtencionH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        unidadesAtencion.setAdapter(adapter);
+        unidadesAtencion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                hc.h_uniddadesAtencion = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_uniddadesAtencion ="";
+            }
+        });
+        spinnerBeneficiario();
+    }
+
+    private  void  spinnerBeneficiario()
+    {
+        Spinner beneficiario = (Spinner) findViewById(R.id.sBeneficiarioH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        beneficiario.setAdapter(adapter);
+        beneficiario.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String esBeneficiario = parent.getItemAtPosition(position).toString();
+                hc.h_programaSocial = esBeneficiario;
+                if(esBeneficiario.equals("Si")){
+                    findViewById(R.id.eBeneficiarioH).setVisibility(View.VISIBLE);
+                }else
+                {
+                    findViewById(R.id.eBeneficiarioH).setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_programaSocial ="";
             }
         });
     }
