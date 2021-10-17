@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.sanandrescustionario.Manager.DBmanagerPoblacionLGBTIQ;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -66,6 +67,13 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent hCalle = new Intent(this, HabitantesCalle.class);
         startActivity(hCalle);
+        dialog.cancel();
+    }
+
+    public void irCuestionarioPLgbt(View view)
+    {
+        Intent pLgbt = new Intent(this, DBmanagerPoblacionLGBTIQ.class);
+        startActivity(pLgbt);
         dialog.cancel();
     }
 }

@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
-            android:text="Población LGBTQI+"
+            android:text="@string/h_calle"
             android:textAlignment="center"
             android:textColor="#070707"
             android:textSize="24sp" />
@@ -192,6 +192,145 @@
             android:ems="10"
             android:hint="¿Cuál?"
             android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/grupoEtnico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sGrupoEtnico"
+            android:text="@string/grupoEtnico"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sGrupoEtnico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eGrupoetnico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="¿Cuál?"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lProcedencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eProcedencia"
+            android:text="@string/procedencia"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eProcedencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/viveActualmente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eViveActualmente"
+            android:text="@string/viveActualmente"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eViveActualmente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tSituacionFamiliar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/situacionFamiliar"
+            android:textColor="#050505"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tTieneHijos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sTieneHijos"
+            android:text="@string/tienesHijo"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sTieneHijos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eTieneHijo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="¿Cuántos?"
+            android:inputType="number"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/nivelEscolaridad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sNivelEscolaridad"
+            android:text="@string/nivelEscolaridad"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sNivelEscolaridad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:minHeight="48dp" />
 
         <Button

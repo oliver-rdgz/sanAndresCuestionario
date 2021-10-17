@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="sexo">
+        <item>Sin especificar</item>
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+
+    <string-array name="estadoCivil">
+        <item>Soltero</item>
+        <item>Casado</item>
+        <item>Viudo</item>
+        <item>Unión Libre</item>
+        <item>Separado</item>
+    </string-array>
+
+    <string-array name="genero">
+        <item>Masculino cis</item>
+        <item>Femenino cis</item>
+        <item>Masculino trans</item>
+        <item>Femenino trans</item>
+        <item>No binário</item>
+        <item>Otro</item>
+    </string-array>
+
+    <string-array name="religion">
+        <item>Católica</item>
+        <item>Cristiana/Presbiteriana</item>
+        <item>Batista</item>
+        <item>Ateísmo</item>
+        <item>Otra</item>
+    </string-array>
+
+    <string-array name="grupoEtnico">
+        <item>Continental</item>
+        <item>Raízales</item>
+        <item>Otro</item>
+    </string-array>
+
+    <string-array name="conQuienVive">
+        <item>Solo</item>
+        <item>Con pareja</item>
+        <item>Con familia</item>
+        <item>Con amigos</item>
+        <item>Con parientes</item>
+    </string-array>
+
+    <string-array name="tieneHijos">
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="nivelEscolaridad">
+        <item>Ninguno</item>
+        <item>Primaria</item>
+        <item>Secundaria</item>
+        <item>Bachiller</item>
+        <item>Licenciatura/Graduación</item>
+        <item>Posgraduación</item>
+    </string-array>
+
+    <string-array name="estaTrabajando">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="siNo">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="siNoOtro">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+        <item>OTRO</item>
+    </string-array>
+
+    <string-array name="trabajaConArtesania">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="trabajaConComercio">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="trabajaConTurismo">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="trabajaConActManejoVentaAlimentos">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+        <item>Otro</item>
+    </string-array>
+
+    <string-array name="orientacionPolitica">
+        <item>Prefiero no opina</item>
+        <item>Derecha</item>
+        <item>Centro</item>
+        <item>Izquierda</item>
+        <item>Apolítico/ninguna</item>
+    </string-array>
+
+    <string-array name="sai">
+        <item>Si</item>
+        <item>No</item>
+        <item>No se contestar a esa pregunta</item>
+    </string-array>
+
+    <string-array name="cFamiliares">
+        <item>una vez a la semana</item>
+        <item>mensualmente</item>
+        <item>a cada 3 meses</item>
+        <item>a cada 6 meses</item>
+        <item>una vez por año</item>
+        <item>nunca</item>
+    </string-array>
+
+    <string-array name="contactoFamiliares">
+        <item>hermanos/as</item>
+        <item>madre</item>
+        <item>padre</item>
+        <item>hijos/as</item>
+    </string-array>
+</resources>

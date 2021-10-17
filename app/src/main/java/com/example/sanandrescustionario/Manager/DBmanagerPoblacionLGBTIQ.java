@@ -22,6 +22,7 @@ public class DBmanagerPoblacionLGBTIQ {
             SQLITECuestionario.l_nivelEscolaridad,
             SQLITECuestionario.l_actualmenteTrabaja,
             SQLITECuestionario.l_dondeTrabaja,
+            SQLITECuestionario.l_sinoTrabaja,
             SQLITECuestionario.l_trabajaArtesania,
             SQLITECuestionario.l_trabajaComercio,
             SQLITECuestionario.l_trabajaTurismo,
@@ -61,38 +62,60 @@ public class DBmanagerPoblacionLGBTIQ {
         dbCuestionario.close();
     }
 
-    public long GuardarComentario(String nombre, String identificacion, String edad ,  String sexo ,  String estadoCivil ,  String direccion ,
-                                  String correo ,  String nivelEstudio ,  String comentario){
+    public long GuardarCuestionario(String nombre, String identificacion, String edad ,  String sexo ,  String estadoCivil ,  String genero ,
+                                  String religion ,  String grupoEC, String procedencia, String viveActualmente, String quienVive, String tienesHijos,
+                                  String cuantosHijos, String vivenEnTuHogar, String nivelEscolaridad, String actualmenteTrabaja, String dondeTrabaja, String sinoTrabaja,
+                                  String trabajaArtesania, String trabajaComercio, String trabajaTurismo, String trabajaManejoAlimentos, String ingresoLaboral,
+                                  String ingresoFamiliar, String orientacionPolitica, String discapacidad, String organizacionLgbt, String derechosLgbt,
+                                  String discriminacionLgbt, String casoSufrido, String orientacionSexual, String intersexual, String noExpresarGenero, String razonesNoExpresar,
+                                  String familiaLgbt, String quienes, String reaccionFamiliar, String violenciaLgbt, String situacionDescrita, String actosDiscriminacion,
+                                  String denunciasResuelven, String sanAndresApoyo, String politicasPublicas, String comentar
+    ){
         ContentValues values = new ContentValues();
         values.put(SQLITECuestionario.l_nombre, nombre);
         values.put(SQLITECuestionario.l_identificacion, identificacion);
         values.put(SQLITECuestionario.l_edad, edad);
         values.put(SQLITECuestionario.l_sexo, sexo);
         values.put(SQLITECuestionario.l_estadoCivil, estadoCivil);
-        values.put(SQLITECuestionario.l_genero, direccion);
-        values.put(SQLITECuestionario.l_religion, correo);
-        values.put(SQLITECuestionario.l_grupoEC, nivelEstudio);
-        values.put(SQLITECuestionario.l_LProcedencia, comentario);
-        values.put(SQLITECuestionario.l_viveActualmente, comentario);
-        values.put(SQLITECuestionario.l_quienVive, comentario);
-        values.put(SQLITECuestionario.l_tienesHijos, comentario);
-        values.put(SQLITECuestionario.l_cuantosHijos, comentario);
-        values.put(SQLITECuestionario.l_vivenTuHogar, comentario);
-        values.put(SQLITECuestionario.l_nivelEscolaridad, comentario);
-        values.put(SQLITECuestionario.l_actualmenteTrabaja, comentario);
-        values.put(SQLITECuestionario.l_dondeTrabaja, comentario);
-        values.put(SQLITECuestionario.l_trabajaArtesania, comentario);
-        values.put(SQLITECuestionario.l_trabajaComercio, comentario);
-        values.put(SQLITECuestionario.l_trabajaTurismo, comentario);
-        values.put(SQLITECuestionario.l_trabajaManejoAlimentos, comentario);
-        values.put(SQLITECuestionario.l_ingresoLaboral, comentario);
-        values.put(SQLITECuestionario.l_ingresoFamiliar, comentario);
-        values.put(SQLITECuestionario.l_orientacionPolitica, comentario);
-        values.put(SQLITECuestionario.l_discapacidad, comentario);
-        values.put(SQLITECuestionario.l_organizacionLGBT, comentario);
-        values.put(SQLITECuestionario.l_derechosLGBT, comentario);
-        values.put(SQLITECuestionario.l_discriminacionLGBT, comentario);
-        values.put(SQLITECuestionario.l_casoSufrido, comentario);
+        values.put(SQLITECuestionario.l_genero, genero);
+        values.put(SQLITECuestionario.l_religion, religion);
+        values.put(SQLITECuestionario.l_grupoEC, grupoEC);
+        values.put(SQLITECuestionario.l_LProcedencia, procedencia);
+        values.put(SQLITECuestionario.l_viveActualmente, viveActualmente);
+        values.put(SQLITECuestionario.l_quienVive, quienVive);
+        values.put(SQLITECuestionario.l_tienesHijos, tienesHijos);
+        values.put(SQLITECuestionario.l_cuantosHijos, cuantosHijos);
+        values.put(SQLITECuestionario.l_vivenTuHogar, vivenEnTuHogar);
+        values.put(SQLITECuestionario.l_nivelEscolaridad, nivelEscolaridad);
+        values.put(SQLITECuestionario.l_actualmenteTrabaja, actualmenteTrabaja);
+        values.put(SQLITECuestionario.l_dondeTrabaja, dondeTrabaja);
+        values.put(SQLITECuestionario.l_sinoTrabaja, sinoTrabaja);
+        values.put(SQLITECuestionario.l_trabajaArtesania, trabajaArtesania);
+        values.put(SQLITECuestionario.l_trabajaComercio, trabajaComercio);
+        values.put(SQLITECuestionario.l_trabajaTurismo, trabajaTurismo);
+        values.put(SQLITECuestionario.l_trabajaManejoAlimentos, trabajaManejoAlimentos);
+        values.put(SQLITECuestionario.l_ingresoLaboral, ingresoLaboral);
+        values.put(SQLITECuestionario.l_ingresoFamiliar, ingresoFamiliar);
+        values.put(SQLITECuestionario.l_orientacionPolitica, orientacionPolitica);
+        values.put(SQLITECuestionario.l_discapacidad, discapacidad);
+        values.put(SQLITECuestionario.l_organizacionLGBT, organizacionLgbt);
+        values.put(SQLITECuestionario.l_derechosLGBT, derechosLgbt);
+        values.put(SQLITECuestionario.l_discriminacionLGBT, discriminacionLgbt);
+        values.put(SQLITECuestionario.l_casoSufrido, casoSufrido);
+        values.put(SQLITECuestionario.l_orientacionSexual, orientacionSexual);
+        values.put(SQLITECuestionario.l_intersexual, intersexual);
+        values.put(SQLITECuestionario.l_noExpresarGenero, noExpresarGenero);
+        values.put(SQLITECuestionario.l_razonesNoExpresar, razonesNoExpresar);
+        values.put(SQLITECuestionario.l_familiaLGBT, familiaLgbt);
+        values.put(SQLITECuestionario.l_quienes, quienes);
+        values.put(SQLITECuestionario.l_reaccionFamiliar, reaccionFamiliar);
+        values.put(SQLITECuestionario.l_violenciaLGBT, violenciaLgbt);
+        values.put(SQLITECuestionario.l_situacionDescrita, situacionDescrita);
+        values.put(SQLITECuestionario.l_actosDiscriminacion, actosDiscriminacion);
+        values.put(SQLITECuestionario.l_denunciasResuelven, denunciasResuelven);
+        values.put(SQLITECuestionario.l_sanAndresApoyo, sanAndresApoyo);
+        values.put(SQLITECuestionario.l_politicasPublicas, politicasPublicas);
+        values.put(SQLITECuestionario.l_comentar, comentar);
 
         long id = database.insert(SQLITECuestionario.T_LGBT, null, values);
         return id;

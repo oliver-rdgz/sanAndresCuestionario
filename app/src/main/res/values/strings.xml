@@ -17,4 +17,27 @@
     <string name="estadoCivil">ESTADO CIVIL</string>
     <string name="generoSexual">GÉNERO</string>
     <string name="religion">RELIGIÓN</string>
+    <string name="grupoEtnico">GRUPO ETNICO/CULTURAL</string>
+    <string name="procedencia">¿CÚAL ES SU LUGAR DE PROCEDENCIA?</string>
+    <string name="viveActualmente">¿DÓNDE VIVE ACTUALMENTE? (Ciudad/Municipio/Corregimiento)</string>
+    <string name="situacionFamiliar">SITUACIÓN FAMILIAR</string>
+    <string name="tienesHijo">¿TIENE HIJOS?</string>
+    <string name="nivelEscolaridad">NIVEL DE ESCOLARIDAD</string>
+    <string name="actualmenteTrabajando">¿ACTUALMENTE ESTÁ TRABAJANDO?</string>
+    <string name="eTrabaja">¿EN QUÉ EMPRESA U ORGANIZACIÓN TRABAJA?</string>
+    <string name="sinoTrabaja">SI NO TRABAJA EN UNA EMPRESA U ORGANIZACIÓN, ES UD. AUTÓNOMO/EMPREENDEDOR?</string>
+    <string name="tArtesania">¿TRABAJA UD. CON ARTESANÍA?</string>
+    <string name="tComercio">¿TRABAJA UD.CON COMERCIO?</string>
+    <string name="tTurismo">¿TRABAJA UD. CON TURISMO?</string>
+    <string name="tAlimentos">¿TRABAJA UD. CON ACTIVIDADES DE MANEJO/VENTA DE ALIMENTOS?</string>
+    <string name="orientacionPolitica">ORIENTACIÓN POLÍTICA</string>
+    <string name="percepcionHabitantes">PERCEPCIONES DE LOS HABITANTES DE LA CALLE Y SU VULNERABILIDAD EN SAN ANDRES </string>
+    <string name="sai">Existen parientes suyos que viven en SAI?</string>
+    <string name="cFamiliares">Con cual frecuencia mantiene Ud conversaciones con sus familiares? </string>
+    <string name="contactoFamiliares">Con cuales familiares Ud mantiene contacto?</string>
+    <string name="razonesCalle">Cuáles fueron las razones por las cuales Ud empezó a vivir en las calles?  (pregunta abierta)</string>
+    <string name="sanandresAyuda">Como el departamento del archipiélago de San Andres Islas le ayuda con sus necesidades diarias?  (pregunta abierta)</string>
+    <string name="unidadAtencion">Ud conoce unidades de atención para la población que vive en la calle en San Andres Islas?</string>
+    <string name="beneficiarioPS">Ud es beneficiario de algún programa social en San Andres Islas?</string>
+    <string name="tipoViolenciaH">Ud sufre algún tipo de violencia por ser habitante de la calle?</string>
 </resources>
