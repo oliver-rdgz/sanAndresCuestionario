@@ -653,7 +653,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:minHeight="48dp" />
 
@@ -670,6 +669,210 @@
             android:maxLines="5"
             android:minHeight="48dp"
             android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lTipoViolenciaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sTipoViolenciaH"
+            android:text="@string/tipoViolenciaH"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sTipoViolenciaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eTipoViolenciaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="¿De cuál tipo?"
+            android:inputType="textMultiLine"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lProblemaSaludH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sProblemaSaludH"
+            android:text="@string/problemaSalud"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sProblemaSaludH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eProblemaSaludH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="¿Cuál o cuales tipos de enfermedades?"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lVacunaCovidH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sVacunaCovidH"
+            android:text="@string/vacunaCovid"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sVacunaCovidH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eVacunaCovidH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="¿Por que? "
+            android:inputType="textMultiLine"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lSanandresAsistenciaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eSanandresAsistenciaH"
+            android:text="@string/sanandresAsistencia"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eSanandresAsistenciaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lEmbarazadaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sEmbarazadaH"
+            android:text="@string/embarazada"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sEmbarazadaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lCompaneraEmbarazadaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sCompaneraEmbarazadaH"
+            android:text="@string/companeraEmbarazada"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sCompaneraEmbarazadaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lSobrevivirH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eSobrevivirH"
+            android:text="@string/sobrevivir"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eSobrevivirH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lComentariosH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eComentariosH"
+            android:text="@string/comentarioH"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eComentariosH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:minHeight="48dp" />
 
         <Button
             android:id="@+id/guardarFormH"

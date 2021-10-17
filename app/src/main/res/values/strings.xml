@@ -40,4 +40,11 @@
     <string name="unidadAtencion">Ud conoce unidades de atención para la población que vive en la calle en San Andres Islas?</string>
     <string name="beneficiarioPS">Ud es beneficiario de algún programa social en San Andres Islas?</string>
     <string name="tipoViolenciaH">Ud sufre algún tipo de violencia por ser habitante de la calle?</string>
+    <string name="problemaSalud">Ud sufre de algún problema de salud?</string>
+    <string name="vacunaCovid">Lograste vacunarse por COVID-19? Las dos dosis?</string>
+    <string name="sanandresAsistencia">Como, en su opinión, el departamento de San Andres podría brindarles más asistencia?</string>
+    <string name="embarazada">Si eres mujer, ¿estàs embarazada?</string>
+    <string name="companeraEmbarazada">Si eres hombre, tu compañera estas embarazada?</string>
+    <string name="sobrevivir">De que forma  Ud logra obtener alimentos para sobrevivir?</string>
+    <string name="comentarioH">Hay alguna otra observación que Ud quiere comentarnos? Algo que no le preguntamos y le parece importante?</string>
 </resources>

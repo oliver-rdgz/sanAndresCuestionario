@@ -60,15 +60,27 @@ public class HabitantesCalle extends AppCompatActivity {
             editText = (EditText) findViewById(R.id.eGeneroOH);
             hc.h_genero = editText.getText().toString();
         }
+        else
+        {
+            hc.h_genero = "";
+        }
         if(findViewById(R.id.eReligionOH).getVisibility()== View.VISIBLE)
         {
             editText = (EditText) findViewById(R.id.eReligionOH);
             hc.h_religion = editText.getText().toString();
         }
+        else
+        {
+            hc.h_religion = "";
+        }
         if(findViewById(R.id.eGrupoetnicoH).getVisibility()== View.VISIBLE)
         {
             editText = (EditText) findViewById(R.id.eGrupoetnicoH);
             hc.h_grupoEC = editText.getText().toString();
+        }
+        else
+        {
+            hc.h_grupoEC = "";
         }
         editText = (EditText) findViewById(R.id.eProcedenciaH);
         hc.h_LProcedencia = editText.getText().toString();
@@ -113,7 +125,44 @@ public class HabitantesCalle extends AppCompatActivity {
             editText= (EditText) findViewById(R.id.eBeneficiarioH);
             hc.h_cualPrograma = editText.getText().toString();
         }
-        Toast.makeText(this, hc.h_cualPrograma+"", Toast.LENGTH_LONG).show();
+        else
+        {
+            hc.h_cualPrograma = "";
+        }
+        if(findViewById(R.id.eTipoViolenciaH).getVisibility() == View.VISIBLE)
+        {
+            editText= (EditText) findViewById(R.id.eTipoViolenciaH);
+            hc.h_tipoViolencia = editText.getText().toString();
+        }
+        else
+        {
+            hc.h_tipoViolencia = "";
+        }
+        if(findViewById(R.id.eProblemaSaludH).getVisibility() == View.VISIBLE)
+        {
+            editText= (EditText) findViewById(R.id.eProblemaSaludH);
+            hc.h_tipoEnfermedad = editText.getText().toString();
+        }
+        else
+        {
+            hc.h_tipoEnfermedad = "";
+        }
+
+        if(findViewById(R.id.eVacunaCovidH).getVisibility() == View.VISIBLE)
+        {
+            editText= (EditText) findViewById(R.id.eVacunaCovidH);
+            hc.h_razonesVacuna = editText.getText().toString();
+        }
+        else
+        {
+            hc.h_razonesVacuna = "";
+        }
+        editText = (EditText) findViewById(R.id.eSanandresAsistenciaH);
+        hc.h_sanAndresMasAsistencia = editText.getText().toString();
+        editText = (EditText) findViewById(R.id.eSobrevivirH);
+        hc.h_alimentosSobrevivir= editText.getText().toString();
+        editText= (EditText) findViewById(R.id.eComentariosH);
+        hc.h_comentarios= editText.getText().toString();
     }
 
     public void  crearHabitanteCalles(View view)
@@ -547,6 +596,129 @@ public class HabitantesCalle extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 hc.h_programaSocial ="";
+            }
+        });
+        spinnerTipoViolencia();
+    }
+
+    private  void  spinnerTipoViolencia()
+    {
+        Spinner tipoViolencia = (Spinner) findViewById(R.id.sTipoViolenciaH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        tipoViolencia.setAdapter(adapter);
+        tipoViolencia.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String sufridoTipoViolencia = parent.getItemAtPosition(position).toString();
+                hc.h_violenciaCalle = sufridoTipoViolencia;
+                if(sufridoTipoViolencia.equals("Si")){
+                    findViewById(R.id.eTipoViolenciaH).setVisibility(View.VISIBLE);
+                }else
+                {
+                    findViewById(R.id.eTipoViolenciaH).setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_violenciaCalle ="";
+            }
+        });
+        spinnerProblemasSalud();
+    }
+
+    private  void  spinnerProblemasSalud()
+    {
+        Spinner problemaSalud = (Spinner) findViewById(R.id.sProblemaSaludH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        problemaSalud.setAdapter(adapter);
+        problemaSalud.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String tieneProblemaSalud = parent.getItemAtPosition(position).toString();
+                hc.h_problemaSalud = tieneProblemaSalud;
+                if(tieneProblemaSalud.equals("Si")){
+                    findViewById(R.id.eProblemaSaludH).setVisibility(View.VISIBLE);
+                }else
+                {
+                    findViewById(R.id.eProblemaSaludH).setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_problemaSalud ="";
+            }
+        });
+        spinnerVacunaCovid();
+    }
+
+    private  void  spinnerVacunaCovid()
+    {
+        Spinner vacunaCovid = (Spinner) findViewById(R.id.sVacunaCovidH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        vacunaCovid.setAdapter(adapter);
+        vacunaCovid.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String tieneVacunaCovid = parent.getItemAtPosition(position).toString();
+                hc.h_tieneVacuna = tieneVacunaCovid;
+                if(tieneVacunaCovid.equals("No")){
+                    findViewById(R.id.eVacunaCovidH).setVisibility(View.VISIBLE);
+                }else
+                {
+                    findViewById(R.id.eVacunaCovidH).setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_tieneVacuna ="";
+            }
+        });
+        spinnerEmbarazada();
+    }
+
+    private  void  spinnerEmbarazada()
+    {
+        Spinner embarazada = (Spinner) findViewById(R.id.sEmbarazadaH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        embarazada.setAdapter(adapter);
+        embarazada.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String estasEmbarazada = parent.getItemAtPosition(position).toString();
+                hc.h_embarazada = estasEmbarazada;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_embarazada ="";
+            }
+        });
+        spinnerCompaneraEmbarazada();
+    }
+
+    private  void  spinnerCompaneraEmbarazada()
+    {
+        Spinner companeraEmbarazada = (Spinner) findViewById(R.id.sCompaneraEmbarazadaH);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        companeraEmbarazada.setAdapter(adapter);
+        companeraEmbarazada.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String companeraEstaEmbarazada = parent.getItemAtPosition(position).toString();
+                hc.h_companeraEmbarazada = companeraEstaEmbarazada;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                hc.h_companeraEmbarazada ="";
             }
         });
     }
