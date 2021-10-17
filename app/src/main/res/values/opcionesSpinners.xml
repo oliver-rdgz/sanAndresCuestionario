@@ -5,4 +5,27 @@
         <item>Masculino</item>
         <item>Femenino</item>
     </string-array>
+
+    <string-array name="estadoCivil">
+        <item>Soltero</item>
+        <item>Casado</item>
+        <item>Viudo</item>
+        <item>Union Libre</item>
+        <item>Separado</item>
+    </string-array>
+
+    <string-array name="genero">
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>No binário</item>
+        <item>Otro</item>
+    </string-array>
+    
+    <string-array name="religion">
+        <item>Católica</item>
+        <item>Cristiana/Presbiteriana</item>
+        <item>Batista</item>
+        <item>Ateísmo</item>
+        <item>Otra</item>
+    </string-array>
 </resources>

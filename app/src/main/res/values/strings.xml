@@ -14,4 +14,7 @@
     <string name="masculino">Masculino</string>
     <string name="femenino">Femenino</string>
     <string name="guardar">GUARDAR</string>
+    <string name="estadoCivil">ESTADO CIVIL</string>
+    <string name="generoSexual">GÉNERO</string>
+    <string name="religion">RELIGIÓN</string>
 </resources>

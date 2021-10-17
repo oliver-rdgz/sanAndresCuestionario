@@ -13,7 +13,7 @@ public class HabitantesCalles {
     public  String  h_LProcedencia="";
     public  String  h_viveActualmente="";
     public  String  h_tienesHijos="";
-    public  short   h_CuantosHijos=0;
+    public  int   h_CuantosHijos=0;
     public  String  h_nivelEscolaridad="";
     public  String  h_actualmenteTrabaja="";
     public  String  h_dondeTrabaja="";

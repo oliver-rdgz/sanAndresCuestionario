@@ -114,11 +114,92 @@
             android:layout_marginRight="10dp"
             android:minHeight="48dp" />
 
+        <TextView
+            android:id="@+id/lEstadoCivilH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sEstadoCivilH"
+            android:text="@string/estadoCivil"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sEstadoCivilH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lGeneroH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sGeneroH"
+            android:text="@string/generoSexual"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sGeneroH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eGeneroOH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="¿Cuál?"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lReligionH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sReligionH"
+            android:text="@string/religion"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sReligionH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eReligionOH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="¿Cuál?"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
         <Button
             android:id="@+id/guardarFormH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="crearHabitanteCalles"
             android:text="@string/guardar" />
+
     </LinearLayout>
 </ScrollView>
