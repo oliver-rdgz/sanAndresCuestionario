@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void irCuestionarioPLgbt(View view)
     {
-        Intent pLgbt = new Intent(this, DBmanagerPoblacionLGBTIQ.class);
+        Intent pLgbt = new Intent(this, poblacionLGBTIQ.class);
         startActivity(pLgbt);
         dialog.cancel();
     }

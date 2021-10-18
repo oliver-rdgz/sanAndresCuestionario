@@ -273,6 +273,25 @@
             android:minHeight="48dp" />
 
         <TextView
+            android:id="@+id/conQuienVive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sConQuienVive"
+            android:text="@string/conQuienVive"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sConQuienVive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
             android:id="@+id/tSituacionFamiliar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -315,6 +334,25 @@
             android:minHeight="48dp" />
 
         <TextView
+            android:id="@+id/cuantasPersonasVivenHogar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sCuantasPersonasVivenHogar"
+            android:text="@string/cuantasPersonasVivenEnTuHogar"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sCuantasPersonasVivenHogar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
             android:id="@+id/nivelEscolaridad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -333,10 +371,228 @@
             android:layout_marginRight="10dp"
             android:minHeight="48dp" />
 
+        <TextView
+            android:id="@+id/estaTrabajando"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sTrabajando"
+            android:text="@string/actualmenteTrabajando"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sTrabajando"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/siEstaTrabajando"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/siEstaTrabajando"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/empresaDondeTrabaja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eETrabaja"
+            android:text="@string/eTrabaja"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eETrabaja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/sinoTrabaja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eSinoTrabaja"
+            android:text="@string/sinoTrabaja"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eSinoTrabaja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/artesania"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sArtesania"
+            android:text="@string/tArtesania"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sArtesania"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/TComercio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sTComercio"
+            android:text="@string/tComercio"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sTComercio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lTTurismo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sTTurismo"
+            android:text="@string/tTurismo"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sTTurismo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/alimentos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sAlimentos"
+            android:text="@string/tAlimentos"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sAlimentos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eAlimentos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="¿Cuál?"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/ingresoLaboral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sIngresoLaboral"
+            android:text="@string/ingresoLaboralAproximadamente"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sIngresoLaboral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/ingresoUnidadFamiliar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sIngresoUnidadFamiliar"
+            android:text="@string/ingresoLaboralUnidadFamiliar"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sIngresoUnidadFamiliar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/orientacionPolitica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sOrientacionPolitica"
+            android:text="@string/orientacionPolitica"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sOrientacionPolitica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
         <Button
             android:id="@+id/guardarFormH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="Enviar"
             android:text="@string/guardar" />
 
     </LinearLayout>
