@@ -1,9 +1,13 @@
 package com.example.sanandrescustionario;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -58,29 +62,38 @@ public class HabitantesCalle extends AppCompatActivity {
         if(findViewById(R.id.eGeneroOH).getVisibility()== View.VISIBLE)
         {
             editText = (EditText) findViewById(R.id.eGeneroOH);
-            hc.h_genero = editText.getText().toString();
-        }
-        else
-        {
-            hc.h_genero = "";
+            if (editText.getText().toString().equals(""))
+            {
+                hc.h_genero = "Otro";
+            }
+            else
+            {
+                hc.h_genero = editText.getText().toString();
+            }
+
         }
         if(findViewById(R.id.eReligionOH).getVisibility()== View.VISIBLE)
         {
             editText = (EditText) findViewById(R.id.eReligionOH);
-            hc.h_religion = editText.getText().toString();
-        }
-        else
-        {
-            hc.h_religion = "";
+            if (editText.getText().toString().equals(""))
+            {
+                hc.h_religion="Otra";
+            }
+            else
+            {
+                hc.h_religion = editText.getText().toString();
+            }
         }
         if(findViewById(R.id.eGrupoetnicoH).getVisibility()== View.VISIBLE)
         {
             editText = (EditText) findViewById(R.id.eGrupoetnicoH);
-            hc.h_grupoEC = editText.getText().toString();
-        }
-        else
-        {
-            hc.h_grupoEC = "";
+            if (editText.getText().toString().equals(""))
+            {
+                hc.h_grupoEC="Otro";
+            }
+            else {
+                hc.h_grupoEC = editText.getText().toString();
+            }
         }
         editText = (EditText) findViewById(R.id.eProcedenciaH);
         hc.h_LProcedencia = editText.getText().toString();
@@ -169,23 +182,37 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         if(view.getId() == R.id.guardarFormH)
         {
-            objetoHAbitanteCalle();
-           /* managerHabitantes.open();
-          long id = managerHabitantes.crearHabitanteCalle(hc);
-            String mensaje="";
-            if (id!=-1){
-                mensaje="Agregado exitosamente";
-            } else{
-                mensaje="Error al ingresar la persona";
-            }
-            Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show();
-            System.out.println(mensaje);
-            System.out.println(id);*/
-           /* Cursor cursor = managerHabitantes.getHabitante();
-            cursor.moveToFirst();
-            System.out.println(cursor.getInt(0));
-            System.out.println(cursor.getString(1));*/
+            mensajeFinalizarCuestionario();
         }
+    }
+
+    private void mensajeFinalizarCuestionario()
+    {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setMessage("¿Finalizar el cuestionario?")
+        .setPositiveButton("SI", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                objetoHAbitanteCalle();
+                managerHabitantes.open();
+                long id = managerHabitantes.crearHabitanteCalle(hc);
+                if (id!=-1){
+                    Toast.makeText(HabitantesCalle.this, "Agregado exitosamente", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(HabitantesCalle.this, MainActivity.class);
+                    startActivity(intent);
+                } else{
+                    Toast.makeText(HabitantesCalle.this, "Error al ingresar al habitante de la calle", Toast.LENGTH_LONG).show();
+                }
+
+            }
+        })
+        .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        alertDialog.show();
     }
 
     private void spinnerSexo()
@@ -723,5 +750,27 @@ public class HabitantesCalle extends AppCompatActivity {
         });
     }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == event.KEYCODE_BACK){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("¿Desea cancelar la creación del cuestionario?")
+            .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent intent = new Intent(HabitantesCalle.this, MainActivity.class);
+                    startActivity(intent);
+                }
+            })
+            .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            builder.show();
+        }
+        return super.onKeyDown(keyCode, event);
 
+    }
 }
