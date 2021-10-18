@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SanAndresCustionario">
         <activity
+            android:name=".Genero"
+            android:exported="false" />
+        <activity
             android:name=".HabitantesCalle"
             android:exported="false" />
         <activity

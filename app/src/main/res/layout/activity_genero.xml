@@ -1,0 +1,1321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cuentionarioGenero"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    tools:context=".Genero">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="@string/genero"
+            android:textAlignment="center"
+            android:textColor="#070707"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/labelNombreG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/editTextNombreG"
+            android:text="@string/nombre"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editTextNombreG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:text="@string/vacio"
+            tools:ignore="DuplicateSpeakableTextCheck"
+            tools:text="@string/vacio" />
+
+        <TextView
+            android:id="@+id/labelIdentificacionG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/editTextIdentificacionG"
+            android:text="@string/Identificacion"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editTextIdentificacionG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:minHeight="48dp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:id="@+id/labelEdadG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/editTextEdadG"
+            android:text="@string/edad"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editTextEdadG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:inputType="number"
+            android:minHeight="48dp"
+            tools:ignore="DuplicateSpeakableTextCheck"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:id="@+id/labelSexoG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sSexoG"
+            android:text="@string/sexo"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sSexoG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lEstadoCivilG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sEstadoCivilG"
+            android:text="@string/estadoCivil"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sEstadoCivilG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lGeneroG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sGeneroG"
+            android:text="@string/generoSexual"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sGeneroG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eGeneroOG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="¿Cuál?"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lReligionG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sReligionG"
+            android:text="@string/religion"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sReligionG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eReligionOG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="¿Cuál?"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lGrupoEtnicoG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sGrupoEtnicoG"
+            android:text="@string/grupoEtnico"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sGrupoEtnicoG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eGrupoetnicoG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="¿Cuál?"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lProcedenciaG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eProcedenciaG"
+            android:text="@string/procedencia"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eProcedenciaG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lViveActualmenteG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eViveActualmenteG"
+            android:text="@string/viveActualmente"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eViveActualmenteG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lQuienViveG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sQuienViveG"
+            android:text="@string/quienVive"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sQuienViveG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tSituacionFamiliarG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/situacionFamiliar"
+            android:textColor="#050505"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tTienesHijosG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sTienesHijoG"
+            android:text="@string/tienesHijo"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sTienesHijoG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eTieneHijoG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="¿Cuántos?"
+            android:inputType="number"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lRolEnSuFamilia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/rolFamiliaG"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:id="@+id/esPadreG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/padreG"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/esMadreG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/madreG"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/esEsposoaG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/esposoaG"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/esHijoaG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/hijoaG"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/esHermanoaG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/hermanoaG"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/rOtroG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/rolOtroG"
+            android:textSize="20sp" />
+        <EditText
+            android:id="@+id/eRolCualG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="¿Cuál?"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lCuantasVivenTuHogarG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eCuantasVivenTuHogarG"
+            android:text="@string/cuantasVivenTuHogarG"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eCuantasVivenTuHogarG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:inputType="number"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lNivelEscolaridadG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sNivelEscolaridadG"
+            android:text="@string/nivelEscolaridad"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sNivelEscolaridadG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lTrabajandoG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sTrabajandoG"
+            android:text="@string/actualmenteTrabajando"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sTrabajandoG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lETrabajaG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eETrabajaG"
+            android:text="@string/eTrabaja"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eETrabajaG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lSinoTrabajaG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eSinoTrabajaG"
+            android:text="@string/sinoTrabaja"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eSinoTrabajaG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lArtesaniaG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sArtesaniaG"
+            android:text="@string/tArtesania"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sArtesaniaG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lTComercioG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sTComercioG"
+            android:text="@string/tComercio"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sTComercioG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lTTurismoG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sTTurismoG"
+            android:text="@string/tTurismo"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sTTurismoG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lAlimentosG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sAlimentosG"
+            android:text="@string/tAlimentos"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sAlimentosG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eAlimentosG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="¿Cuál?"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lIngresoLaboralG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sIngresoLaboralG"
+            android:text="@string/ingresoLaboralG"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sIngresoLaboralG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lIngresoLaboralFamiliarG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sIngresoLaboraFamiliarlG"
+            android:text="@string/ingresoLaboralFamiliarG"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sIngresoLaboraFamiliarlG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lOrientacionPoliticaG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sOrientacionPoliticaG"
+            android:text="@string/orientacionPolitica"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sOrientacionPoliticaG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lTemaGeneroG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eTemaGeneroG"
+            android:text="@string/procedencia"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eTemaGeneroG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lViolenciaMujerG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sViolenciaMujerG"
+            android:text="@string/violenciaPorSerMujerG"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sViolenciaMujerG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eViolenciaMujerG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="Indique el tipo de violencia"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:minHeight="48dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/lOpinionPiropoG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sOpinionPiropoG"
+            android:text="@string/opinionPiropoG"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sOpinionPiropoG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eOpinionPiropoG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="¿Cuál?"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:minHeight="48dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/lOpinionAcosoG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sOpinionAcosoG"
+            android:text="@string/opinionAcosoG"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sOpinionAcosoG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lFuncionarioSituacionesG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/situacionFuncionarioG"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:id="@+id/fComentarioAparienciaG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Comentarios sobre mi apariencia"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/fComentarioAparienciaCuerpoG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Comentarios sobre la apariencia de mi cuerpo"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/fComentarioVestirmeG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Comentarios sobre mi modo de vestirme"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/fSilbidosG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Silbidos"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/fMiradasSexualesG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Miradas sexuales"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/fPalabrasObsenasG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Palabras obscenas"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/fGestosSexualG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Gestos sexualmente sugestivos (como movimientos pélvicos)"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/fTocamientosG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Tocamientos, abrazos, caricias, besos, toques indebidos y no consentidos"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/fFavorSexualG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Favores sexuales a cambio de notas"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/fCitaAfueraG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Que le pidan repetidamente una cita fuera de la universidad"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/fInsultoSexualG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Insultos por no corresponder a la expectativa sexual del otro/a"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/fMiradasOfensivasG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Miradas ofensivas: hacia escote, falda, nalgas, u otra parte del cuerpo"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/fAmenzaSexualG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Amenazas si no acepta invitaciones o propuestas sexuales"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lAcosoContraMujerG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sAcosoContraMujerG"
+            android:text="@string/acosoContraMujerG"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sAcosoContraMujerG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lMujerResponsableAcosoG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sMujerResponsableAcosoG"
+            android:text="@string/mujerResponsableAcosoG"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sMujerResponsableAcosoG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lAsedioSexualG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sAsedioSexualG"
+            android:text="@string/asedioSexualG"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sAsedioSexualG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lActitudesVidaG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sActitudesVidaG"
+            android:text="@string/actitudesEnSuVidaG"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sActitudesVidaG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lMecanismoLegalG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sMecanismoLegalG"
+            android:text="@string/mecanismoLegalG"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sMecanismoLegalG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/ldenunciariaAcosoSexualG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sDenunciariaAcosoSexualG"
+            android:text="@string/denunciariaAcosoSexualG"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sDenunciariaAcosoSexualG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eDenunciariaAcosoSexualH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="Explique porqué"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lComercianteSituacionesG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/situacionComercianteG"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:id="@+id/cComentarioAparienciaG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Comentarios sobre mi apariencia"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/cComentarioAparienciaCuerpoG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Comentarios sobre la apariencia de mi cuerpo"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/cComentarioVestirmeG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Comentarios sobre mi modo de vestirme"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/cSilbidosG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Silbidos"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/cMiradasSexualesG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Miradas sexuales"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/cPalabrasObsenasG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Palabras obscenas"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/cGestosSexualG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Gestos sexualmente sugestivos (como movimientos pélvicos)"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/cTocamientosG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Tocamientos, abrazos, caricias, besos, toques indebidos y no consentidos"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/cFavorSexualG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Favores sexuales a cambio de notas"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/cCitaAfueraG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Que le pidan repetidamente una cita fuera de la universidad"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/cInsultoSexualG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Insultos por no corresponder a la expectativa sexual del otro/a"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/cMiradasOfensivasG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Miradas ofensivas: hacia escote, falda, nalgas, u otra parte del cuerpo"
+            android:textSize="20sp" />
+        <CheckBox
+            android:id="@+id/cAmenzaSexualG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Amenazas si no acepta invitaciones o propuestas sexuales"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lmujerViolenciaGeneroG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sMujerViolenciaGeneroG"
+            android:text="@string/mujerViolenciaGenero"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sMujerViolenciaGeneroG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/eMujerViolenciaGeneroG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="¿Por que?"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lExperienciaViolenciaGeneroG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sExperienciaViolenciaGeneroG"
+            android:text="@string/experimentadoViolenciaGeneroG"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sExperienciaViolenciaGeneroG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lVotariaMujerG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sVotariaMujerG"
+            android:text="@string/votariaMujerG"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sVotariaMujerG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lDesistioDenunciaG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sDesistioDenunciaG"
+            android:text="@string/desistioDenunciaG"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sDesistioDenunciaG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lViolenciaGeneroFamiliarG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sViolenciaGeneroFamiliarG"
+            android:text="@string/violenciaGeneroFamiliarG"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sViolenciaGeneroFamiliarG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lViolenciaGeneroParejaG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sViolenciaGeneroParejaG"
+            android:text="@string/violenciaGeneroParejaG"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sViolenciaGeneroParejaG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lTratoIgualHombreG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sTratoIgualHombreG"
+            android:text="@string/tratoIgualHombreG"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sTratoIgualHombreG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lMiedoMujerG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eMiedoMujerG"
+            android:text="@string/miedoMujerG"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eMiedoMujerG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/lComentarioG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eComentarioG"
+            android:text="@string/comentarioG"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eComentarioG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/guardarFormG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/guardar" />
+
+
+    </LinearLayout>
+
+</ScrollView>

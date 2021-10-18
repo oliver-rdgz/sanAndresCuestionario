@@ -138,7 +138,19 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
     public  static  final String  g_situacionViolencia="situacionViolencia";
     public  static  final String  g_quePiropo="quePiropo";
     public  static  final String  g_opinionAcoso="opinionAcoso";
-    public  static  final String  g_funcionarioPublico="funcionarioPublico";
+    public  static  final String  g_fComentarioApariencia="fComentarioApariencia";
+    public  static  final String  g_fComentarioAparienciaCuerpo="fComentarioAparienciaCuerpo";
+    public  static  final String  g_fComentarioVestirme="fComentarioVestirme";
+    public  static  final String  g_fSilbidos="fSilbidos";
+    public  static  final String  g_fMiradasSexuales="fMiradasSexuales";
+    public  static  final String  g_fPalabrasObsenas="fPalabrasObsenas";
+    public  static  final String  g_fGestoSexual="fGestoSexual";
+    public  static  final String  g_fTocamientos="fTocamientos";
+    public  static  final String  g_fFavorSexual="fFavorSexual";
+    public  static  final String  g_fCitaFuera="fCitaFuera";
+    public  static  final String  g_fInsultoSexual="fInsultoSexual";
+    public  static  final String  g_fMiradaOfensiva="fMiradaOfensiva";
+    public  static  final String  g_fAmenazaSexual="fAmenazaSexual";
     public  static  final String  g_acosoSexual="acosoSexual";
     public  static  final String  g_mujerResponsable="mujerResponsable";
     public  static  final String  g_asedioSexual="asedioSexual";
@@ -146,7 +158,19 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
     public  static  final String  g_mecanismoLegal="mecanismoLegal";
     public  static  final String  g_victimaAcoso="victimaAcoso";
     public  static  final String  g_victimaPorque="victimaPorque";
-    public  static  final String  g_experienciaComerciante="experiencaComerciante";
+    public  static  final String  g_cComentarioApariencia="cComentarioApariencia";
+    public  static  final String  g_cComentarioAparienciaCuerpo="cComentarioAparienciaCuerpo";
+    public  static  final String  g_cComentarioVestirme="cComentarioVestirme";
+    public  static  final String  g_cSilbidos="cSilbidos";
+    public  static  final String  g_cMiradasSexuales="cMiradasSexuales";
+    public  static  final String  g_cPalabrasObsenas="cPalabrasObsenas";
+    public  static  final String  g_cGestoSexual="cGestoSexual";
+    public  static  final String  g_cTocamientos="cTocamientos";
+    public  static  final String  g_cFavorSexual="cFavorSexual";
+    public  static  final String  g_cCitaFuera="cCitaFuera";
+    public  static  final String  g_cInsultoSexual="cInsultoSexual";
+    public  static  final String  g_cMiradaOfensiva="cMiradaOfensiva";
+    public  static  final String  g_cAmenazaSexual="cAmenazaSexual";
     public  static  final String  g_violenciaGenero="violenciaGenero";
     public  static  final String  g_porqueViolenciaGenero="porqueViolenciaGenero";
     public  static  final String  g_experienciaViolenciaGenero="experienciaViolenciaGenero";
@@ -284,7 +308,19 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
             g_situacionViolencia+" text not null,"+
             g_quePiropo+" text not null,"+
             g_opinionAcoso+" text not null,"+
-            g_funcionarioPublico+" text not null,"+
+            g_fComentarioApariencia+" text not null,"+
+            g_fComentarioAparienciaCuerpo+" text not null,"+
+            g_fComentarioVestirme+" text not null,"+
+            g_fSilbidos+" text not null,"+
+            g_fMiradasSexuales+" text not null,"+
+            g_fPalabrasObsenas+" text not null,"+
+            g_fGestoSexual+" text not null,"+
+            g_fTocamientos+" text not null,"+
+            g_fFavorSexual+" text not null,"+
+            g_fCitaFuera+" text not null,"+
+            g_fInsultoSexual+" text not null,"+
+            g_fMiradaOfensiva+" text not null,"+
+            g_fAmenazaSexual+" text not null,"+
             g_acosoSexual+" text not null,"+
             g_mujerResponsable+" text not null,"+
             g_asedioSexual+" text not null,"+
@@ -292,7 +328,19 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
             g_mecanismoLegal+" text not null,"+
             g_victimaAcoso+" text not null,"+
             g_victimaPorque+" text not null,"+
-            g_experienciaComerciante+" text not null,"+
+            g_cComentarioApariencia+" text not null,"+
+            g_cComentarioAparienciaCuerpo+" text not null,"+
+            g_cComentarioVestirme+" text not null,"+
+            g_cSilbidos+" text not null,"+
+            g_cMiradasSexuales+" text not null,"+
+            g_cPalabrasObsenas+" text not null,"+
+            g_cGestoSexual+" text not null,"+
+            g_cTocamientos+" text not null,"+
+            g_cFavorSexual+" text not null,"+
+            g_cCitaFuera+" text not null,"+
+            g_cInsultoSexual+" text not null,"+
+            g_cMiradaOfensiva+" text not null,"+
+            g_cAmenazaSexual+" text not null,"+
             g_violenciaGenero+" text not null,"+
             g_porqueViolenciaGenero+" text not null,"+
             g_experienciaViolenciaGenero+" text not null,"+
