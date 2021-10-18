@@ -24,19 +24,19 @@
             android:textSize="24sp" />
 
         <TextView
-            android:id="@+id/labelNombreH"
+            android:id="@+id/labelNombreL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/editTextNombreH"
+            android:labelFor="@id/editTextNombreL"
             android:text="@string/nombre"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextNombreH"
+            android:id="@+id/editTextNombreL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -50,7 +50,7 @@
             tools:text="@string/vacio" />
 
         <TextView
-            android:id="@+id/labelIdentificacionH"
+            android:id="@+id/labelIdentificacionL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -61,7 +61,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextIdentificacionH"
+            android:id="@+id/editTextIdentificacionL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -73,18 +73,18 @@
             tools:ignore="DuplicateSpeakableTextCheck" />
 
         <TextView
-            android:id="@+id/labelEdadH"
+            android:id="@+id/labelEdadL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/editTextEdadH"
+            android:labelFor="@id/editTextEdadL"
             android:text="@string/edad"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextEdadH"
+            android:id="@+id/editTextEdadL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -96,18 +96,18 @@
             android:importantForAutofill="no" />
 
         <TextView
-            android:id="@+id/labelSexoH"
+            android:id="@+id/labelSexoL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/sSexoH"
+            android:labelFor="@id/sSexoL"
             android:text="@string/sexo"
             android:textSize="20sp" />
 
         <Spinner
-            android:id="@+id/sSexoH"
+            android:id="@+id/sSexoL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -115,18 +115,18 @@
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/lEstadoCivilH"
+            android:id="@+id/lEstadoCivilL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/sEstadoCivilH"
+            android:labelFor="@id/sEstadoCivilL"
             android:text="@string/estadoCivil"
             android:textSize="20sp" />
 
         <Spinner
-            android:id="@+id/sEstadoCivilH"
+            android:id="@+id/sEstadoCivilL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -134,18 +134,18 @@
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/lGeneroH"
+            android:id="@+id/lGeneroL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/sGeneroH"
+            android:labelFor="@id/sGeneroL"
             android:text="@string/generoSexual"
             android:textSize="20sp" />
 
         <Spinner
-            android:id="@+id/sGeneroH"
+            android:id="@+id/sGeneroL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -153,7 +153,7 @@
             android:minHeight="48dp" />
 
         <EditText
-            android:id="@+id/eGeneroOH"
+            android:id="@+id/eGeneroOL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -165,18 +165,18 @@
             android:visibility="gone" />
 
         <TextView
-            android:id="@+id/lReligionH"
+            android:id="@+id/lReligionL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/sReligionH"
+            android:labelFor="@id/sReligionL"
             android:text="@string/religion"
             android:textSize="20sp" />
 
         <Spinner
-            android:id="@+id/sReligionH"
+            android:id="@+id/sReligionL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -184,7 +184,7 @@
             android:minHeight="48dp" />
 
         <EditText
-            android:id="@+id/eReligionOH"
+            android:id="@+id/eReligionOL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -196,18 +196,18 @@
             android:visibility="gone" />
 
         <TextView
-            android:id="@+id/grupoEtnico"
+            android:id="@+id/grupoEtnicoL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/sGrupoEtnico"
+            android:labelFor="@id/sGrupoEtnicoL"
             android:text="@string/grupoEtnico"
             android:textSize="20sp" />
 
         <Spinner
-            android:id="@+id/sGrupoEtnico"
+            android:id="@+id/sGrupoEtnicoL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -215,7 +215,7 @@
             android:minHeight="48dp" />
 
         <EditText
-            android:id="@+id/eGrupoetnico"
+            android:id="@+id/eGrupoetnicoL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -227,18 +227,18 @@
             android:visibility="gone" />
 
         <TextView
-            android:id="@+id/lProcedencia"
+            android:id="@+id/procedenciaL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/eProcedencia"
+            android:labelFor="@id/eProcedenciaL"
             android:text="@string/procedencia"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/eProcedencia"
+            android:id="@+id/eProcedenciaL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -250,18 +250,18 @@
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/viveActualmente"
+            android:id="@+id/viveActualmenteL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/eViveActualmente"
+            android:labelFor="@id/eViveActualmenteL"
             android:text="@string/viveActualmente"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/eViveActualmente"
+            android:id="@+id/eViveActualmenteL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -273,18 +273,18 @@
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/conQuienVive"
+            android:id="@+id/conQuienViveL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/sConQuienVive"
+            android:labelFor="@id/sConQuienViveL"
             android:text="@string/conQuienVive"
             android:textSize="20sp" />
 
         <Spinner
-            android:id="@+id/sConQuienVive"
+            android:id="@+id/sConQuienViveL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -292,7 +292,7 @@
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/tSituacionFamiliar"
+            android:id="@+id/tSituacionFamiliarL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -304,18 +304,18 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tTieneHijos"
+            android:id="@+id/tTieneHijosL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/sTieneHijos"
+            android:labelFor="@id/sTieneHijosL"
             android:text="@string/tienesHijo"
             android:textSize="20sp" />
 
         <Spinner
-            android:id="@+id/sTieneHijos"
+            android:id="@+id/sTieneHijosL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -323,7 +323,7 @@
             android:minHeight="48dp" />
 
         <EditText
-            android:id="@+id/eTieneHijo"
+            android:id="@+id/eTieneHijoL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -334,37 +334,40 @@
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/cuantasPersonasVivenHogar"
+            android:id="@+id/cuantasPersonasVivenHogarL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/sCuantasPersonasVivenHogar"
+            android:labelFor="@id/eCuantasPersonasVivenHogarL"
             android:text="@string/cuantasPersonasVivenEnTuHogar"
             android:textSize="20sp" />
 
-        <Spinner
-            android:id="@+id/sCuantasPersonasVivenHogar"
+        <EditText
+            android:id="@+id/eCuantasPersonasVivenHogarL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="Respuesta"
+            android:inputType="number"
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/nivelEscolaridad"
+            android:id="@+id/nivelEscolaridadL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/sNivelEscolaridad"
+            android:labelFor="@id/sNivelEscolaridadL"
             android:text="@string/nivelEscolaridad"
             android:textSize="20sp" />
 
         <Spinner
-            android:id="@+id/sNivelEscolaridad"
+            android:id="@+id/sNivelEscolaridadL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -372,18 +375,18 @@
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/estaTrabajando"
+            android:id="@+id/estaTrabajandoL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/sTrabajando"
+            android:labelFor="@id/sTrabajandoL"
             android:text="@string/actualmenteTrabajando"
             android:textSize="20sp" />
 
         <Spinner
-            android:id="@+id/sTrabajando"
+            android:id="@+id/sTrabajandoL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -391,7 +394,7 @@
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/siEstaTrabajando"
+            android:id="@+id/siEstaTrabajandoL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -401,18 +404,18 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/empresaDondeTrabaja"
+            android:id="@+id/empresaDondeTrabajaL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/eETrabaja"
+            android:labelFor="@id/eETrabajaL"
             android:text="@string/eTrabaja"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/eETrabaja"
+            android:id="@+id/eETrabajaL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -423,18 +426,18 @@
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/sinoTrabaja"
+            android:id="@+id/sinoTrabajaL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/eSinoTrabaja"
+            android:labelFor="@id/eSinoTrabajaL"
             android:text="@string/sinoTrabaja"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/eSinoTrabaja"
+            android:id="@+id/eSinoTrabajaL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -444,18 +447,18 @@
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/artesania"
+            android:id="@+id/artesaniaL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/sArtesania"
+            android:labelFor="@id/sArtesaniaL"
             android:text="@string/tArtesania"
             android:textSize="20sp" />
 
         <Spinner
-            android:id="@+id/sArtesania"
+            android:id="@+id/sArtesaniaL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -463,18 +466,18 @@
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/TComercio"
+            android:id="@+id/TComercioL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/sTComercio"
+            android:labelFor="@id/sTComercioL"
             android:text="@string/tComercio"
             android:textSize="20sp" />
 
         <Spinner
-            android:id="@+id/sTComercio"
+            android:id="@+id/sTComercioL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -482,18 +485,18 @@
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/lTTurismo"
+            android:id="@+id/turismoL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/sTTurismo"
+            android:labelFor="@id/sTurismoL"
             android:text="@string/tTurismo"
             android:textSize="20sp" />
 
         <Spinner
-            android:id="@+id/sTTurismo"
+            android:id="@+id/sTurismoL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -501,18 +504,18 @@
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/alimentos"
+            android:id="@+id/alimentosL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/sAlimentos"
+            android:labelFor="@id/sAlimentosL"
             android:text="@string/tAlimentos"
             android:textSize="20sp" />
 
         <Spinner
-            android:id="@+id/sAlimentos"
+            android:id="@+id/sAlimentosL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -520,7 +523,166 @@
             android:minHeight="48dp" />
 
         <EditText
-            android:id="@+id/eAlimentos"
+            android:id="@+id/eAlimentosL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="Respuesta"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/ingresoLaboralL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sIngresoLaboralL"
+            android:text="@string/ingresoLaboralAproximadamente"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sIngresoLaboralL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/ingresoUnidadFamiliarL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sIngresoUnidadFamiliarL"
+            android:text="@string/ingresoLaboralUnidadFamiliar"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sIngresoUnidadFamiliarL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/orientacionPoliticaL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sOrientacionPoliticaL"
+            android:text="@string/orientacionPolitica"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sOrientacionPoliticaL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tPregunta1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sPregunta1"
+            android:text="@string/lPregunta1"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sPregunta1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tPregunta2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/ePregunta2"
+            android:text="@string/lPregunta2"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/ePregunta2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="¿Cuál?"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tPregunta3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sPregunta3"
+            android:text="@string/lPregunta3"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sPregunta3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tPregunta4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sPregunta4"
+            android:text="@string/lPregunta4"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sPregunta4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tPregunta5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/ePregunta5"
+            android:text="@string/lPregunta5"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/ePregunta5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -532,18 +694,41 @@
             android:visibility="gone" />
 
         <TextView
-            android:id="@+id/ingresoLaboral"
+            android:id="@+id/tPregunta6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/sIngresoLaboral"
-            android:text="@string/ingresoLaboralAproximadamente"
+            android:labelFor="@id/ePregunta6"
+            android:text="@string/lPregunta6"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/ePregunta6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="¿Cuál?"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tPregunta7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sPregunta7"
+            android:text="@string/lPregunta7"
             android:textSize="20sp" />
 
         <Spinner
-            android:id="@+id/sIngresoLaboral"
+            android:id="@+id/sPregunta7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -551,18 +736,18 @@
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/ingresoUnidadFamiliar"
+            android:id="@+id/tPregunta8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/sIngresoUnidadFamiliar"
-            android:text="@string/ingresoLaboralUnidadFamiliar"
+            android:labelFor="@id/sPregunta8"
+            android:text="@string/lPregunta8"
             android:textSize="20sp" />
 
         <Spinner
-            android:id="@+id/sIngresoUnidadFamiliar"
+            android:id="@+id/sPregunta8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -570,23 +755,283 @@
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/orientacionPolitica"
+            android:id="@+id/tExtra1Pregunta8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/sOrientacionPolitica"
-            android:text="@string/orientacionPolitica"
+            android:labelFor="@id/eExtra1Pregunta8"
+            android:text="@string/extra1Pregunta8"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eExtra1Pregunta8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="¿Cuál?"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tPregunta9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sPregunta9"
+            android:text="@string/lPregunta9"
             android:textSize="20sp" />
 
         <Spinner
-            android:id="@+id/sOrientacionPolitica"
+            android:id="@+id/sPregunta9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tExtra1Pregunta9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eExtra1Pregunta9"
+            android:text="@string/extra1Pregunta9"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eExtra1Pregunta9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="¿Cuál?"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tPregunta10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/ePregunta10"
+            android:text="@string/lPregunta10"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/ePregunta10"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="150dp"
+            android:gravity="top"
+            android:ems="10"
+            android:hint="Respusta"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tPregunta11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sPregunta11"
+            android:text="@string/lPregunta11"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sPregunta11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tPregunta12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/ePregunta12"
+            android:text="@string/lPregunta12"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/ePregunta12"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="150dp"
+            android:gravity="top"
+            android:ems="10"
+            android:hint="Respuesta"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tPregunta13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sPregunta13"
+            android:text="@string/lPregunta13"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sPregunta13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tPregunta14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sPregunta14"
+            android:text="@string/lPregunta14"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sPregunta14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tExtra1Pregunta14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/eExtra1Pregunta14"
+            android:text="@string/extra1Pregunta14"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/eExtra1Pregunta14"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="top"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="Respuesta"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"/>
+
+        <TextView
+            android:id="@+id/tPregunta15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sPregunta15"
+            android:text="@string/lPregunta15"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sPregunta15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/tPregunta16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/ePregunta16"
+            android:text="@string/lPregunta16"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/ePregunta16"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="top"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="Respuesta"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"/>
+
+        <TextView
+            android:id="@+id/tPregunta17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/ePregunta17"
+            android:text="@string/lPregunta17"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/ePregunta17"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="top"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="Respuesta"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"/>
+
+        <TextView
+            android:id="@+id/tPregunta18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/ePregunta18"
+            android:text="@string/lPregunta18"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/ePregunta18"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="top"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="Respuesta"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"/>
 
         <Button
             android:id="@+id/guardarFormH"
