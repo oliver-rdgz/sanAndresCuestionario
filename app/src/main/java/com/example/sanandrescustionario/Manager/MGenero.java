@@ -29,7 +29,12 @@ public class MGenero {
         values.put(SQLITECuestionario.g_quienVive, genero.g_quienVive);
         values.put(SQLITECuestionario.g_tienesHijos, genero.g_tienesHijos);
         values.put(SQLITECuestionario.g_cuantosHijos, genero.g_cuantosHijos);
-        values.put(SQLITECuestionario.g_rolFamilia, genero.g_rolFamilia);
+        values.put(SQLITECuestionario.g_esPadre, genero.g_esPadre);
+        values.put(SQLITECuestionario.g_esMadre, genero.g_esMadre);
+        values.put(SQLITECuestionario.g_esEsposoa, genero.g_esEsposoa);
+        values.put(SQLITECuestionario.g_esHijoa, genero.g_esHijoa);
+        values.put(SQLITECuestionario.g_esHermanoa, genero.g_esHermanoa);
+        values.put(SQLITECuestionario.g_esOtro, genero.g_esOtro);
         values.put(SQLITECuestionario.g_vivenTuHogar, genero.g_vivenTuHogar);
         values.put(SQLITECuestionario.g_nivelEscolaridad, genero.g_nivelEscolaridad);
         values.put(SQLITECuestionario.g_actualmenteTrabaja, genero.g_actualmenteTrabaja);

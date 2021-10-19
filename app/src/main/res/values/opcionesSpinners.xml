@@ -91,4 +91,12 @@
         <item>padre</item>
         <item>hijos/as</item>
     </string-array>
+    
+    <string-array name="quienViveG">
+        <item>Solo</item>
+        <item>Con pareja</item>
+        <item>Con familia</item>
+        <item>Con amigos</item>
+        <item>Con parientes</item>
+    </string-array>
 </resources>

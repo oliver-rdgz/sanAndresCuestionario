@@ -120,7 +120,12 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
     public  static  final String  g_quienVive="quienVive";
     public  static  final String  g_tienesHijos="tienesHijos";
     public  static  final String  g_cuantosHijos="cuantosHijos";
-    public  static  final String  g_rolFamilia="rolFamilia";
+    public  static  final String  g_esPadre="esPadre";
+    public  static  final String  g_esMadre="esMadre";
+    public  static  final String  g_esEsposoa="esEsposoa";
+    public  static  final String  g_esHijoa="esHijoa";
+    public  static  final String  g_esHermanoa="esHermanoa";
+    public  static  final String  g_esOtro="esOtro";
     public  static  final String  g_vivenTuHogar="vivenTuHogar";
     public  static  final String  g_nivelEscolaridad="nivelEscolaridad";
     public  static  final String  g_actualmenteTrabaja="actualmenteTrabaja";
@@ -291,7 +296,12 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
             g_quienVive+" text not null,"+
             g_tienesHijos+" text not null,"+
             g_cuantosHijos+" integer not null,"+
-            g_rolFamilia+" text not null,"+
+            g_esPadre+" integer not null,"+
+            g_esMadre+" integer not null,"+
+            g_esEsposoa+" integer not null,"+
+            g_esHijoa+" integer not null,"+
+            g_esHermanoa+" integer not null,"+
+            g_esOtro+" integer not null,"+
             g_vivenTuHogar+" integer not null,"+
             g_nivelEscolaridad+" text not null,"+
             g_actualmenteTrabaja+" text not null,"+

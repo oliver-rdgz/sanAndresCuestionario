@@ -14,7 +14,12 @@ public class GeneroUsuario {
     public   String  g_quienVive="";
     public   String  g_tienesHijos="";
     public   int  g_cuantosHijos=0;
-    public   String  g_rolFamilia="";
+    public   String  g_esPadre="";
+    public   String  g_esMadre="";
+    public   String  g_esEsposoa="";
+    public   String  g_esHijoa="";
+    public   String  g_esHermanoa="";
+    public   String  g_esOtro="";
     public   int  g_vivenTuHogar=0;
     public   String  g_nivelEscolaridad="";
     public   String  g_actualmenteTrabaja="";
