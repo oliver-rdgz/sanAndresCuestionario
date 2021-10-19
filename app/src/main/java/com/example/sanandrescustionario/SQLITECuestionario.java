@@ -179,6 +179,7 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
     public  static  final String  g_violenciaFamiliar="violenciaFamiliar";
     public  static  final String  g_violenciaPareja="violenciaPareja";
     public  static  final String  g_mismoTrato="mismoTrato";
+    public  static  final String  g_miedoMujer="miedoMujer";
     public  static  final String  g_comentarios="comentarios";
 
 
@@ -349,6 +350,7 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
             g_violenciaFamiliar+" text not null,"+
             g_violenciaPareja+" text not null,"+
             g_mismoTrato+" text not null,"+
+            g_miedoMujer+" text not null,"+
             g_comentarios+" text not null);";
 
 
