@@ -68,9 +68,9 @@ public class DBmanagerPoblacionLGBTIQ {
         dbCuestionario.close();
     }
 
-    public long GuardarCuestionario(String nombre, String identificacion, String edad ,  String sexo ,  String estadoCivil ,  String genero , String otroGenero,
+    public long GuardarCuestionario(String nombre, int identificacion, int edad ,  String sexo ,  String estadoCivil ,  String genero , String otroGenero,
                                   String religion , String otraRelegion, String grupoEC, String otroGrupoEC, String procedencia, String viveActualmente, String quienVive, String tienesHijos,
-                                  String cuantosHijos, String vivenEnTuHogar, String nivelEscolaridad, String actualmenteTrabaja, String dondeTrabaja, String sinoTrabaja,
+                                    int cuantosHijos, int vivenEnTuHogar, String nivelEscolaridad, String actualmenteTrabaja, String dondeTrabaja, String sinoTrabaja,
                                   String trabajaArtesania, String trabajaComercio, String trabajaTurismo, String trabajaManejoAlimentos, String otroTrabajoManejoAlimentos, String ingresoLaboral,
                                   String ingresoFamiliar, String orientacionPolitica, String discapacidad, String organizacionLgbt, String derechosLgbt,
                                   String discriminacionLgbt, String casoSufrido, String orientacionSexual, String intersexual, String noExpresarGenero, String razonesNoExpresar,

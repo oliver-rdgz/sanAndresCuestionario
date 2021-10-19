@@ -530,7 +530,7 @@
             android:layout_marginRight="10dp"
             android:ems="10"
             android:hint="Respuesta"
-            android:inputType="textPersonName"
+            android:inputType="textMultiLine"
             android:minHeight="48dp"
             android:visibility="gone" />
 
@@ -617,19 +617,19 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/ePregunta2"
+            android:labelFor="@id/ePregunta2L"
             android:text="@string/lPregunta2"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/ePregunta2"
+            android:id="@+id/ePregunta2L"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:ems="10"
             android:hint="¿Cuál?"
-            android:inputType="textPersonName"
+            android:inputType="textMultiLine"
             android:minHeight="48dp" />
 
         <TextView
@@ -677,19 +677,19 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/ePregunta5"
+            android:labelFor="@id/ePregunta5L"
             android:text="@string/lPregunta5"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/ePregunta5"
+            android:id="@+id/ePregunta5L"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:ems="10"
-            android:hint="¿Cuál?"
-            android:inputType="textPersonName"
+            android:hint="Respuesta"
+            android:inputType="textMultiLine"
             android:minHeight="48dp"
             android:visibility="gone" />
 
@@ -700,21 +700,20 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/ePregunta6"
+            android:labelFor="@id/ePregunta6L"
             android:text="@string/lPregunta6"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/ePregunta6"
+            android:id="@+id/ePregunta6L"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:ems="10"
             android:hint="¿Cuál?"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:visibility="gone" />
+            android:inputType="textMultiLine"
+            android:minHeight="48dp" />
 
         <TextView
             android:id="@+id/tPregunta7"
@@ -761,19 +760,19 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/eExtra1Pregunta8"
+            android:labelFor="@id/eExtra1Pregunta8L"
             android:text="@string/extra1Pregunta8"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/eExtra1Pregunta8"
+            android:id="@+id/eExtra1Pregunta8L"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:ems="10"
-            android:hint="¿Cuál?"
-            android:inputType="textPersonName"
+            android:hint="Respuesta"
+            android:inputType="textMultiLine"
             android:minHeight="48dp"
             android:visibility="gone" />
 
@@ -797,25 +796,25 @@
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/tExtra1Pregunta9"
+            android:id="@+id/tExtra1Pregunta9L"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/eExtra1Pregunta9"
+            android:labelFor="@id/eExtra1Pregunta9L"
             android:text="@string/extra1Pregunta9"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/eExtra1Pregunta9"
+            android:id="@+id/eExtra1Pregunta9L"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:ems="10"
             android:hint="¿Cuál?"
-            android:inputType="textPersonName"
+            android:inputType="textMultiLine"
             android:minHeight="48dp"
             android:visibility="gone" />
 
@@ -826,20 +825,20 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/ePregunta10"
+            android:labelFor="@id/ePregunta10L"
             android:text="@string/lPregunta10"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/ePregunta10"
+            android:id="@+id/ePregunta10L"
             android:layout_width="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_height="150dp"
             android:gravity="top"
             android:ems="10"
-            android:hint="Respusta"
-            android:inputType="textPersonName"
+            android:hint="Respuesta"
+            android:inputType="textMultiLine"
             android:minHeight="48dp" />
 
         <TextView
@@ -868,12 +867,12 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/ePregunta12"
+            android:labelFor="@id/ePregunta12L"
             android:text="@string/lPregunta12"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/ePregunta12"
+            android:id="@+id/ePregunta12L"
             android:layout_width="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -881,7 +880,7 @@
             android:gravity="top"
             android:ems="10"
             android:hint="Respuesta"
-            android:inputType="textPersonName"
+            android:inputType="textMultiLine"
             android:minHeight="48dp" />
 
         <TextView
@@ -923,18 +922,18 @@
             android:minHeight="48dp" />
 
         <TextView
-            android:id="@+id/tExtra1Pregunta14"
+            android:id="@+id/tExtra1Pregunta14L"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/eExtra1Pregunta14"
+            android:labelFor="@id/eExtra1Pregunta14L"
             android:text="@string/extra1Pregunta14"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/eExtra1Pregunta14"
+            android:id="@+id/eExtra1Pregunta14L"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:gravity="top"
@@ -942,11 +941,11 @@
             android:layout_marginRight="10dp"
             android:ems="10"
             android:hint="Respuesta"
-            android:inputType="textPersonName"
+            android:inputType="textMultiLine"
             android:minHeight="48dp"/>
 
         <TextView
-            android:id="@+id/tPregunta15"
+            android:id="@+id/tPregunta15L"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -971,12 +970,12 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/ePregunta16"
+            android:labelFor="@id/ePregunta16L"
             android:text="@string/lPregunta16"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/ePregunta16"
+            android:id="@+id/ePregunta16L"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:gravity="top"
@@ -984,7 +983,7 @@
             android:layout_marginRight="10dp"
             android:ems="10"
             android:hint="Respuesta"
-            android:inputType="textPersonName"
+            android:inputType="textMultiLine"
             android:minHeight="48dp"/>
 
         <TextView
@@ -994,12 +993,12 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/ePregunta17"
+            android:labelFor="@id/ePregunta17L"
             android:text="@string/lPregunta17"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/ePregunta17"
+            android:id="@+id/ePregunta17L"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:gravity="top"
@@ -1007,7 +1006,7 @@
             android:layout_marginRight="10dp"
             android:ems="10"
             android:hint="Respuesta"
-            android:inputType="textPersonName"
+            android:inputType="textMultiLine"
             android:minHeight="48dp"/>
 
         <TextView
@@ -1017,12 +1016,12 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:labelFor="@id/ePregunta18"
+            android:labelFor="@id/ePregunta18L"
             android:text="@string/lPregunta18"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/ePregunta18"
+            android:id="@+id/ePregunta18L"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:gravity="top"
@@ -1030,7 +1029,7 @@
             android:layout_marginRight="10dp"
             android:ems="10"
             android:hint="Respuesta"
-            android:inputType="textPersonName"
+            android:inputType="textMultiLine"
             android:minHeight="48dp"/>
 
         <Button

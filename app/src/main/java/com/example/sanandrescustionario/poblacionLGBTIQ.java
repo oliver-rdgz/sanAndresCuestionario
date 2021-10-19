@@ -21,6 +21,8 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                      et_orientacionSexual, et_razonesNoExpresar, et_quienesFamiliares, et_reaccionFamiliar, et_situacionesDescritas, et_porQueDenunciasResuelven,
                      et_sanAndresApoyo, et_politicasPublicas, et_comentar;
 
+    //private int etCuantosHijos;
+
     public String sexoSt, estadoCivilSt, generoSt, religionSt, grupoEtnicoSt, conQuienViveSt, tieneHijosSt,
                   nivelDeEscolaridadSt, estaTrabajandoSt, trabajaArtesaniaSt, trabajaComercioSt, trabajaTurismoSt, trabajaVentaManejoAlimentosSt,
                   ingresoLaboralAproSt, ingresoUnidadFamiliarSt, orientacionPoliticaSt, pregunta1St, pregunta3St, pregunta4St, pregunta7St, pregunta8St,
@@ -28,7 +30,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
 
     public Spinner sexoSp;
 
-    boolean generoBoo, religionBoo, grupoEtnicoBoo, tieneHijosBoo, trabajaManevoVentaAliBoo, pregunta5Boo, pregunta8Boo, pregunta9Boo, pregunta14Boo;
+    //boolean generoBoo, religionBoo, grupoEtnicoBoo, tieneHijosBoo, trabajaManevoVentaAliBoo, pregunta5Boo, pregunta8Boo, pregunta9Boo, pregunta14Boo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +39,97 @@ public class poblacionLGBTIQ extends AppCompatActivity {
         //dbManager = new DBManagerComunidadLgbt(getApplicationContext(), "Cuestionario_SanAndres", null, 1);
         dbManager = new DBmanagerPoblacionLGBTIQ(this);
 
+        et_nombre = (EditText)findViewById(R.id.editTextNombreL);
+        et_identificacion = (EditText)findViewById(R.id.editTextIdentificacionL);
+        et_edad = (EditText)findViewById(R.id.editTextEdadL);
         et_otroGenero = (EditText)findViewById(R.id.eGeneroOL);
+        et_otraReligion = (EditText)findViewById(R.id.eReligionOL);
+        et_otroGrupoEC = (EditText)findViewById(R.id.eGrupoetnicoL);
+        et_procedencia = (EditText)findViewById(R.id.eProcedenciaL);
+        et_dondeVive = (EditText)findViewById(R.id.eViveActualmenteL);
+        et_cuantosHijos = (EditText)findViewById(R.id.eTieneHijoL);
+        et_cuantasVivenHogar = (EditText)findViewById(R.id.eCuantasPersonasVivenHogarL);
+        et_dondeTrabaja = (EditText)findViewById(R.id.eETrabajaL);
+        et_sinoTrabaja = (EditText)findViewById(R.id.eSinoTrabajaL);
+        et_otroTrabajoManejoAlimentos = (EditText)findViewById(R.id.eAlimentosL);
+        et_organizacionLGBT = (EditText)findViewById(R.id.ePregunta2L);
+        et_casosSufridos = (EditText)findViewById(R.id.ePregunta5L);
+        et_orientacionSexual = (EditText)findViewById(R.id.ePregunta6L);
+        et_razonesNoExpresar = (EditText)findViewById(R.id.eExtra1Pregunta8L);
+        et_quienesFamiliares = (EditText)findViewById(R.id.eExtra1Pregunta9L);
+        et_reaccionFamiliar = (EditText)findViewById(R.id.ePregunta10L);
+        et_situacionesDescritas = (EditText)findViewById(R.id.ePregunta12L);
+        et_porQueDenunciasResuelven = (EditText)findViewById(R.id.eExtra1Pregunta14L);
+        et_sanAndresApoyo = (EditText)findViewById(R.id.ePregunta16L);
+        et_politicasPublicas = (EditText)findViewById(R.id.ePregunta17L);
+        et_comentar = (EditText)findViewById(R.id.ePregunta18L);
 
         spinnerSexo();
+    }
+
+    public void Enviar(View view){
+        String nombre = et_nombre.getText().toString();
+        String identificacion = et_identificacion.getText().toString();
+        String edad = et_edad.getText().toString();
+        String otroGenero = et_otroGenero.getText().toString();
+        String otraReligion = et_otraReligion.getText().toString();
+        String otroGrupoEC = et_otroGrupoEC.getText().toString();
+        String procedencia = et_procedencia.getText().toString();
+        String dondeVive = et_dondeVive.getText().toString();
+        String cuantosHijos = et_cuantosHijos.getText().toString();
+        String cuantasVivenHogar = et_cuantasVivenHogar.getText().toString();
+        String dondeTrabaja = et_dondeTrabaja.getText().toString();
+        String sinoTrabaja = et_sinoTrabaja.getText().toString();
+        String otroTrabajoManejoAlimentos = et_otroTrabajoManejoAlimentos.getText().toString();
+        String organizacionLGBTQI = et_organizacionLGBT.getText().toString();
+        String casosSufridos = et_casosSufridos.getText().toString();
+        String orientacionSexual = et_orientacionSexual.getText().toString();
+        String razonesNoExpresar = et_razonesNoExpresar.getText().toString();
+        String quienesFamiliares = et_quienesFamiliares.getText().toString();
+        String reaccionFamiliar = et_reaccionFamiliar.getText().toString();
+        String situacionesDescritas = et_situacionesDescritas.getText().toString();
+        String porQueDenunciasResuelven = et_porQueDenunciasResuelven.getText().toString();
+        String sanAndresApoyo = et_sanAndresApoyo.getText().toString();
+        String politicasPublicas = et_politicasPublicas.getText().toString();
+        String comentar = et_comentar.getText().toString();
+
+        if(identificacion.equals("")){
+            identificacion = "0";
+        }
+
+        if(edad.equals("")){
+            edad = "0";
+        }
+
+        if(cuantosHijos.equals("")){
+            cuantosHijos = "0";
+        }
+
+        if(cuantasVivenHogar.equals("")){
+            cuantasVivenHogar = "0";
+        }
+
+        int idInt = Integer.parseInt(identificacion);
+        int edadInt = Integer.parseInt(edad);
+        int cuantosHijosInt = Integer.parseInt(cuantosHijos);
+        int cuantasVivenHogarInt = Integer.parseInt(cuantasVivenHogar);
+
+        dbManager.open();
+        dbManager.GuardarCuestionario(nombre, idInt, edadInt, sexoSt, estadoCivilSt, generoSt, otroGenero, religionSt, otraReligion, grupoEtnicoSt, otroGrupoEC,
+                                      procedencia, dondeVive, conQuienViveSt, tieneHijosSt, cuantosHijosInt, cuantasVivenHogarInt, nivelDeEscolaridadSt, estaTrabajandoSt,
+                                      dondeTrabaja, sinoTrabaja, trabajaArtesaniaSt, trabajaComercioSt, trabajaTurismoSt, trabajaVentaManejoAlimentosSt, otroTrabajoManejoAlimentos,
+                                      ingresoLaboralAproSt, ingresoUnidadFamiliarSt, orientacionPoliticaSt, pregunta1St, organizacionLGBTQI, pregunta3St, pregunta4St, casosSufridos,
+                                      orientacionSexual, pregunta7St, pregunta8St, razonesNoExpresar, pregunta9St, quienesFamiliares, reaccionFamiliar, pregunta11St, situacionesDescritas,
+                                      pregunta13St, pregunta14St, porQueDenunciasResuelven, pregunta15St, sanAndresApoyo, politicasPublicas, comentar);
+
+        Toast.makeText(this,"Guardado correctamente", Toast.LENGTH_SHORT).show();
+    }
+
+    public void validarEnvio(){
+        //if(generoBoo == false){
+        //    String genero = et_otroGenero.getText().toString();
+        //    generoSt = genero;
+        //}
     }
 
     private void spinnerSexo()
@@ -60,22 +150,6 @@ public class poblacionLGBTIQ extends AppCompatActivity {
             }
         });
         spinnerEstadoCivil();
-    }
-
-    public void validarEnvio(){
-        if(generoBoo == true){
-            String genero = et_otroGenero.getText().toString();
-            generoSt = genero;
-        }
-    }
-
-    public void Enviar(View view){
-        validarEnvio();
-        if(sexoSt.equals("Sin especificar")){
-            Toast.makeText(this,"LLene todos los campos antes de enviar el formulario", Toast.LENGTH_SHORT).show();
-        }else{
-            Toast.makeText(this,"El valor seleccionado es: " + generoSt, Toast.LENGTH_SHORT).show();
-        }
     }
 
     private void spinnerEstadoCivil()
@@ -111,12 +185,10 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 if(generoSt.equals("Otro"))
                 {
                     findViewById(R.id.eGeneroOL).setVisibility(View.VISIBLE);
-                    generoBoo = true;
                 }
                 else
                 {
                     findViewById(R.id.eGeneroOL).setVisibility(View.GONE);
-                    generoBoo = false;
                     et_otroGenero.setText("");
                 }
             }
@@ -146,6 +218,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 else
                 {
                     findViewById(R.id.eReligionOL).setVisibility(View.GONE);
+                    et_otraReligion.setText("");
                 }
 
             }
@@ -174,6 +247,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 else
                 {
                     findViewById(R.id.eGrupoetnicoL).setVisibility(View.GONE);
+                    et_otroGrupoEC.setText("");
                 }
             }
 
@@ -222,6 +296,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 else
                 {
                     findViewById(R.id.eTieneHijoL).setVisibility(View.GONE);
+                    et_cuantosHijos.setText("0");
                 }
             }
 
@@ -350,6 +425,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 else
                 {
                     findViewById(R.id.eAlimentosL).setVisibility(View.GONE);
+                    et_otroTrabajoManejoAlimentos.setText("");
                 }
             }
 
@@ -471,6 +547,16 @@ public class poblacionLGBTIQ extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 pregunta4St = parent.getItemAtPosition(position).toString();
+                if(pregunta4St.equals("Si"))
+                {
+                    findViewById(R.id.ePregunta5L).setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    findViewById(R.id.ePregunta5L).setVisibility(View.GONE);
+                    et_casosSufridos.setText("");
+
+                }
             }
 
             @Override
@@ -513,11 +599,12 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 pregunta8St = parent.getItemAtPosition(position).toString();
                 if(pregunta8St.equals("Si"))
                 {
-                    findViewById(R.id.eExtra1Pregunta8).setVisibility(View.VISIBLE);
+                    findViewById(R.id.eExtra1Pregunta8L).setVisibility(View.VISIBLE);
                 }
                 else
                 {
-                    findViewById(R.id.eExtra1Pregunta8).setVisibility(View.GONE);
+                    findViewById(R.id.eExtra1Pregunta8L).setVisibility(View.GONE);
+                    et_razonesNoExpresar.setText("");
                 }
             }
 
@@ -541,11 +628,12 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 pregunta9St = parent.getItemAtPosition(position).toString();
                 if(pregunta9St.equals("Si"))
                 {
-                    findViewById(R.id.eExtra1Pregunta9).setVisibility(View.VISIBLE);
+                    findViewById(R.id.eExtra1Pregunta9L).setVisibility(View.VISIBLE);
                 }
                 else
                 {
-                    findViewById(R.id.eExtra1Pregunta9).setVisibility(View.GONE);
+                    findViewById(R.id.eExtra1Pregunta9L).setVisibility(View.GONE);
+                    et_quienesFamiliares.setText("");
                 }
             }
 
@@ -609,11 +697,12 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 pregunta14St = parent.getItemAtPosition(position).toString();
                 if(pregunta14St.equals("Si"))
                 {
-                    findViewById(R.id.eExtra1Pregunta14).setVisibility(View.VISIBLE);
+                    findViewById(R.id.eExtra1Pregunta14L).setVisibility(View.VISIBLE);
                 }
                 else
                 {
-                    findViewById(R.id.eExtra1Pregunta14).setVisibility(View.GONE);
+                    findViewById(R.id.eExtra1Pregunta14L).setVisibility(View.GONE);
+                    et_porQueDenunciasResuelven.setText("");
                 }
             }
 
