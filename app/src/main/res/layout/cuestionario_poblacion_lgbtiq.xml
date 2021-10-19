@@ -1036,7 +1036,7 @@
             android:id="@+id/guardarFormH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="Enviar"
+            android:onClick="mensajeFinalizarCuestionario"
             android:text="@string/guardar" />
 
     </LinearLayout>

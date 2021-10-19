@@ -2,6 +2,7 @@ package com.example.sanandrescustionario.Manager;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 
@@ -131,6 +132,11 @@ public class DBmanagerPoblacionLGBTIQ {
 
         long id = database.insert(SQLITECuestionario.T_LGBT, null, values);
         return id;
+    }
+
+    public Cursor getLGBT(){
+        Cursor cursor=database.query(SQLITECuestionario.T_LGBT, allColumns,null,null,null,null,null);
+        return cursor;
     }
 
 }

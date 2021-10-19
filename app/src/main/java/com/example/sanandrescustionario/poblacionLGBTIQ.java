@@ -1,6 +1,9 @@
 package com.example.sanandrescustionario;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -8,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.sanandrescustionario.Manager.DBmanagerPoblacionLGBTIQ;
@@ -67,7 +71,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
         spinnerSexo();
     }
 
-    public void Enviar(View view){
+    public void Enviar(){
         String nombre = et_nombre.getText().toString();
         String identificacion = et_identificacion.getText().toString();
         String edad = et_edad.getText().toString();
@@ -731,6 +735,51 @@ public class poblacionLGBTIQ extends AppCompatActivity {
             }
 
         });
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == event.KEYCODE_BACK){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("¿Desea cancelar la creación del cuestionario?")
+                    .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(poblacionLGBTIQ.this, MainActivity.class);
+                            startActivity(intent);
+                        }
+                    })
+                    .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+            builder.show();
+        }
+        return super.onKeyDown(keyCode, event);
+
+    }
+
+    public void mensajeFinalizarCuestionario(View view)
+    {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setMessage("¿Finalizar el cuestionario?")
+                .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Enviar();
+                        Intent intent = new Intent(poblacionLGBTIQ.this, MainActivity.class);
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+        alertDialog.show();
     }
 
 }

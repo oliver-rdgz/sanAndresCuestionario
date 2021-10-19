@@ -23,12 +23,14 @@ public class MainActivity extends AppCompatActivity {
     private AlertDialog dialog;
     private Button cancelar;
     private MHabitantesCalles managerHabitantes;
+    private DBmanagerPoblacionLGBTIQ managerLgtbi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         managerHabitantes = new MHabitantesCalles(this);
+        managerLgtbi = new DBmanagerPoblacionLGBTIQ(this);
         inicializarComponentes();
         eventoAgregarCuestionario();
         obtenerHabitantesEncustados();
@@ -91,7 +93,15 @@ public class MainActivity extends AppCompatActivity {
         Cursor cursor = managerHabitantes.getHabitante();
         TextView encuestados = (TextView) findViewById(R.id.numeroHabitantesEncuestadosM);
         encuestados.setText(cursor.getCount()+"");
+        obtenerLgtbiEncuestados();
+    }
 
+    private void obtenerLgtbiEncuestados()
+    {
+        managerLgtbi.open();
+        Cursor cursor = managerLgtbi.getLGBT();
+        TextView encuestados = (TextView) findViewById(R.id.numeroLgtbiM);
+        encuestados.setText(cursor.getCount()+"");
     }
 
     public void irCuestionarioPLgbt(View view)
