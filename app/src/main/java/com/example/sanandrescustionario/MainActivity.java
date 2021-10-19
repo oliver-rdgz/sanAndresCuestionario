@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.sanandrescustionario.Manager.MHabitantesCalles;
+import com.example.sanandrescustionario.Manager.DBmanagerPoblacionLGBTIQ;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -92,4 +93,12 @@ public class MainActivity extends AppCompatActivity {
         encuestados.setText(cursor.getCount()+"");
 
     }
+
+    public void irCuestionarioPLgbt(View view)
+    {
+        Intent pLgbt = new Intent(this, poblacionLGBTIQ.class);
+        startActivity(pLgbt);
+        dialog.cancel();
+    }
+
 }

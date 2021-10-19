@@ -59,6 +59,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
+            android:onClick="irCuestionarioPLgbt"
             android:text="@string/LGBTQI" />
 
         <Button

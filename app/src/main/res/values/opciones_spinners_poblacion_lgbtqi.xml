@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="sexoL">
+        <item></item>
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>Sin especificar</item>
+    </string-array>
+
+    <string-array name="estadoCivilL">
+        <item>Soltero</item>
+        <item>Casado</item>
+        <item>Viudo</item>
+        <item>Unión Libre</item>
+        <item>Separado</item>
+    </string-array>
+
+    <string-array name="generoL">
+        <item>Masculino cis</item>
+        <item>Femenino cis</item>
+        <item>Masculino trans</item>
+        <item>Femenino trans</item>
+        <item>No binário</item>
+        <item>Otro</item>
+    </string-array>
+
+    <string-array name="religionL">
+        <item>Católica</item>
+        <item>Cristiana/Presbiteriana</item>
+        <item>Batista</item>
+        <item>Ateísmo</item>
+        <item>Otra</item>
+    </string-array>
+
+    <string-array name="grupoEtnicoL">
+        <item>Continental</item>
+        <item>Raízales</item>
+        <item>Otro</item>
+    </string-array>
+
+    <string-array name="conQuienViveL">
+        <item>Solo</item>
+        <item>Con pareja</item>
+        <item>Con familia</item>
+        <item>Con amigos</item>
+        <item>Con parientes</item>
+    </string-array>
+
+    <string-array name="tieneHijosL">
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="nivelEscolaridadL">
+        <item>Ninguno</item>
+        <item>Primaria</item>
+        <item>Secundaria</item>
+        <item>Bachiller</item>
+        <item>Licenciatura/Graduación</item>
+        <item>Posgraduación</item>
+    </string-array>
+
+    <string-array name="estaTrabajandoL">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="trabajaConArtesaniaL">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="trabajaConComercioL">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="trabajaConTurismoL">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="trabajaConActManejoVentaAlimentosL">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+        <item>Otro</item>
+    </string-array>
+
+    <string-array name="ingresoLaboralAproximadoL">
+        <item></item>
+        <item>Menos de un salario mínimo</item>
+        <item>Un salario mínimo</item>
+        <item>De dos a cuatro salarios mínimos</item>
+        <item>De cinco a diez salarios mínimos</item>
+        <item>Más de diez salarios mínimos</item>
+    </string-array>
+
+    <string-array name="ingresoUnidadFamiliarL">
+        <item></item>
+        <item>Un salario mínimo</item>
+        <item>Menos de un salario mínimo</item>
+        <item>De dos a cuatro salarios mínimos </item>
+        <item>De cinco a diez salarios mínimos</item>
+        <item>Más de diez salarios mínimos</item>
+    </string-array>
+
+    <string-array name="orientacionPoliticaL">
+        <item>Derecha</item>
+        <item>Centro</item>
+        <item>Izquierda</item>
+        <item>Apolítico/ninguna</item>
+        <item>Prefiero no opinar</item>
+    </string-array>
+
+    <string-array name="valoresPregunta1L">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="valoresPregunta3L">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+        <item>Un poco</item>
+    </string-array>
+
+    <string-array name="valoresPregunta4L">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="valoresPregunta7L">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="valoresPregunta8L">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="valoresPregunta9L">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="valoresPregunta11L">
+        <item></item>
+        <item>Le gritaron, amenazaron y/o hostigaron</item>
+        <item>Le obligaron a cambiar la apariencia</item>
+        <item>Expulsaron/Negaron la entrada a un espacio público</item>
+        <item>Víctima de violencia sexual</item>
+        <item>No respetan su género de identificación</item>
+        <item>Impidieron donar sangre</item>
+        <item>Ridicularizaron</item>
+        <item>Le obligaron a someterse a pruebas de ITS/VIH</item>
+    </string-array>
+
+    <string-array name="valoresPregunta13L">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="valoresPregunta14L">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="valoresPregunta15L">
+        <item></item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+
+</resources>

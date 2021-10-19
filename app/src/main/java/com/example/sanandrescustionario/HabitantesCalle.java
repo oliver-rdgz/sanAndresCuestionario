@@ -221,6 +221,7 @@ public class HabitantesCalle extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.sexo,
                 android.R.layout.simple_spinner_item);
         sexo.setAdapter(adapter);
+        //Esto se dispara cada vez que detecta un cambio en el spinner
         sexo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -287,8 +288,10 @@ public class HabitantesCalle extends AppCompatActivity {
     private void spinnerReligion()
     {
         Spinner religion = (Spinner) findViewById(R.id.sReligionH);
+        //El simple_spinner_item es para indicar que es una lista desplegable
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.religion,
                 android.R.layout.simple_spinner_item);
+        //Esto es para agregarle el adapator al spinner seleccionado arriba
         religion.setAdapter(adapter);
         religion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
