@@ -65,8 +65,11 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
     public  static  final String  l_sexo="sexo";
     public  static  final String  l_estadoCivil="estadoCivil";
     public  static  final String  l_genero="genero";
+    public  static  final String  l_otro_genero="otroGenero";
     public  static  final String  l_religion="religion";
+    public  static  final String  l_otra_religion="otraRelegion";
     public  static  final String  l_grupoEC="grupoEC";
+    public  static  final String  l_otro_grupoEC="otroGrupoEC";
     public  static  final String  l_LProcedencia="LProcedencia";
     public  static  final String  l_viveActualmente="viveActualmente";
     public  static  final String  l_quienVive="quienVive";
@@ -81,6 +84,7 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
     public  static  final String  l_trabajaComercio="trabajaComercio";
     public  static  final String  l_trabajaTurismo="trabajaTurismo";
     public  static  final String  l_trabajaManejoAlimentos="trabajaManejoAlimentos";
+    public  static  final String  l_otroTrabajoManejoAlimentos="otroTrabajoManejoAlimentos";
     public  static  final String  l_ingresoLaboral="ingresoLaboral";
     public  static  final String  l_ingresoFamiliar="ingresoFamiliar";
     public  static  final String  l_orientacionPolitica="orientacionPolitica";
@@ -100,6 +104,8 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
     public  static  final String  l_situacionDescrita="situacionDescrita";
     public  static  final String  l_actosDiscriminacion="actosDiscriminacion";
     public  static  final String  l_denunciasResuelven="denunciasResuelven";
+    public  static  final String  l_porQueDenunciasResuelven="porQueDenunciasResuelven";
+    public  static  final String  l_existenCampanasDiscriminacion="existenCampanasDiscriminacion";
     public  static  final String  l_sanAndresApoyo="sanAndresApoyo";
     public  static  final String  l_politicasPublicas="politicasPublicas";
     public  static  final String  l_comentar="Comentar";
@@ -211,8 +217,11 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
             l_sexo+" text not null,"+
             l_estadoCivil+" text not null,"+
             l_genero+" text not null,"+
+            l_otro_genero+" text not null,"+
             l_religion+" text not null,"+
+            l_otra_religion+" text not null,"+
             l_grupoEC+" text not null,"+
+            l_otro_grupoEC+" text not null,"+
             l_LProcedencia+" text not null,"+
             l_viveActualmente+" text not null,"+
             l_quienVive+" text not null,"+
@@ -227,6 +236,7 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
             l_trabajaComercio+" text not null,"+
             l_trabajaTurismo+" text not null,"+
             l_trabajaManejoAlimentos+" text not null,"+
+            l_otroTrabajoManejoAlimentos+" text not null,"+
             l_ingresoLaboral+" text not null,"+
             l_ingresoFamiliar+" text not null,"+
             l_orientacionPolitica+" text not null,"+
@@ -246,6 +256,8 @@ public class SQLITECuestionario extends SQLiteOpenHelper {
             l_situacionDescrita+" text not null,"+
             l_actosDiscriminacion+" text not null,"+
             l_denunciasResuelven+" text not null,"+
+            l_porQueDenunciasResuelven+" text not null,"+
+            l_existenCampanasDiscriminacion+" text not null,"+
             l_sanAndresApoyo+" text not null,"+
             l_politicasPublicas+" text not null,"+
             l_comentar+" text not null);";

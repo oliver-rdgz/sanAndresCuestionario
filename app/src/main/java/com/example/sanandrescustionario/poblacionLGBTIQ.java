@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -14,11 +15,20 @@ import com.example.sanandrescustionario.Manager.DBmanagerPoblacionLGBTIQ;
 public class poblacionLGBTIQ extends AppCompatActivity {
 
     private DBmanagerPoblacionLGBTIQ dbManager;
+
+    private EditText et_nombre, et_identificacion, et_edad, et_otroGenero, et_otraReligion, et_otroGrupoEC, et_procedencia, et_dondeVive, et_cuantosHijos,
+                     et_cuantasVivenHogar, et_dondeTrabaja, et_sinoTrabaja, et_otroTrabajoManejoAlimentos, et_organizacionLGBT, et_casosSufridos,
+                     et_orientacionSexual, et_razonesNoExpresar, et_quienesFamiliares, et_reaccionFamiliar, et_situacionesDescritas, et_porQueDenunciasResuelven,
+                     et_sanAndresApoyo, et_politicasPublicas, et_comentar;
+
     public String sexoSt, estadoCivilSt, generoSt, religionSt, grupoEtnicoSt, conQuienViveSt, tieneHijosSt,
                   nivelDeEscolaridadSt, estaTrabajandoSt, trabajaArtesaniaSt, trabajaComercioSt, trabajaTurismoSt, trabajaVentaManejoAlimentosSt,
                   ingresoLaboralAproSt, ingresoUnidadFamiliarSt, orientacionPoliticaSt, pregunta1St, pregunta3St, pregunta4St, pregunta7St, pregunta8St,
                   pregunta9St, pregunta11St, pregunta13St, pregunta14St, pregunta15St;
+
     public Spinner sexoSp;
+
+    boolean generoBoo, religionBoo, grupoEtnicoBoo, tieneHijosBoo, trabajaManevoVentaAliBoo, pregunta5Boo, pregunta8Boo, pregunta9Boo, pregunta14Boo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +36,9 @@ public class poblacionLGBTIQ extends AppCompatActivity {
         setContentView(R.layout.cuestionario_poblacion_lgbtiq);
         //dbManager = new DBManagerComunidadLgbt(getApplicationContext(), "Cuestionario_SanAndres", null, 1);
         dbManager = new DBmanagerPoblacionLGBTIQ(this);
+
+        et_otroGenero = (EditText)findViewById(R.id.eGeneroOL);
+
         spinnerSexo();
     }
 
@@ -49,11 +62,19 @@ public class poblacionLGBTIQ extends AppCompatActivity {
         spinnerEstadoCivil();
     }
 
+    public void validarEnvio(){
+        if(generoBoo == true){
+            String genero = et_otroGenero.getText().toString();
+            generoSt = genero;
+        }
+    }
+
     public void Enviar(View view){
+        validarEnvio();
         if(sexoSt.equals("Sin especificar")){
             Toast.makeText(this,"LLene todos los campos antes de enviar el formulario", Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(this,"El valor seleccionado es: " + grupoEtnicoSt, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"El valor seleccionado es: " + generoSt, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -90,10 +111,13 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 if(generoSt.equals("Otro"))
                 {
                     findViewById(R.id.eGeneroOL).setVisibility(View.VISIBLE);
+                    generoBoo = true;
                 }
                 else
                 {
                     findViewById(R.id.eGeneroOL).setVisibility(View.GONE);
+                    generoBoo = false;
+                    et_otroGenero.setText("");
                 }
             }
 
