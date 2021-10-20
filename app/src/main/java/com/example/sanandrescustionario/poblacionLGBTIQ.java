@@ -150,7 +150,9 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                     orientacionSexual, pregunta7St, pregunta8St, razonesNoExpresar, pregunta9St, quienesFamiliares, reaccionFamiliar, pregunta11St, situacionesDescritas,
                     pregunta13St, pregunta14St, porQueDenunciasResuelven, pregunta15St, sanAndresApoyo, politicasPublicas, comentar);
 
-            Toast.makeText(this,"Guardado correctamente" + validacionDeotros, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Guardado correctamente", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(poblacionLGBTIQ.this, MainActivity.class);
+            startActivity(intent);
         }else{
             Toast.makeText(this,"Verifique que ningún campo del formulario este vacío", Toast.LENGTH_SHORT).show();
         }
@@ -807,8 +809,6 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Enviar();
-                        Intent intent = new Intent(poblacionLGBTIQ.this, MainActivity.class);
-                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {

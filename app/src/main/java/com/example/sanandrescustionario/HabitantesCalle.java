@@ -219,7 +219,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         sexo = (Spinner) findViewById(R.id.sSexoH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.sexo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         sexo.setAdapter(adapter);
         //Esto se dispara cada vez que detecta un cambio en el spinner
         sexo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -240,7 +240,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner estadoCivil = (Spinner) findViewById(R.id.sEstadoCivilH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.estadoCivil,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         estadoCivil.setAdapter(adapter);
         estadoCivil.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -260,7 +260,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner genero = (Spinner) findViewById(R.id.sGeneroH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.genero,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         genero.setAdapter(adapter);
         genero.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -290,7 +290,7 @@ public class HabitantesCalle extends AppCompatActivity {
         Spinner religion = (Spinner) findViewById(R.id.sReligionH);
         //El simple_spinner_item es para indicar que es una lista desplegable
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.religion,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         //Esto es para agregarle el adapator al spinner seleccionado arriba
         religion.setAdapter(adapter);
         religion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -321,7 +321,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner grupoEtnico = (Spinner) findViewById(R.id.sGrupoEtnicoH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.grupoEtnico,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         grupoEtnico.setAdapter(adapter);
         grupoEtnico.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -350,7 +350,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner tieneHijos = (Spinner) findViewById(R.id.sTienesHijoH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.tieneHijos,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         tieneHijos.setAdapter(adapter);
         tieneHijos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -379,7 +379,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner nivelEscolaridad = (Spinner) findViewById(R.id.sNivelEscolaridadH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.nivelEscolaridad,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         nivelEscolaridad.setAdapter(adapter);
         nivelEscolaridad.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -399,7 +399,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner actualmenteTrabajando = (Spinner) findViewById(R.id.sTrabajandoH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         actualmenteTrabajando.setAdapter(adapter);
         actualmenteTrabajando.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -419,7 +419,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner tArtesania = (Spinner) findViewById(R.id.sArtesaniaH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         tArtesania.setAdapter(adapter);
         tArtesania.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -439,7 +439,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner tComercio = (Spinner) findViewById(R.id.sTComercioH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         tComercio.setAdapter(adapter);
         tComercio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -459,7 +459,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner tTurismo = (Spinner) findViewById(R.id.sTTurismoH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         tTurismo.setAdapter(adapter);
         tTurismo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -479,7 +479,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner tAlimentos = (Spinner) findViewById(R.id.sAlimentosH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNoOtro,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         tAlimentos.setAdapter(adapter);
         tAlimentos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -508,7 +508,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner orientacionPolitica = (Spinner) findViewById(R.id.sOrientacionPoliticaH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.orientacionPolitica,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         orientacionPolitica.setAdapter(adapter);
         orientacionPolitica.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -528,7 +528,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner sai = (Spinner) findViewById(R.id.sSaiH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.sai,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         sai.setAdapter(adapter);
         sai.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -548,7 +548,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner cFamiliares = (Spinner) findViewById(R.id.sFCFamiliaresH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.cFamiliares,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         cFamiliares.setAdapter(adapter);
         cFamiliares.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -568,7 +568,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner cFamiliares = (Spinner) findViewById(R.id.sContactoFamiliaresH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.contactoFamiliares,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         cFamiliares.setAdapter(adapter);
         cFamiliares.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -588,7 +588,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner unidadesAtencion = (Spinner) findViewById(R.id.sUnidadAtencionH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         unidadesAtencion.setAdapter(adapter);
         unidadesAtencion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -608,7 +608,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner beneficiario = (Spinner) findViewById(R.id.sBeneficiarioH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         beneficiario.setAdapter(adapter);
         beneficiario.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -635,7 +635,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner tipoViolencia = (Spinner) findViewById(R.id.sTipoViolenciaH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         tipoViolencia.setAdapter(adapter);
         tipoViolencia.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -662,7 +662,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner problemaSalud = (Spinner) findViewById(R.id.sProblemaSaludH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         problemaSalud.setAdapter(adapter);
         problemaSalud.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -689,7 +689,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner vacunaCovid = (Spinner) findViewById(R.id.sVacunaCovidH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         vacunaCovid.setAdapter(adapter);
         vacunaCovid.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -716,7 +716,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner embarazada = (Spinner) findViewById(R.id.sEmbarazadaH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         embarazada.setAdapter(adapter);
         embarazada.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -737,7 +737,7 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         Spinner companeraEmbarazada = (Spinner) findViewById(R.id.sCompaneraEmbarazadaH);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         companeraEmbarazada.setAdapter(adapter);
         companeraEmbarazada.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

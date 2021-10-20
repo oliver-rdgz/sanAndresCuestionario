@@ -533,7 +533,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner sexo = (Spinner) findViewById(R.id.sSexoG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.sexo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         sexo.setAdapter(adapter);
         sexo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -553,7 +553,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner estadoCivil = (Spinner) findViewById(R.id.sEstadoCivilG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.estadoCivil,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         estadoCivil.setAdapter(adapter);
         estadoCivil.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -573,7 +573,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner genero = (Spinner) findViewById(R.id.sGeneroG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.genero,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         genero.setAdapter(adapter);
         genero.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -602,7 +602,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner religion = (Spinner) findViewById(R.id.sReligionG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.religion,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         religion.setAdapter(adapter);
         religion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -631,7 +631,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner grupoEtnico = (Spinner) findViewById(R.id.sGrupoEtnicoG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.grupoEtnico,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         grupoEtnico.setAdapter(adapter);
         grupoEtnico.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -660,7 +660,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner quienVive = (Spinner) findViewById(R.id.sQuienViveG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.quienViveG,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         quienVive.setAdapter(adapter);
         quienVive.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -680,7 +680,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner tieneHijos = (Spinner) findViewById(R.id.sTienesHijoG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.tieneHijos,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         tieneHijos.setAdapter(adapter);
         tieneHijos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -700,7 +700,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner nivelEscolaridad = (Spinner) findViewById(R.id.sNivelEscolaridadG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.nivelEscolaridad,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         nivelEscolaridad.setAdapter(adapter);
         nivelEscolaridad.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -720,7 +720,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner estaTrabajando = (Spinner) findViewById(R.id.sTrabajandoG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         estaTrabajando.setAdapter(adapter);
         estaTrabajando.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -740,7 +740,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner artesania = (Spinner) findViewById(R.id.sArtesaniaG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         artesania.setAdapter(adapter);
         artesania.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -760,7 +760,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner comercio = (Spinner) findViewById(R.id.sTComercioG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         comercio.setAdapter(adapter);
         comercio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -780,7 +780,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner turismo = (Spinner) findViewById(R.id.sTTurismoG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         turismo.setAdapter(adapter);
         turismo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -800,7 +800,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner manejoAlimento = (Spinner) findViewById(R.id.sAlimentosG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNoOtro,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         manejoAlimento.setAdapter(adapter);
         manejoAlimento.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -830,7 +830,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner ingresoLaboral = (Spinner) findViewById(R.id.sIngresoLaboralG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.ingresoLaboralAproximadoL,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         ingresoLaboral.setAdapter(adapter);
         ingresoLaboral.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -850,7 +850,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner spinnerIngresoLaboralFamiliar = (Spinner) findViewById(R.id.sIngresoLaboraFamiliarlG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.ingresoUnidadFamiliarL,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         spinnerIngresoLaboralFamiliar.setAdapter(adapter);
         spinnerIngresoLaboralFamiliar.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -870,7 +870,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner orientacionPolitica = (Spinner) findViewById(R.id.sOrientacionPoliticaG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.orientacionPolitica,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         orientacionPolitica.setAdapter(adapter);
         orientacionPolitica.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -890,7 +890,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner violenciaMujer = (Spinner) findViewById(R.id.sViolenciaMujerG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         violenciaMujer.setAdapter(adapter);
         violenciaMujer.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -920,7 +920,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner opinionPiropo = (Spinner) findViewById(R.id.sOpinionPiropoG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.quePiropo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         opinionPiropo.setAdapter(adapter);
         opinionPiropo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -949,7 +949,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner acoso = (Spinner) findViewById(R.id.sOpinionAcosoG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.opinionAcoso,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         acoso.setAdapter(adapter);
         acoso.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -969,7 +969,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner acoso = (Spinner) findViewById(R.id.sAcosoContraMujerG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.acosoMujerG,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         acoso.setAdapter(adapter);
         acoso.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -989,7 +989,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner responsable = (Spinner) findViewById(R.id.sMujerResponsableAcosoG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.acosoMujerResponsableG,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         responsable.setAdapter(adapter);
         responsable.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -1009,7 +1009,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner asedio = (Spinner) findViewById(R.id.sAsedioSexualG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.asedioSexualG,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         asedio.setAdapter(adapter);
         asedio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -1029,7 +1029,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner actitud = (Spinner) findViewById(R.id.sActitudesVidaG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.actitudesVidaG,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         actitud.setAdapter(adapter);
         actitud.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -1049,7 +1049,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner legal = (Spinner) findViewById(R.id.sMecanismoLegalG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.mecanismoLegalG,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         legal.setAdapter(adapter);
         legal.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -1069,7 +1069,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner denuncia = (Spinner) findViewById(R.id.sDenunciariaAcosoSexualG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         denuncia.setAdapter(adapter);
         denuncia.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -1098,7 +1098,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner genero = (Spinner) findViewById(R.id.sMujerViolenciaGeneroG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.acosoMujerResponsableG,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         genero.setAdapter(adapter);
         genero.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -1118,7 +1118,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner experiencia = (Spinner) findViewById(R.id.sExperienciaViolenciaGeneroG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.asedioSexualG,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         experiencia.setAdapter(adapter);
         experiencia.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -1138,7 +1138,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner votaria = (Spinner) findViewById(R.id.sVotariaMujerG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         votaria.setAdapter(adapter);
         votaria.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -1158,7 +1158,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner desistio = (Spinner) findViewById(R.id.sDesistioDenunciaG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         desistio.setAdapter(adapter);
         desistio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -1178,7 +1178,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner familiar = (Spinner) findViewById(R.id.sViolenciaGeneroFamiliarG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         familiar.setAdapter(adapter);
         familiar.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -1198,7 +1198,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner pareja = (Spinner) findViewById(R.id.sViolenciaGeneroParejaG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         pareja.setAdapter(adapter);
         pareja.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -1218,7 +1218,7 @@ public class Genero extends AppCompatActivity {
     {
         Spinner igual = (Spinner) findViewById(R.id.sTratoIgualHombreG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNoInformacion,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         igual.setAdapter(adapter);
         igual.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
