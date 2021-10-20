@@ -1,8 +1,12 @@
 package com.example.sanandrescustionario;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
@@ -10,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.sanandrescustionario.Manager.MGenero;
 import com.example.sanandrescustionario.usuarios.GeneroUsuario;
@@ -161,6 +166,367 @@ public class Genero extends AppCompatActivity {
             gU.g_esOtro = "No";
         }
 
+        editText = (EditText) findViewById(R.id.eCuantasVivenTuHogarG);
+        if(editText.getText().toString().isEmpty())
+        {
+            gU.g_vivenTuHogar=0;
+        }
+        else
+        {
+            gU.g_vivenTuHogar= Integer.parseInt(editText.getText().toString());
+        }
+        editText = (EditText) findViewById(R.id.eETrabajaG);
+        gU.g_dondeTrabaja = editText.getText().toString();
+        editText = (EditText) findViewById(R.id.eSinoTrabajaG);
+        gU.g_sinoTrabaja = editText.getText().toString();
+        if (findViewById(R.id.eAlimentosG).getVisibility()== View.VISIBLE)
+        {
+            editText = (EditText) findViewById(R.id.eAlimentosG);
+            if (editText.getText().toString().isEmpty())
+            {
+                gU.g_trabajaManejoAlimentos= "Otro";
+            }
+            else
+            {
+                gU.g_trabajaManejoAlimentos= editText.getText().toString();
+            }
+        }
+        editText =(EditText) findViewById(R.id.eTemaGeneroG);
+        gU.g_temaGenero= editText.getText().toString();
+
+        if (findViewById(R.id.eViolenciaMujerG).getVisibility()== View.VISIBLE)
+        {
+            editText = (EditText) findViewById(R.id.eViolenciaMujerG);
+            gU.g_situacionViolencia=editText.getText().toString();
+        }
+
+        if (findViewById(R.id.eOpinionPiropoG).getVisibility()== View.VISIBLE)
+        {
+            editText = (EditText) findViewById(R.id.eOpinionPiropoG);
+            if (editText.getText().toString().isEmpty())
+            {
+                gU.g_quePiropo= "Otro";
+            }
+            else
+            {
+                gU.g_quePiropo= editText.getText().toString();
+            }
+        }
+
+        checkBox=(CheckBox) findViewById(R.id.fComentarioAparienciaG);
+        if (checkBox.isChecked())
+        {
+            gU.g_fComentarioApariencia="Si";
+        }
+        else
+        {
+            gU.g_fComentarioApariencia="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.fComentarioAparienciaCuerpoG));
+        if (checkBox.isChecked())
+        {
+            gU.g_fComentarioAparienciaCuerpo="Si";
+        }
+        else
+        {
+            gU.g_fComentarioAparienciaCuerpo="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.fComentarioVestirmeG));
+        if (checkBox.isChecked())
+        {
+            gU.g_fComentarioVestirme="Si";
+        }
+        else
+        {
+            gU.g_fComentarioVestirme="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.fSilbidosG));
+        if (checkBox.isChecked())
+        {
+            gU.g_fSilbidos="Si";
+        }
+        else
+        {
+            gU.g_fSilbidos="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.fMiradasSexualesG));
+        if (checkBox.isChecked())
+        {
+            gU.g_fMiradasSexuales="Si";
+        }
+        else
+        {
+            gU.g_fMiradasSexuales="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.fPalabrasObsenasG));
+        if (checkBox.isChecked())
+        {
+            gU.g_fPalabrasObsenas="Si";
+        }
+        else
+        {
+            gU.g_fPalabrasObsenas="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.fGestosSexualG));
+        if (checkBox.isChecked())
+        {
+            gU.g_fGestoSexual="Si";
+        }
+        else
+        {
+            gU.g_fGestoSexual="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.fTocamientosG));
+        if (checkBox.isChecked())
+        {
+            gU.g_fTocamientos="Si";
+        }
+        else
+        {
+            gU.g_fTocamientos="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.fFavorSexualG));
+        if (checkBox.isChecked())
+        {
+            gU.g_fFavorSexual="Si";
+        }
+        else
+        {
+            gU.g_fFavorSexual="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.fCitaAfueraG));
+        if (checkBox.isChecked())
+        {
+            gU.g_fCitaFuera="Si";
+        }
+        else
+        {
+            gU.g_fCitaFuera="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.fInsultoSexualG));
+        if (checkBox.isChecked())
+        {
+            gU.g_fInsultoSexual="Si";
+        }
+        else
+        {
+            gU.g_fInsultoSexual="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.fMiradasOfensivasG));
+        if (checkBox.isChecked())
+        {
+            gU.g_fMiradaOfensiva="Si";
+        }
+        else
+        {
+            gU.g_fMiradaOfensiva="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.fAmenzaSexualG));
+        if (checkBox.isChecked())
+        {
+            gU.g_fAmenazaSexual="Si";
+        }
+        else
+        {
+            gU.g_fAmenazaSexual="No";
+        }
+
+        if(findViewById(R.id.eDenunciariaAcosoSexualG).getVisibility()== View.VISIBLE)
+        {
+            editText= (EditText) findViewById(R.id.eDenunciariaAcosoSexualG);
+            gU.g_victimaPorque= editText.getText().toString();
+        }
+        else
+        {
+            gU.g_victimaPorque="";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.cComentarioAparienciaG));
+        if (checkBox.isChecked())
+        {
+            gU.g_cComentarioApariencia="Si";
+        }
+        else
+        {
+            gU.g_cComentarioApariencia="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.cComentarioAparienciaCuerpoG));
+        if (checkBox.isChecked())
+        {
+            gU.g_cComentarioAparienciaCuerpo="Si";
+        }
+        else
+        {
+            gU.g_cComentarioAparienciaCuerpo="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.cComentarioVestirmeG));
+        if (checkBox.isChecked())
+        {
+            gU.g_cComentarioVestirme="Si";
+        }
+        else
+        {
+            gU.g_cComentarioVestirme="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.cSilbidosG));
+        if (checkBox.isChecked())
+        {
+            gU.g_cSilbidos="Si";
+        }
+        else
+        {
+            gU.g_cSilbidos="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.cMiradasSexualesG));
+        if (checkBox.isChecked())
+        {
+            gU.g_cMiradasSexuales="Si";
+        }
+        else
+        {
+            gU.g_cMiradasSexuales="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.cPalabrasObsenasG));
+        if (checkBox.isChecked())
+        {
+            gU.g_cPalabrasObsenas="Si";
+        }
+        else
+        {
+            gU.g_cPalabrasObsenas="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.cGestosSexualG));
+        if (checkBox.isChecked())
+        {
+            gU.g_cGestoSexual="Si";
+        }
+        else
+        {
+            gU.g_cGestoSexual="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.cTocamientosG));
+        if (checkBox.isChecked())
+        {
+            gU.g_cTocamientos="Si";
+        }
+        else
+        {
+            gU.g_cTocamientos="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.cFavorSexualG));
+        if (checkBox.isChecked())
+        {
+            gU.g_cFavorSexual="Si";
+        }
+        else
+        {
+            gU.g_cFavorSexual="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.cCitaAfueraG));
+        if (checkBox.isChecked())
+        {
+            gU.g_cCitaFuera="Si";
+        }
+        else
+        {
+            gU.g_cCitaFuera="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.cInsultoSexualG));
+        if (checkBox.isChecked())
+        {
+            gU.g_cInsultoSexual="Si";
+        }
+        else
+        {
+            gU.g_cInsultoSexual="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.cMiradasOfensivasG));
+        if (checkBox.isChecked())
+        {
+            gU.g_cMiradaOfensiva="Si";
+        }
+        else
+        {
+            gU.g_cMiradaOfensiva="No";
+        }
+
+        checkBox= (CheckBox) findViewById((R.id.cAmenzaSexualG));
+        if (checkBox.isChecked())
+        {
+            gU.g_cAmenazaSexual="Si";
+        }
+        else
+        {
+            gU.g_cAmenazaSexual="No";
+        }
+
+        editText = (EditText) findViewById(R.id.eMujerViolenciaGeneroG);
+        gU.g_porqueViolenciaGenero=editText.getText().toString();
+
+        editText = (EditText) findViewById(R.id.eMiedoMujerG);
+        gU.g_miedoMujer= editText.getText().toString();
+
+        editText = (EditText) findViewById(R.id.eComentarioG);
+        gU.g_comentarios=editText.getText().toString();
+    }
+
+    public void crearGenero(View view)
+    {
+        if (view.getId() == R.id.guardarFormG)
+        {
+            mensajeFinalizarCuestionario();
+        }
+    }
+
+    private void mensajeFinalizarCuestionario()
+    {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setMessage("¿Finalizar el cuestionario?")
+                .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        objetoGeneroUsuario();
+                        managerGenero.open();
+                        long id = managerGenero.crearGenero(gU);
+                        if (id!=-1){
+                            Toast.makeText(Genero.this, "Agregado exitosamente", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(Genero.this, MainActivity.class);
+                            startActivity(intent);
+                        } else{
+                            Toast.makeText(Genero.this, "Error al ingresar al habitante de la calle", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                })
+        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        alertDialog.show();
     }
 
     private void spinnerSexo()
@@ -185,7 +551,7 @@ public class Genero extends AppCompatActivity {
 
     private void spinnerEstadoCivil()
     {
-        Spinner estadoCivil = (Spinner) findViewById(R.id.sSexoG);
+        Spinner estadoCivil = (Spinner) findViewById(R.id.sEstadoCivilG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.estadoCivil,
                 android.R.layout.simple_spinner_item);
         estadoCivil.setAdapter(adapter);
@@ -312,7 +678,7 @@ public class Genero extends AppCompatActivity {
 
     private void spinnerTieneHijos()
     {
-        Spinner tieneHijos = (Spinner) findViewById(R.id.sQuienViveG);
+        Spinner tieneHijos = (Spinner) findViewById(R.id.sTienesHijoG);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.tieneHijos,
                 android.R.layout.simple_spinner_item);
         tieneHijos.setAdapter(adapter);
@@ -327,8 +693,572 @@ public class Genero extends AppCompatActivity {
                 gU.g_tienesHijos="";
             }
         });
+        spinnerNivelEscolaridad();
+    }
+
+    private void spinnerNivelEscolaridad()
+    {
+        Spinner nivelEscolaridad = (Spinner) findViewById(R.id.sNivelEscolaridadG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.nivelEscolaridad,
+                android.R.layout.simple_spinner_item);
+        nivelEscolaridad.setAdapter(adapter);
+        nivelEscolaridad.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_nivelEscolaridad= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_nivelEscolaridad="";
+            }
+        });
+        spinnerEstaTrabajando();
+    }
+
+    private void spinnerEstaTrabajando()
+    {
+        Spinner estaTrabajando = (Spinner) findViewById(R.id.sTrabajandoG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        estaTrabajando.setAdapter(adapter);
+        estaTrabajando.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_actualmenteTrabaja= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_actualmenteTrabaja="";
+            }
+        });
+        spinnerTrabajaArtesania();
+    }
+
+    private void spinnerTrabajaArtesania()
+    {
+        Spinner artesania = (Spinner) findViewById(R.id.sArtesaniaG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        artesania.setAdapter(adapter);
+        artesania.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_trabajaArtesania= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_trabajaArtesania="";
+            }
+        });
+        spinnerTrabajaComercio();
+    }
+
+    private void spinnerTrabajaComercio()
+    {
+        Spinner comercio = (Spinner) findViewById(R.id.sTComercioG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        comercio.setAdapter(adapter);
+        comercio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_trabajaComercio= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_trabajaComercio="";
+            }
+        });
+        spinnerTrabajaTurismo();
+    }
+
+    private void spinnerTrabajaTurismo()
+    {
+        Spinner turismo = (Spinner) findViewById(R.id.sTTurismoG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        turismo.setAdapter(adapter);
+        turismo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_trabajaTurismo= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_trabajaTurismo="";
+            }
+        });
+        spinnerManejoAlimento();
+    }
+
+    private void spinnerManejoAlimento()
+    {
+        Spinner manejoAlimento = (Spinner) findViewById(R.id.sAlimentosG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNoOtro,
+                android.R.layout.simple_spinner_item);
+        manejoAlimento.setAdapter(adapter);
+        manejoAlimento.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String manejoAlimentoSeleccionado = parent.getItemAtPosition(position).toString();
+                gU.g_trabajaManejoAlimentos= parent.getItemAtPosition(position).toString();
+                if (manejoAlimentoSeleccionado.equals("OTRO"))
+                {
+                    findViewById(R.id.eAlimentosG).setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    findViewById(R.id.eAlimentosG).setVisibility(View.GONE);
+
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_trabajaManejoAlimentos="";
+            }
+        });
+        spinnerIngresoLaboral();
+    }
+
+    private void spinnerIngresoLaboral()
+    {
+        Spinner ingresoLaboral = (Spinner) findViewById(R.id.sIngresoLaboralG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.ingresoLaboralAproximadoL,
+                android.R.layout.simple_spinner_item);
+        ingresoLaboral.setAdapter(adapter);
+        ingresoLaboral.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_ingresoLaboral= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_ingresoLaboral="";
+            }
+        });
+        spinnerIngresoLaboralFamiliar();
+    }
+
+    private void spinnerIngresoLaboralFamiliar()
+    {
+        Spinner spinnerIngresoLaboralFamiliar = (Spinner) findViewById(R.id.sIngresoLaboraFamiliarlG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.ingresoUnidadFamiliarL,
+                android.R.layout.simple_spinner_item);
+        spinnerIngresoLaboralFamiliar.setAdapter(adapter);
+        spinnerIngresoLaboralFamiliar.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_ingresoFamiliar= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_ingresoFamiliar="";
+            }
+        });
+        spinnerOrientacionPolitica();
+    }
+
+    private void spinnerOrientacionPolitica()
+    {
+        Spinner orientacionPolitica = (Spinner) findViewById(R.id.sOrientacionPoliticaG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.orientacionPolitica,
+                android.R.layout.simple_spinner_item);
+        orientacionPolitica.setAdapter(adapter);
+        orientacionPolitica.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_orientacionPolitica= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_orientacionPolitica="";
+            }
+        });
+        spinnerViolenciaSerMujer();
+    }
+
+    private void spinnerViolenciaSerMujer()
+    {
+        Spinner violenciaMujer = (Spinner) findViewById(R.id.sViolenciaMujerG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        violenciaMujer.setAdapter(adapter);
+        violenciaMujer.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String seleccionViolenciaMujer = parent.getItemAtPosition(position).toString();
+                gU.g_violenciaMujer= parent.getItemAtPosition(position).toString();
+                if (seleccionViolenciaMujer.equals("Si"))
+                {
+                    findViewById(R.id.eViolenciaMujerG).setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    findViewById(R.id.eViolenciaMujerG).setVisibility(View.GONE);
+                    gU.g_situacionViolencia="";
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_violenciaMujer="";
+            }
+        });
+        spinnerOpinionPiropo();
+    }
+
+    private void spinnerOpinionPiropo()
+    {
+        Spinner opinionPiropo = (Spinner) findViewById(R.id.sOpinionPiropoG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.quePiropo,
+                android.R.layout.simple_spinner_item);
+        opinionPiropo.setAdapter(adapter);
+        opinionPiropo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String quePiropo = parent.getItemAtPosition(position).toString();
+                gU.g_quePiropo= parent.getItemAtPosition(position).toString();
+                if (quePiropo.equals("Otro"))
+                {
+                    findViewById(R.id.eOpinionPiropoG).setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    findViewById(R.id.eOpinionPiropoG).setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_quePiropo="";
+            }
+        });
+        spinnerOpinionAcoso();
+    }
+
+    private void spinnerOpinionAcoso()
+    {
+        Spinner acoso = (Spinner) findViewById(R.id.sOpinionAcosoG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.opinionAcoso,
+                android.R.layout.simple_spinner_item);
+        acoso.setAdapter(adapter);
+        acoso.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_opinionAcoso= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_opinionAcoso="";
+            }
+        });
+        spinnerMujerAcoso();
+    }
+
+    private void spinnerMujerAcoso()
+    {
+        Spinner acoso = (Spinner) findViewById(R.id.sAcosoContraMujerG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.acosoMujerG,
+                android.R.layout.simple_spinner_item);
+        acoso.setAdapter(adapter);
+        acoso.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_acosoSexual= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_acosoSexual="";
+            }
+        });
+        spinnerMujeResponsablerAcoso();
+    }
+
+    private void spinnerMujeResponsablerAcoso()
+    {
+        Spinner responsable = (Spinner) findViewById(R.id.sMujerResponsableAcosoG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.acosoMujerResponsableG,
+                android.R.layout.simple_spinner_item);
+        responsable.setAdapter(adapter);
+        responsable.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_mujerResponsable= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_mujerResponsable="";
+            }
+        });
+        spinnerAsedioSexual();
+    }
+
+    private void spinnerAsedioSexual()
+    {
+        Spinner asedio = (Spinner) findViewById(R.id.sAsedioSexualG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.asedioSexualG,
+                android.R.layout.simple_spinner_item);
+        asedio.setAdapter(adapter);
+        asedio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_asedioSexual= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_asedioSexual="";
+            }
+        });
+        spinnerActitudVida();
+    }
+
+    private void spinnerActitudVida()
+    {
+        Spinner actitud = (Spinner) findViewById(R.id.sActitudesVidaG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.actitudesVidaG,
+                android.R.layout.simple_spinner_item);
+        actitud.setAdapter(adapter);
+        actitud.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_actitudesVida= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_actitudesVida="";
+            }
+        });
+        spinnerMecanismoLegal();
+    }
+
+    private void spinnerMecanismoLegal()
+    {
+        Spinner legal = (Spinner) findViewById(R.id.sMecanismoLegalG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.mecanismoLegalG,
+                android.R.layout.simple_spinner_item);
+        legal.setAdapter(adapter);
+        legal.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_mecanismoLegal= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_mecanismoLegal="";
+            }
+        });
+        spinnerDenunciaAcoso();
+    }
+
+    private void spinnerDenunciaAcoso()
+    {
+        Spinner denuncia = (Spinner) findViewById(R.id.sDenunciariaAcosoSexualG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        denuncia.setAdapter(adapter);
+        denuncia.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String eleccionDenuncia= parent.getItemAtPosition(position).toString();
+                gU.g_victimaAcoso= eleccionDenuncia;
+                if(eleccionDenuncia.equals("No"))
+                {
+                    findViewById(R.id.eDenunciariaAcosoSexualG).setVisibility(View.VISIBLE);
+                }else
+                {
+                    findViewById(R.id.eDenunciariaAcosoSexualG).setVisibility(View.GONE);
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_victimaAcoso="";
+            }
+        });
+        spinnerViolenciaGeneroMujer();
+    }
+
+    private void spinnerViolenciaGeneroMujer()
+    {
+        Spinner genero = (Spinner) findViewById(R.id.sMujerViolenciaGeneroG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.acosoMujerResponsableG,
+                android.R.layout.simple_spinner_item);
+        genero.setAdapter(adapter);
+        genero.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_violenciaGenero= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_violenciaGenero="";
+            }
+        });
+        spinnerExperienciaViolenciaGenero();
+    }
+
+    private void spinnerExperienciaViolenciaGenero()
+    {
+        Spinner experiencia = (Spinner) findViewById(R.id.sExperienciaViolenciaGeneroG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.asedioSexualG,
+                android.R.layout.simple_spinner_item);
+        experiencia.setAdapter(adapter);
+        experiencia.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_experienciaViolenciaGenero= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_experienciaViolenciaGenero="";
+            }
+        });
+        spinnerVotariaMujer();
+    }
+
+    private void spinnerVotariaMujer()
+    {
+        Spinner votaria = (Spinner) findViewById(R.id.sVotariaMujerG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        votaria.setAdapter(adapter);
+        votaria.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_votariaMujer= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_votariaMujer="";
+            }
+        });
+        spinnerDesistioDenuncia();
+    }
+
+    private void spinnerDesistioDenuncia()
+    {
+        Spinner desistio = (Spinner) findViewById(R.id.sDesistioDenunciaG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        desistio.setAdapter(adapter);
+        desistio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_desistioDenuncia= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_desistioDenuncia="";
+            }
+        });
+        spinnerViolenciaFamiliar();
+    }
+
+    private void spinnerViolenciaFamiliar()
+    {
+        Spinner familiar = (Spinner) findViewById(R.id.sViolenciaGeneroFamiliarG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        familiar.setAdapter(adapter);
+        familiar.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_violenciaFamiliar= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_violenciaFamiliar="";
+            }
+        });
+        spinnerViolenciaPareja();
+    }
+
+    private void spinnerViolenciaPareja()
+    {
+        Spinner pareja = (Spinner) findViewById(R.id.sViolenciaGeneroParejaG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                android.R.layout.simple_spinner_item);
+        pareja.setAdapter(adapter);
+        pareja.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_violenciaPareja= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_violenciaPareja="";
+            }
+        });
+        spinnerTratoIgualHombre();
+    }
+
+    private void spinnerTratoIgualHombre()
+    {
+        Spinner igual = (Spinner) findViewById(R.id.sTratoIgualHombreG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNoInformacion,
+                android.R.layout.simple_spinner_item);
+        igual.setAdapter(adapter);
+        igual.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                gU.g_mismoTrato= parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_mismoTrato="";
+            }
+        });
 
     }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == event.KEYCODE_BACK){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("¿Desea cancelar la creación del cuestionario?")
+                    .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(Genero.this, MainActivity.class);
+                            startActivity(intent);
+                        }
+                    })
+                    .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+            builder.show();
+        }
+        return super.onKeyDown(keyCode, event);
+
+    }
+
+
 
     public void mostrarCampoOtroRolFamilia(View view)
     {

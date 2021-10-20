@@ -112,4 +112,7 @@
     <string name="lPregunta17">17) Cuales políticas públicas hacen falta para el colectivo LGBTQI+ en su opinión?</string>
     <string name="lPregunta18">18) Hay alguna otra información que no le fue preguntada y que Ud le gustaría de comentar?</string>
     <string name="LGBTQIEncuestados">Número LGBTQI+ encuestados:</string>
+    <string name="GeneroEncuestados">Número encuestado en Genero:</string>
+
+    <string name="temaGeneroG">Como Ud percibe el tema de género? </string>
 </resources>

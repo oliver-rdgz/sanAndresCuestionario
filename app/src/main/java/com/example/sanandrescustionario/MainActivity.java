@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.sanandrescustionario.Manager.MGenero;
 import com.example.sanandrescustionario.Manager.MHabitantesCalles;
 import com.example.sanandrescustionario.Manager.DBmanagerPoblacionLGBTIQ;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private Button cancelar;
     private MHabitantesCalles managerHabitantes;
     private DBmanagerPoblacionLGBTIQ managerLgtbi;
+    private MGenero managerGenero;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         managerHabitantes = new MHabitantesCalles(this);
         managerLgtbi = new DBmanagerPoblacionLGBTIQ(this);
+        managerGenero = new MGenero(this);
         inicializarComponentes();
         eventoAgregarCuestionario();
         obtenerHabitantesEncustados();
@@ -88,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void obtenerHabitantesEncustados()
     {
-
         managerHabitantes.open();
         Cursor cursor = managerHabitantes.getHabitante();
         TextView encuestados = (TextView) findViewById(R.id.numeroHabitantesEncuestadosM);
@@ -101,6 +103,15 @@ public class MainActivity extends AppCompatActivity {
         managerLgtbi.open();
         Cursor cursor = managerLgtbi.getLGBT();
         TextView encuestados = (TextView) findViewById(R.id.numeroLgtbiM);
+        encuestados.setText(cursor.getCount()+"");
+        obtenerGeneroEncuestados();
+    }
+
+    private void obtenerGeneroEncuestados()
+    {
+        managerGenero.open();
+        Cursor cursor = managerGenero.getGenero();
+        TextView encuestados = (TextView) findViewById(R.id.numeroGeneroM);
         encuestados.setText(cursor.getCount()+"");
     }
 

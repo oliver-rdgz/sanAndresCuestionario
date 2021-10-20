@@ -659,7 +659,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:labelFor="@id/eTemaGeneroG"
-            android:text="@string/procedencia"
+            android:text="@string/temaGeneroG"
             android:textSize="20sp" />
 
         <EditText
@@ -989,7 +989,7 @@
             android:minHeight="48dp" />
 
         <EditText
-            android:id="@+id/eDenunciariaAcosoSexualH"
+            android:id="@+id/eDenunciariaAcosoSexualG"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -1146,7 +1146,7 @@
             android:inputType="textMultiLine"
             android:maxLines="5"
             android:minHeight="48dp"
-            android:visibility="gone" />
+            />
 
         <TextView
             android:id="@+id/lExperienciaViolenciaGeneroG"
@@ -1315,6 +1315,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
+            android:onClick="crearGenero"
             android:text="@string/guardar" />
 
 

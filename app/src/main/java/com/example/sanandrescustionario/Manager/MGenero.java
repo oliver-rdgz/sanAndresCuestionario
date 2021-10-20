@@ -2,6 +2,7 @@ package com.example.sanandrescustionario.Manager;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -104,5 +105,9 @@ public class MGenero {
 
     public  void  close(){ dbCuestionario.close();}
     public void open() throws SQLException { database=dbCuestionario.getWritableDatabase();}
+    public Cursor getGenero(){
+        Cursor cursor=database.query(SQLITECuestionario.T_genero, all_columns,null,null,null,null,null);
+        return cursor;
+    }
 
 }
