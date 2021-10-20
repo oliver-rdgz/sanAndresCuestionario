@@ -2,13 +2,14 @@
 <resources>
 
     <string-array name="sexoL">
-        <item></item>
+        <item>Seleccione una opción</item>
         <item>Masculino</item>
         <item>Femenino</item>
         <item>Sin especificar</item>
     </string-array>
 
     <string-array name="estadoCivilL">
+        <item>Seleccione una opción</item>
         <item>Soltero</item>
         <item>Casado</item>
         <item>Viudo</item>
@@ -17,6 +18,7 @@
     </string-array>
 
     <string-array name="generoL">
+        <item>Seleccione una opción</item>
         <item>Masculino cis</item>
         <item>Femenino cis</item>
         <item>Masculino trans</item>
@@ -26,6 +28,7 @@
     </string-array>
 
     <string-array name="religionL">
+        <item>Seleccione una opción</item>
         <item>Católica</item>
         <item>Cristiana/Presbiteriana</item>
         <item>Batista</item>
@@ -34,12 +37,14 @@
     </string-array>
 
     <string-array name="grupoEtnicoL">
+        <item>Seleccione una opción</item>
         <item>Continental</item>
         <item>Raízales</item>
         <item>Otro</item>
     </string-array>
 
     <string-array name="conQuienViveL">
+        <item>Seleccione una opción</item>
         <item>Solo</item>
         <item>Con pareja</item>
         <item>Con familia</item>
@@ -48,11 +53,13 @@
     </string-array>
 
     <string-array name="tieneHijosL">
+        <item>Seleccione una opción</item>
         <item>Si</item>
         <item>No</item>
     </string-array>
 
     <string-array name="nivelEscolaridadL">
+        <item>Seleccione una opción</item>
         <item>Ninguno</item>
         <item>Primaria</item>
         <item>Secundaria</item>
@@ -62,38 +69,38 @@
     </string-array>
 
     <string-array name="estaTrabajandoL">
-        <item></item>
+        <item>Seleccione una opción</item>
         <item>Si</item>
         <item>No</item>
     </string-array>
 
     <string-array name="trabajaConArtesaniaL">
-        <item></item>
+        <item>Seleccione una opción</item>
         <item>Si</item>
         <item>No</item>
     </string-array>
 
     <string-array name="trabajaConComercioL">
-        <item></item>
+        <item>Seleccione una opción</item>
         <item>Si</item>
         <item>No</item>
     </string-array>
 
     <string-array name="trabajaConTurismoL">
-        <item></item>
+        <item>Seleccione una opción</item>
         <item>Si</item>
         <item>No</item>
     </string-array>
 
     <string-array name="trabajaConActManejoVentaAlimentosL">
-        <item></item>
+        <item>Seleccione una opción</item>
         <item>Si</item>
         <item>No</item>
         <item>Otro</item>
     </string-array>
 
     <string-array name="ingresoLaboralAproximadoL">
-        <item></item>
+        <item>Seleccione una opción</item>
         <item>Menos de un salario mínimo</item>
         <item>Un salario mínimo</item>
         <item>De dos a cuatro salarios mínimos</item>
@@ -102,7 +109,7 @@
     </string-array>
 
     <string-array name="ingresoUnidadFamiliarL">
-        <item></item>
+        <item>Seleccione una opción</item>
         <item>Un salario mínimo</item>
         <item>Menos de un salario mínimo</item>
         <item>De dos a cuatro salarios mínimos </item>
@@ -111,6 +118,7 @@
     </string-array>
 
     <string-array name="orientacionPoliticaL">
+        <item>Seleccione una opción</item>
         <item>Derecha</item>
         <item>Centro</item>
         <item>Izquierda</item>
@@ -119,44 +127,44 @@
     </string-array>
 
     <string-array name="valoresPregunta1L">
-        <item></item>
+        <item>Seleccione una opción</item>
         <item>Si</item>
         <item>No</item>
     </string-array>
 
     <string-array name="valoresPregunta3L">
-        <item></item>
+        <item>Seleccione una opción</item>
         <item>Si</item>
         <item>No</item>
         <item>Un poco</item>
     </string-array>
 
     <string-array name="valoresPregunta4L">
-        <item></item>
+        <item>Seleccione una opción</item>
         <item>Si</item>
         <item>No</item>
     </string-array>
 
     <string-array name="valoresPregunta7L">
-        <item></item>
+        <item>Seleccione una opción</item>
         <item>Si</item>
         <item>No</item>
     </string-array>
 
     <string-array name="valoresPregunta8L">
-        <item></item>
+        <item>Seleccione una opción</item>
         <item>Si</item>
         <item>No</item>
     </string-array>
 
     <string-array name="valoresPregunta9L">
-        <item></item>
+        <item>Seleccione una opción</item>
         <item>Si</item>
         <item>No</item>
     </string-array>
 
     <string-array name="valoresPregunta11L">
-        <item></item>
+        <item>Seleccione una opción</item>
         <item>Le gritaron, amenazaron y/o hostigaron</item>
         <item>Le obligaron a cambiar la apariencia</item>
         <item>Expulsaron/Negaron la entrada a un espacio público</item>
@@ -168,19 +176,19 @@
     </string-array>
 
     <string-array name="valoresPregunta13L">
-        <item></item>
+        <item>Seleccione una opción</item>
         <item>Si</item>
         <item>No</item>
     </string-array>
 
     <string-array name="valoresPregunta14L">
-        <item></item>
+        <item>Seleccione una opción</item>
         <item>Si</item>
         <item>No</item>
     </string-array>
 
     <string-array name="valoresPregunta15L">
-        <item></item>
+        <item>Seleccione una opción</item>
         <item>Si</item>
         <item>No</item>
     </string-array>
