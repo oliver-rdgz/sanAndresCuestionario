@@ -25,8 +25,6 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                      et_orientacionSexual, et_razonesNoExpresar, et_quienesFamiliares, et_reaccionFamiliar, et_situacionesDescritas, et_porQueDenunciasResuelven,
                      et_sanAndresApoyo, et_politicasPublicas, et_comentar;
 
-    //private int etCuantosHijos;
-
     public String sexoSt, estadoCivilSt, generoSt, religionSt, grupoEtnicoSt, conQuienViveSt, tieneHijosSt,
                   nivelDeEscolaridadSt, estaTrabajandoSt, trabajaArtesaniaSt, trabajaComercioSt, trabajaTurismoSt, trabajaVentaManejoAlimentosSt,
                   ingresoLaboralAproSt, ingresoUnidadFamiliarSt, orientacionPoliticaSt, pregunta1St, pregunta3St, pregunta4St, pregunta7St, pregunta8St,
@@ -34,13 +32,12 @@ public class poblacionLGBTIQ extends AppCompatActivity {
 
     public Spinner sexoSp;
 
-    //boolean generoBoo, religionBoo, grupoEtnicoBoo, tieneHijosBoo, trabajaManevoVentaAliBoo, pregunta5Boo, pregunta8Boo, pregunta9Boo, pregunta14Boo;
+    boolean generoBoo, religionBoo, grupoEtnicoBoo, tieneHijosBoo, trabajaManevoVentaAliBoo, pregunta5Boo, pregunta8Boo, pregunta9Boo, pregunta14Boo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cuestionario_poblacion_lgbtiq);
-        //dbManager = new DBManagerComunidadLgbt(getApplicationContext(), "Cuestionario_SanAndres", null, 1);
         dbManager = new DBmanagerPoblacionLGBTIQ(this);
 
         et_nombre = (EditText)findViewById(R.id.editTextNombreL);
@@ -97,6 +94,31 @@ public class poblacionLGBTIQ extends AppCompatActivity {
         String politicasPublicas = et_politicasPublicas.getText().toString();
         String comentar = et_comentar.getText().toString();
 
+        boolean validacionNormal = false;
+        boolean validacionDeotros = false;
+
+        String validar = "Seleccione una opción";
+
+        if(generoBoo == true && otroGenero.equals("") || religionBoo == true && otraReligion.equals("") || grupoEtnicoBoo == true && otroGrupoEC.equals("") ||
+           tieneHijosBoo == true && cuantosHijos.equals("") || trabajaManevoVentaAliBoo == true && otroTrabajoManejoAlimentos.equals("") ||
+           pregunta5Boo == true && casosSufridos.equals("") || pregunta8Boo == true && razonesNoExpresar.equals("")  || pregunta9Boo == true && quienesFamiliares.equals("")
+           || pregunta14Boo == true && porQueDenunciasResuelven.equals("")){
+            validacionDeotros = true;
+        }
+
+        if(nombre.equals("") || identificacion.equals("") || edad.equals("") ||
+           procedencia.equals("") || dondeVive.equals("")  || cuantasVivenHogar.equals("") || dondeTrabaja.equals("") || sinoTrabaja.equals("") ||
+                organizacionLGBTQI.equals("") || orientacionSexual.equals("") || reaccionFamiliar.equals("") || situacionesDescritas.equals("") || sanAndresApoyo.equals("")
+                || politicasPublicas.equals("") || comentar.equals("") || sexoSt.equals(validar) || estadoCivilSt.equals(validar) || generoSt.equals(validar)
+                || religionSt.equals(validar) || grupoEtnicoSt.equals(validar) || conQuienViveSt.equals(validar) || tieneHijosSt.equals(validar) || nivelDeEscolaridadSt.equals(validar) ||
+                estaTrabajandoSt.equals(validar) || trabajaArtesaniaSt.equals(validar) || trabajaComercioSt.equals(validar) || trabajaTurismoSt.equals(validar) || trabajaVentaManejoAlimentosSt.equals(validar)
+                || ingresoLaboralAproSt.equals(validar) || ingresoUnidadFamiliarSt.equals(validar) || orientacionPoliticaSt.equals(validar) || pregunta1St.equals(validar) ||
+                pregunta3St.equals(validar) || pregunta4St.equals(validar) || pregunta7St.equals(validar) || pregunta8St.equals(validar) || pregunta9St.equals(validar) ||
+                pregunta11St.equals(validar) || pregunta13St.equals(validar) || pregunta14St.equals(validar) || pregunta15St.equals(validar)
+           ){
+            validacionNormal = true;
+        }
+
         if(identificacion.equals("")){
             identificacion = "0";
         }
@@ -118,29 +140,27 @@ public class poblacionLGBTIQ extends AppCompatActivity {
         int cuantosHijosInt = Integer.parseInt(cuantosHijos);
         int cuantasVivenHogarInt = Integer.parseInt(cuantasVivenHogar);
 
-        dbManager.open();
-        dbManager.GuardarCuestionario(nombre, idInt, edadInt, sexoSt, estadoCivilSt, generoSt, otroGenero, religionSt, otraReligion, grupoEtnicoSt, otroGrupoEC,
-                                      procedencia, dondeVive, conQuienViveSt, tieneHijosSt, cuantosHijosInt, cuantasVivenHogarInt, nivelDeEscolaridadSt, estaTrabajandoSt,
-                                      dondeTrabaja, sinoTrabaja, trabajaArtesaniaSt, trabajaComercioSt, trabajaTurismoSt, trabajaVentaManejoAlimentosSt, otroTrabajoManejoAlimentos,
-                                      ingresoLaboralAproSt, ingresoUnidadFamiliarSt, orientacionPoliticaSt, pregunta1St, organizacionLGBTQI, pregunta3St, pregunta4St, casosSufridos,
-                                      orientacionSexual, pregunta7St, pregunta8St, razonesNoExpresar, pregunta9St, quienesFamiliares, reaccionFamiliar, pregunta11St, situacionesDescritas,
-                                      pregunta13St, pregunta14St, porQueDenunciasResuelven, pregunta15St, sanAndresApoyo, politicasPublicas, comentar);
 
-        Toast.makeText(this,"Guardado correctamente", Toast.LENGTH_SHORT).show();
-    }
+        if( validacionNormal == false && validacionDeotros == false){
+            dbManager.open();
+            dbManager.GuardarCuestionario(nombre, idInt, edadInt, sexoSt, estadoCivilSt, generoSt, otroGenero, religionSt, otraReligion, grupoEtnicoSt, otroGrupoEC,
+                    procedencia, dondeVive, conQuienViveSt, tieneHijosSt, cuantosHijosInt, cuantasVivenHogarInt, nivelDeEscolaridadSt, estaTrabajandoSt,
+                    dondeTrabaja, sinoTrabaja, trabajaArtesaniaSt, trabajaComercioSt, trabajaTurismoSt, trabajaVentaManejoAlimentosSt, otroTrabajoManejoAlimentos,
+                    ingresoLaboralAproSt, ingresoUnidadFamiliarSt, orientacionPoliticaSt, pregunta1St, organizacionLGBTQI, pregunta3St, pregunta4St, casosSufridos,
+                    orientacionSexual, pregunta7St, pregunta8St, razonesNoExpresar, pregunta9St, quienesFamiliares, reaccionFamiliar, pregunta11St, situacionesDescritas,
+                    pregunta13St, pregunta14St, porQueDenunciasResuelven, pregunta15St, sanAndresApoyo, politicasPublicas, comentar);
 
-    public void validarEnvio(){
-        //if(generoBoo == false){
-        //    String genero = et_otroGenero.getText().toString();
-        //    generoSt = genero;
-        //}
+            Toast.makeText(this,"Guardado correctamente" + validacionDeotros, Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this,"Verifique que ningún campo del formulario este vacío", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void spinnerSexo()
     {
         sexoSp = (Spinner) findViewById(R.id.sSexoL);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.sexoL,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         sexoSp.setAdapter(adapter);
         //Esto se dispara cada vez que detecta un cambio en el spinner
         sexoSp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -160,7 +180,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner estadoCivil = (Spinner) findViewById(R.id.sEstadoCivilL);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.estadoCivilL,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         estadoCivil.setAdapter(adapter);
         estadoCivil.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -180,7 +200,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner genero = (Spinner) findViewById(R.id.sGeneroL);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.generoL,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         genero.setAdapter(adapter);
         genero.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -189,10 +209,12 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 if(generoSt.equals("Otro"))
                 {
                     findViewById(R.id.eGeneroOL).setVisibility(View.VISIBLE);
+                    generoBoo = true;
                 }
                 else
                 {
                     findViewById(R.id.eGeneroOL).setVisibility(View.GONE);
+                    generoBoo = false;
                     et_otroGenero.setText("");
                 }
             }
@@ -209,7 +231,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner religion = (Spinner) findViewById(R.id.sReligionL);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.religionL,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         religion.setAdapter(adapter);
         religion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -218,10 +240,12 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 if(religionSt.equals("Otra"))
                 {
                     findViewById(R.id.eReligionOL).setVisibility(View.VISIBLE);
+                    religionBoo = true;
                 }
                 else
                 {
                     findViewById(R.id.eReligionOL).setVisibility(View.GONE);
+                    religionBoo = false;
                     et_otraReligion.setText("");
                 }
 
@@ -238,7 +262,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner grupoEtnico = (Spinner) findViewById(R.id.sGrupoEtnicoL);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.grupoEtnicoL,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         grupoEtnico.setAdapter(adapter);
         grupoEtnico.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -247,10 +271,12 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 if(grupoEtnicoSt.equals("Otro"))
                 {
                     findViewById(R.id.eGrupoetnicoL).setVisibility(View.VISIBLE);
+                    grupoEtnicoBoo = true;
                 }
                 else
                 {
                     findViewById(R.id.eGrupoetnicoL).setVisibility(View.GONE);
+                    grupoEtnicoBoo = false;
                     et_otroGrupoEC.setText("");
                 }
             }
@@ -267,7 +293,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner conQuienVive = (Spinner) findViewById(R.id.sConQuienViveL);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.conQuienViveL,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         conQuienVive.setAdapter(adapter);
         conQuienVive.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -287,7 +313,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner tieneHijos = (Spinner) findViewById(R.id.sTieneHijosL);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.tieneHijosL,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         tieneHijos.setAdapter(adapter);
         tieneHijos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -296,10 +322,12 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 if(tieneHijosSt.equals("Si"))
                 {
                     findViewById(R.id.eTieneHijoL).setVisibility(View.VISIBLE);
+                    tieneHijosBoo = true;
                 }
                 else
                 {
                     findViewById(R.id.eTieneHijoL).setVisibility(View.GONE);
+                    tieneHijosBoo = false;
                     et_cuantosHijos.setText("0");
                 }
             }
@@ -316,7 +344,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner nivelEscolaridad = (Spinner) findViewById(R.id.sNivelEscolaridadL);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.nivelEscolaridadL,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         nivelEscolaridad.setAdapter(adapter);
         nivelEscolaridad.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -336,7 +364,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner estaTrabajando = (Spinner) findViewById(R.id.sTrabajandoL);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.estaTrabajandoL,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         estaTrabajando.setAdapter(adapter);
         estaTrabajando.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -356,7 +384,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner trabajaArtesania = (Spinner) findViewById(R.id.sArtesaniaL);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.trabajaConArtesaniaL,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         trabajaArtesania.setAdapter(adapter);
         trabajaArtesania.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -376,7 +404,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner trabajaComercio = (Spinner) findViewById(R.id.sTComercioL);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.trabajaConComercioL,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         trabajaComercio.setAdapter(adapter);
         trabajaComercio.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -396,7 +424,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner trabajaTurismo = (Spinner) findViewById(R.id.sTurismoL);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.trabajaConTurismoL,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         trabajaTurismo.setAdapter(adapter);
         trabajaTurismo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -416,7 +444,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner trabajaManejoVentaAlimentos = (Spinner) findViewById(R.id.sAlimentosL);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.trabajaConActManejoVentaAlimentosL,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         trabajaManejoVentaAlimentos.setAdapter(adapter);
         trabajaManejoVentaAlimentos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -425,10 +453,12 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 if(trabajaVentaManejoAlimentosSt.equals("Otro"))
                 {
                     findViewById(R.id.eAlimentosL).setVisibility(View.VISIBLE);
+                    trabajaManevoVentaAliBoo = true;
                 }
                 else
                 {
                     findViewById(R.id.eAlimentosL).setVisibility(View.GONE);
+                    trabajaManevoVentaAliBoo = false;
                     et_otroTrabajoManejoAlimentos.setText("");
                 }
             }
@@ -445,7 +475,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner ingresoLaboralAproximado = (Spinner) findViewById(R.id.sIngresoLaboralL);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.ingresoLaboralAproximadoL,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         ingresoLaboralAproximado.setAdapter(adapter);
         ingresoLaboralAproximado.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -465,7 +495,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner ingresoUnidadFamiliar = (Spinner) findViewById(R.id.sIngresoUnidadFamiliarL);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.ingresoUnidadFamiliarL,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         ingresoUnidadFamiliar.setAdapter(adapter);
         ingresoUnidadFamiliar.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -485,7 +515,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner orientacionPolitica = (Spinner) findViewById(R.id.sOrientacionPoliticaL);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.orientacionPoliticaL,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         orientacionPolitica.setAdapter(adapter);
         orientacionPolitica.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -505,7 +535,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner pregunta1 = (Spinner) findViewById(R.id.sPregunta1);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.valoresPregunta1L,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         pregunta1.setAdapter(adapter);
         pregunta1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -525,7 +555,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner pregunta3 = (Spinner) findViewById(R.id.sPregunta3);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.valoresPregunta3L,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         pregunta3.setAdapter(adapter);
         pregunta3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -545,7 +575,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner pregunta4 = (Spinner) findViewById(R.id.sPregunta4);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.valoresPregunta4L,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         pregunta4.setAdapter(adapter);
         pregunta4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -554,10 +584,12 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 if(pregunta4St.equals("Si"))
                 {
                     findViewById(R.id.ePregunta5L).setVisibility(View.VISIBLE);
+                    pregunta5Boo = true;
                 }
                 else
                 {
                     findViewById(R.id.ePregunta5L).setVisibility(View.GONE);
+                    pregunta5Boo = false;
                     et_casosSufridos.setText("");
 
                 }
@@ -575,7 +607,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner pregunta7 = (Spinner) findViewById(R.id.sPregunta7);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.valoresPregunta7L,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         pregunta7.setAdapter(adapter);
         pregunta7.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -595,7 +627,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner pregunta8 = (Spinner) findViewById(R.id.sPregunta8);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.valoresPregunta8L,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         pregunta8.setAdapter(adapter);
         pregunta8.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -604,10 +636,12 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 if(pregunta8St.equals("Si"))
                 {
                     findViewById(R.id.eExtra1Pregunta8L).setVisibility(View.VISIBLE);
+                    pregunta8Boo = true;
                 }
                 else
                 {
                     findViewById(R.id.eExtra1Pregunta8L).setVisibility(View.GONE);
+                    pregunta8Boo = false;
                     et_razonesNoExpresar.setText("");
                 }
             }
@@ -624,7 +658,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner pregunta9 = (Spinner) findViewById(R.id.sPregunta9);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.valoresPregunta9L,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         pregunta9.setAdapter(adapter);
         pregunta9.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -633,10 +667,12 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 if(pregunta9St.equals("Si"))
                 {
                     findViewById(R.id.eExtra1Pregunta9L).setVisibility(View.VISIBLE);
+                    pregunta9Boo = true;
                 }
                 else
                 {
                     findViewById(R.id.eExtra1Pregunta9L).setVisibility(View.GONE);
+                    pregunta9Boo = false;
                     et_quienesFamiliares.setText("");
                 }
             }
@@ -653,7 +689,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner pregunta11 = (Spinner) findViewById(R.id.sPregunta11);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.valoresPregunta11L,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         pregunta11.setAdapter(adapter);
         pregunta11.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -673,7 +709,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner pregunta13 = (Spinner) findViewById(R.id.sPregunta13);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.valoresPregunta13L,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         pregunta13.setAdapter(adapter);
         pregunta13.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -693,7 +729,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner pregunta14 = (Spinner) findViewById(R.id.sPregunta14);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.valoresPregunta14L,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         pregunta14.setAdapter(adapter);
         pregunta14.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -702,10 +738,12 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 if(pregunta14St.equals("Si"))
                 {
                     findViewById(R.id.eExtra1Pregunta14L).setVisibility(View.VISIBLE);
+                    pregunta14Boo = true;
                 }
                 else
                 {
                     findViewById(R.id.eExtra1Pregunta14L).setVisibility(View.GONE);
+                    pregunta14Boo = false;
                     et_porQueDenunciasResuelven.setText("");
                 }
             }
@@ -722,7 +760,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     {
         Spinner pregunta15 = (Spinner) findViewById(R.id.sPregunta15);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.valoresPregunta15L,
-                android.R.layout.simple_spinner_item);
+                R.layout.spinner_con_estilos);
         pregunta15.setAdapter(adapter);
         pregunta15.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

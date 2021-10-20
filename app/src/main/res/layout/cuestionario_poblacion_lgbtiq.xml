@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
-            android:text="@string/h_calle"
+            android:text="@string/perspectivaLGBTQI"
             android:textAlignment="center"
             android:textColor="#070707"
             android:textSize="24sp" />
