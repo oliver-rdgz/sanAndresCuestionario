@@ -829,7 +829,7 @@ public class Genero extends AppCompatActivity {
     private void spinnerIngresoLaboral()
     {
         Spinner ingresoLaboral = (Spinner) findViewById(R.id.sIngresoLaboralG);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.ingresoLaboralAproximadoL,
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.ingresoLaboralAproximadoG,
                 R.layout.spinner_con_estilos);
         ingresoLaboral.setAdapter(adapter);
         ingresoLaboral.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -849,7 +849,7 @@ public class Genero extends AppCompatActivity {
     private void spinnerIngresoLaboralFamiliar()
     {
         Spinner spinnerIngresoLaboralFamiliar = (Spinner) findViewById(R.id.sIngresoLaboraFamiliarlG);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.ingresoUnidadFamiliarL,
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.ingresoUnidadFamiliarG,
                 R.layout.spinner_con_estilos);
         spinnerIngresoLaboralFamiliar.setAdapter(adapter);
         spinnerIngresoLaboralFamiliar.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

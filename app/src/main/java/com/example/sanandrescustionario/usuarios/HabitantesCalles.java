@@ -43,28 +43,115 @@ public class HabitantesCalles {
     public  String  h_alimentosSobrevivir="";
     public  String  h_comentarios="";
 
+    public String h_TrabajaEnEmpresaOrganizacion="";
+
     public boolean esValidoElFormulario()
     {
-        if(!h_nombre.equals("")
+        if(!h_nombre.equals("") && !h_tienesHijos.equals("")
             && !(h_edad==0) && !h_sexo.equals("")
             && !h_estadoCivil.equals("") && !h_genero.equals("")
             && !h_religion.equals("") && !h_grupoEC.equals("")
             && !h_LProcedencia.equals("") && !h_viveActualmente.equals("")
-            && !h_dondeTrabaja.equals("") && !h_sinoTrabaja.equals("")
-            && !h_trabajaArtesania.equals("") && !h_trabajaComercio.equals("")
-            && !h_trabajaTurismo.equals("") && !h_trabajaManejoAlimentos.equals("")
             && !h_orientacionPolitica.equals("") && !h_parientesSai.equals("")
             && !h_conversacionFamiliares.equals("") && !h_familiaresContacto.equals("")
             && !h_razonesCalle.equals("") && !h_sanAndresAyuda.equals("")
             && !h_uniddadesAtencion.equals("") && !h_programaSocial.equals("")
             && !h_violenciaCalle.equals("") && !h_problemaSalud.equals("")
             && !h_tieneVacuna.equals("") && !h_sanAndresMasAsistencia.equals("")
-            && !h_embarazada.equals("") && !h_companeraEmbarazada.equals("")
             && !h_alimentosSobrevivir.equals("") && !h_nivelEscolaridad.equals("")
             && !h_actualmenteTrabaja.equals(""))
         {
-            return true;
+            return cuantosHijos();
         }
         return false;
+    }
+
+
+    private boolean cuantosHijos ()
+    {
+        if(h_tienesHijos.equals("Si") && h_CuantosHijos==0)
+        {
+            return false;
+        }
+        else
+        {
+            return estaTrabajando();
+        }
+    }
+
+    private boolean estaTrabajando()
+    {
+        if (h_actualmenteTrabaja.equals("Si"))
+        {
+            if (h_TrabajaEnEmpresaOrganizacion.equals("")
+                || h_trabajaArtesania.equals("") || h_trabajaComercio.equals("")
+                || h_trabajaTurismo.equals("") || h_trabajaManejoAlimentos.equals(""))
+            {
+                return false;
+            }
+            else
+            {
+                if (h_TrabajaEnEmpresaOrganizacion.equals("Si") && h_dondeTrabaja.equals(""))
+                {
+                    return false;
+                }else if (h_TrabajaEnEmpresaOrganizacion.equals("No") && h_sinoTrabaja.equals(""))
+                {
+                    return false;
+                }
+                else
+                {
+                    return cualProgramaSocial();
+                }
+            }
+        }
+        else
+        {
+            return cualProgramaSocial();
+        }
+
+    }
+
+    private boolean cualProgramaSocial()
+    {
+        if(h_programaSocial.equals("Si") && h_cualPrograma.isEmpty())
+        {
+            return false;
+        }
+        else
+        {
+            return tipoViolencia();
+        }
+    }
+
+    private  boolean tipoViolencia()
+    {
+        if(h_violenciaCalle.equals("Si") && h_tipoViolencia.isEmpty())
+        {
+         return false;
+        }else {
+            return tipoEnfermedad();
+        }
+    }
+
+    private boolean tipoEnfermedad()
+    {
+        if (h_problemaSalud.equals("Si") && h_tipoEnfermedad.isEmpty())
+        {
+            return false;
+        }
+        else {
+            return tieneVanucaCovid();
+        }
+    }
+
+    private boolean tieneVanucaCovid()
+    {
+        if (h_tieneVacuna.equals("No") && h_razonesVacuna.isEmpty())
+        {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 }

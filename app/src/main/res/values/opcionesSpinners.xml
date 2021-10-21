@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="sexo">
+        <item></item>
         <item>Sin especificar</item>
         <item>Masculino</item>
         <item>Femenino</item>
     </string-array>
 
     <string-array name="estadoCivil">
+        <item></item>
         <item>Soltero</item>
         <item>Casado</item>
         <item>Viudo</item>
@@ -15,6 +17,7 @@
     </string-array>
 
     <string-array name="genero">
+        <item></item>
         <item>Masculino</item>
         <item>Femenino</item>
         <item>No binário</item>
@@ -22,6 +25,7 @@
     </string-array>
 
     <string-array name="religion">
+        <item></item>
         <item>Católica</item>
         <item>Cristiana/Presbiteriana</item>
         <item>Batista</item>
@@ -30,17 +34,20 @@
     </string-array>
 
     <string-array name="grupoEtnico">
+        <item></item>
         <item>Continental</item>
         <item>Raízales</item>
         <item>otro</item>
     </string-array>
     
     <string-array name="tieneHijos">
+        <item></item>
         <item>Si</item>
         <item>No</item>
     </string-array>
     
     <string-array name="nivelEscolaridad">
+        <item></item>
         <item>Ninguno</item>
         <item>Primaria</item>
         <item>Secundaria</item>
@@ -70,6 +77,7 @@
     </string-array>
     
     <string-array name="orientacionPolitica">
+        <item></item>
         <item>Prefiero no opina</item>
         <item>Derecha</item>
         <item>Centro</item>
@@ -78,12 +86,14 @@
     </string-array>
     
     <string-array name="sai">
+        <item></item>
         <item>Si</item>
         <item>No</item>
         <item>No se contestar a esa pregunta</item>
     </string-array>
 
     <string-array name="cFamiliares">
+        <item></item>
         <item>una vez a la semana</item>
         <item>mensualmente</item>
         <item>a cada 3 meses</item>
@@ -93,6 +103,7 @@
     </string-array>
     
     <string-array name="contactoFamiliares">
+        <item></item>
         <item>hermanos/as</item>
         <item>madre</item>
         <item>padre</item>
@@ -100,6 +111,7 @@
     </string-array>
     
     <string-array name="quienViveG">
+        <item></item>
         <item>Solo</item>
         <item>Con pareja</item>
         <item>Con familia</item>
@@ -108,23 +120,27 @@
     </string-array>
 
     <string-array name="quePiropo">
+        <item></item>
         <item>Un halago a la mujer</item>
         <item>una agresión a la mujer</item>
         <item>Otro</item>
     </string-array>
     
     <string-array name="opinionAcoso">
+        <item></item>
         <item>Un halago a la mujer</item>
         <item>una agresión a la mujer</item>
     </string-array>
     
     <string-array name="acosoMujerG">
+        <item></item>
         <item>Estoy de acuerdo</item>
         <item>No estoy de acuerdo</item>
         <item>Me es indiferente</item>
     </string-array>
 
     <string-array name="acosoMujerResponsableG">
+        <item></item>
         <item>Estoy de acuerdo</item>
         <item>No estoy de acuerdo</item>
         <item>Me es indiferente</item>
@@ -132,6 +148,7 @@
     </string-array>
     
     <string-array name="asedioSexualG">
+        <item></item>
         <item>Satisfacción</item>
         <item>Alegría</item>
         <item>Autoestima alta</item>
@@ -144,6 +161,7 @@
     </string-array>
     
     <string-array name="actitudesVidaG">
+        <item></item>
         <item>Cambiar mi forma de vestir</item>
         <item>cambiar mi actitud frente a esa persona</item>
         <item>retraerme</item>
@@ -152,9 +170,28 @@
     </string-array>
 
     <string-array name="mecanismoLegalG">
+        <item></item>
         <item>No lo sabía</item>
         <item>Sí. Lo sabía</item>
         <item>Ahora sé que existe esa ley</item>
+    </string-array>
+
+    <string-array name="ingresoLaboralAproximadoG">
+        <item></item>
+        <item>Menos de un salario mínimo</item>
+        <item>Un salario mínimo</item>
+        <item>De dos a cuatro salarios mínimos</item>
+        <item>De cinco a diez salarios mínimos</item>
+        <item>Más de diez salarios mínimos</item>
+    </string-array>
+
+    <string-array name="ingresoUnidadFamiliarG">
+        <item></item>
+        <item>Un salario mínimo</item>
+        <item>Menos de un salario mínimo</item>
+        <item>De dos a cuatro salarios mínimos </item>
+        <item>De cinco a diez salarios mínimos</item>
+        <item>Más de diez salarios mínimos</item>
     </string-array>
 
 </resources>

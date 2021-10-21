@@ -353,6 +353,27 @@
             android:minHeight="48dp" />
 
         <TextView
+            android:id="@+id/lTrabajandoEmpresaOrganizacionH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sTrabajandoH"
+            android:visibility="gone"
+            android:text="@string/trabajandoEmpresaOrganizacionH"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sTrabajandoEmpresaOrganizacionH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:minHeight="48dp" />
+
+        <TextView
             android:id="@+id/lETrabajaH"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -360,6 +381,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:labelFor="@id/eETrabajaH"
+            android:visibility="gone"
             android:text="@string/eTrabaja"
             android:textSize="20sp" />
 
@@ -372,6 +394,7 @@
             android:layout_marginRight="10dp"
             android:ems="10"
             android:inputType="textPersonName"
+            android:visibility="gone"
             android:minHeight="48dp" />
 
         <TextView
@@ -382,6 +405,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:labelFor="@id/eSinoTrabajaH"
+            android:visibility="gone"
             android:text="@string/sinoTrabaja"
             android:textSize="20sp" />
 
@@ -392,6 +416,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:ems="10"
+            android:visibility="gone"
             android:inputType="textPersonName"
             android:minHeight="48dp" />
 
@@ -402,6 +427,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
+            android:visibility="gone"
             android:labelFor="@id/sArtesaniaH"
             android:text="@string/tArtesania"
             android:textSize="20sp" />
@@ -412,6 +438,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:visibility="gone"
             android:minHeight="48dp" />
 
         <TextView
@@ -422,6 +449,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:labelFor="@id/sTComercioH"
+            android:visibility="gone"
             android:text="@string/tComercio"
             android:textSize="20sp" />
 
@@ -430,6 +458,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:visibility="gone"
             android:layout_marginRight="10dp"
             android:minHeight="48dp" />
 
@@ -441,6 +470,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:labelFor="@id/sTTurismoH"
+            android:visibility="gone"
             android:text="@string/tTurismo"
             android:textSize="20sp" />
 
@@ -449,6 +479,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:visibility="gone"
             android:layout_marginRight="10dp"
             android:minHeight="48dp" />
 
@@ -459,6 +490,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
+            android:visibility="gone"
             android:labelFor="@id/sAlimentosH"
             android:text="@string/tAlimentos"
             android:textSize="20sp" />
@@ -469,6 +501,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:visibility="gone"
             android:minHeight="48dp" />
 
         <EditText
