@@ -24,7 +24,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
     public String sexoSt, estadoCivilSt, generoSt, religionSt, grupoEtnicoSt, conQuienViveSt, tieneHijosSt,
                   nivelDeEscolaridadSt, estaTrabajandoSt, trabajaArtesaniaSt, trabajaComercioSt, trabajaTurismoSt, trabajaVentaManejoAlimentosSt,
                   ingresoLaboralAproSt, ingresoUnidadFamiliarSt, orientacionPoliticaSt, pregunta1St, pregunta3St, pregunta4St, pregunta7St, pregunta8St,
-                  pregunta9St, pregunta11St, pregunta13St, pregunta14St, pregunta15St;
+                  pregunta9St, pregunta11St, pregunta13St, pregunta14St, pregunta15St, trabajandoEnUnaEmpresaSt;
 
     public Spinner sexoSp;
 
@@ -92,6 +92,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
 
         boolean validacionNormal = false;
         boolean validacionDeotros = false;
+        boolean siEstaTrabajando = false;
 
         String validar = "Seleccione una opción";
 
@@ -110,8 +111,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                 organizacionLGBTQI.equals("") || orientacionSexual.equals("") || reaccionFamiliar.equals("") || situacionesDescritas.equals("") || sanAndresApoyo.equals("")
                 || politicasPublicas.equals("") || comentar.equals("") || sexoSt.equals(validar) || estadoCivilSt.equals(validar) || generoSt.equals(validar)
                 || religionSt.equals(validar) || grupoEtnicoSt.equals(validar) || conQuienViveSt.equals(validar) || tieneHijosSt.equals(validar) || nivelDeEscolaridadSt.equals(validar) ||
-                estaTrabajandoSt.equals(validar) || trabajaArtesaniaSt.equals(validar) || trabajaComercioSt.equals(validar) || trabajaTurismoSt.equals(validar) || trabajaVentaManejoAlimentosSt.equals(validar)
-                || ingresoLaboralAproSt.equals(validar) || ingresoUnidadFamiliarSt.equals(validar) || orientacionPoliticaSt.equals(validar) || pregunta1St.equals(validar) ||
+                estaTrabajandoSt.equals(validar) || ingresoUnidadFamiliarSt.equals(validar) || orientacionPoliticaSt.equals(validar) || pregunta1St.equals(validar) ||
                 pregunta3St.equals(validar) || pregunta4St.equals(validar) || pregunta7St.equals(validar) || pregunta8St.equals(validar) || pregunta9St.equals(validar) ||
                 pregunta11St.equals(validar) || pregunta13St.equals(validar) || pregunta14St.equals(validar) || pregunta15St.equals(validar)
            ){
@@ -148,16 +148,23 @@ public class poblacionLGBTIQ extends AppCompatActivity {
             religionSt = otraReligion;
         }
 
-        if(grupoEtnicoBoo = true){
+        if(grupoEtnicoBoo == true){
             grupoEtnicoSt = otroGrupoEC;
         }
 
-        if(trabajaManevoVentaAliBoo = true){
+        if(trabajaManevoVentaAliBoo == true){
             trabajaVentaManejoAlimentosSt = otroTrabajoManejoAlimentos;
         }
 
+        //Validar los campos que se muestran al indicar qua la persona si se encuentra trabajando
+        if( trabajandoEnUnaEmpresaSt.equals("Si") ){
+           if( dondeTrabaja.equals("") || sinoTrabaja.equals("") || trabajaArtesaniaSt.equals(validar) || trabajaComercioSt.equals(validar) ||
+                   trabajaTurismoSt.equals(validar) || trabajaVentaManejoAlimentosSt.equals(validar) || ingresoLaboralAproSt.equals(validar) ){
+             siEstaTrabajando = true;
+           }
+        }
 
-        if( validacionNormal == false && validacionDeotros == false){
+        if( validacionNormal == false && validacionDeotros == false && siEstaTrabajando == false){
             dbManager.open();
             dbManager.GuardarCuestionario(nombre, idInt, edadInt, sexoSt, estadoCivilSt, generoSt, religionSt, grupoEtnicoSt,
                     procedencia, dondeVive, conQuienViveSt, tieneHijosSt, cuantosHijosInt, cuantasVivenHogarInt, nivelDeEscolaridadSt, estaTrabajandoSt,
@@ -166,7 +173,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                     orientacionSexual, pregunta7St, pregunta8St, razonesNoExpresar, pregunta9St, quienesFamiliares, reaccionFamiliar, pregunta11St, situacionesDescritas,
                     pregunta13St, pregunta14St, porQueDenunciasResuelven, pregunta15St, sanAndresApoyo, politicasPublicas, comentar);
 
-            Toast.makeText(this,"Guardado correctamente" + validacionDeotros, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Guardado correctamente", Toast.LENGTH_SHORT).show();
         }else{
             Toast.makeText(this,"Verifique que ningún campo del formulario este vacío", Toast.LENGTH_SHORT).show();
         }
@@ -386,6 +393,81 @@ public class poblacionLGBTIQ extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 estaTrabajandoSt = parent.getItemAtPosition(position).toString();
+                if(estaTrabajandoSt.equals("Si"))
+                {
+                    findViewById(R.id.estaTrabajandoEnUnaEmpresaL).setVisibility(View.VISIBLE);
+                    findViewById(R.id.sTrabajandoEnUnaEmpresaL).setVisibility(View.VISIBLE);
+
+                    findViewById(R.id.empresaDondeTrabajaL).setVisibility(View.VISIBLE);
+                    findViewById(R.id.eETrabajaL).setVisibility(View.VISIBLE);
+
+                    findViewById(R.id.sinoTrabajaL).setVisibility(View.VISIBLE);
+                    findViewById(R.id.eSinoTrabajaL).setVisibility(View.VISIBLE);
+
+                    findViewById(R.id.artesaniaL).setVisibility(View.VISIBLE);
+                    findViewById(R.id.sArtesaniaL).setVisibility(View.VISIBLE);
+
+                    findViewById(R.id.TComercioL).setVisibility(View.VISIBLE);
+                    findViewById(R.id.sTComercioL).setVisibility(View.VISIBLE);
+
+                    findViewById(R.id.turismoL).setVisibility(View.VISIBLE);
+                    findViewById(R.id.sTurismoL).setVisibility(View.VISIBLE);
+
+                    findViewById(R.id.alimentosL).setVisibility(View.VISIBLE);
+                    findViewById(R.id.sAlimentosL).setVisibility(View.VISIBLE);
+
+                    findViewById(R.id.ingresoLaboralL).setVisibility(View.VISIBLE);
+                    findViewById(R.id.sIngresoLaboralL).setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    findViewById(R.id.estaTrabajandoEnUnaEmpresaL).setVisibility(View.GONE);
+                    findViewById(R.id.sTrabajandoEnUnaEmpresaL).setVisibility(View.GONE);
+                    Spinner spinner01 = (Spinner) findViewById(R.id.sTrabajandoEnUnaEmpresaL);
+                    spinner01.setSelection(0);
+                    trabajandoEnUnaEmpresaSt = "";
+
+
+                    findViewById(R.id.empresaDondeTrabajaL).setVisibility(View.GONE);
+                    findViewById(R.id.eETrabajaL).setVisibility(View.GONE);
+                    et_dondeTrabaja.setText("");
+
+                    findViewById(R.id.sinoTrabajaL).setVisibility(View.GONE);
+                    findViewById(R.id.eSinoTrabajaL).setVisibility(View.GONE);
+                    et_sinoTrabaja.setText("");
+
+                    findViewById(R.id.artesaniaL).setVisibility(View.GONE);
+                    findViewById(R.id.sArtesaniaL).setVisibility(View.GONE);
+                    spinner01 = (Spinner) findViewById(R.id.sArtesaniaL);
+                    spinner01.setSelection(0);
+                    trabajaArtesaniaSt = "";
+
+                    findViewById(R.id.TComercioL).setVisibility(View.GONE);
+                    findViewById(R.id.sTComercioL).setVisibility(View.GONE);
+                    spinner01 = (Spinner) findViewById(R.id.sTComercioL);
+                    spinner01.setSelection(0);
+                    trabajaComercioSt = "";
+
+                    findViewById(R.id.turismoL).setVisibility(View.GONE);
+                    findViewById(R.id.sTurismoL).setVisibility(View.GONE);
+                    spinner01 = (Spinner) findViewById(R.id.sTurismoL);
+                    spinner01.setSelection(0);
+                    trabajaTurismoSt = "";
+
+                    findViewById(R.id.alimentosL).setVisibility(View.GONE);
+                    findViewById(R.id.sAlimentosL).setVisibility(View.GONE);
+                    spinner01 = (Spinner) findViewById(R.id.sAlimentosL);
+                    spinner01.setSelection(0);
+                    trabajaVentaManejoAlimentosSt = "";
+                    et_otroTrabajoManejoAlimentos.setText("");
+                    findViewById(R.id.eAlimentosL).setVisibility(View.GONE);
+
+                    findViewById(R.id.ingresoLaboralL).setVisibility(View.GONE);
+                    findViewById(R.id.sIngresoLaboralL).setVisibility(View.GONE);
+                    spinner01 = (Spinner) findViewById(R.id.sIngresoLaboralL);
+                    spinner01.setSelection(0);
+                    ingresoLaboralAproSt = "";
+                }
             }
 
             @Override
@@ -394,6 +476,26 @@ public class poblacionLGBTIQ extends AppCompatActivity {
 
         });
         spinnerTrabajaArtesania();
+        spinnerEstaTrabajandoEnUnaEmpresa();
+    }
+
+    private void spinnerEstaTrabajandoEnUnaEmpresa()
+    {
+        Spinner trabajandoEnUnaEmpresa = (Spinner) findViewById(R.id.sTrabajandoEnUnaEmpresaL);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.estaTrabajandoEnUnaEmpresaL,
+                R.layout.spinner_con_estilos);
+        trabajandoEnUnaEmpresa.setAdapter(adapter);
+        trabajandoEnUnaEmpresa.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                trabajandoEnUnaEmpresaSt = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+
+        });
     }
 
     private void spinnerTrabajaArtesania()

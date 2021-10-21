@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
-            android:text="@string/perspectivaLGBTQI"
+            android:text="@string/tituloLGBTQI"
             android:textAlignment="center"
             android:textColor="#070707"
             android:textSize="24sp" />
@@ -404,6 +404,28 @@
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/estaTrabajandoEnUnaEmpresaL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sTrabajandoEnUnaEmpresaL"
+            android:text="@string/estaTrabajandoEnUnaEmpresaL"
+            android:textSize="20sp"
+            android:visibility="gone"
+            />
+
+        <Spinner
+            android:id="@+id/sTrabajandoEnUnaEmpresaL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="48dp"
+            android:visibility="gone"/>
+
+        <TextView
             android:id="@+id/empresaDondeTrabajaL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -412,7 +434,8 @@
             android:layout_marginRight="10dp"
             android:labelFor="@id/eETrabajaL"
             android:text="@string/eTrabaja"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:visibility="gone"/>
 
         <EditText
             android:id="@+id/eETrabajaL"
@@ -423,7 +446,8 @@
             android:layout_marginRight="10dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/sinoTrabajaL"
@@ -434,7 +458,8 @@
             android:layout_marginRight="10dp"
             android:labelFor="@id/eSinoTrabajaL"
             android:text="@string/sinoTrabaja"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:visibility="gone"/>
 
         <EditText
             android:id="@+id/eSinoTrabajaL"
@@ -444,7 +469,8 @@
             android:layout_marginRight="10dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/artesaniaL"
@@ -455,7 +481,8 @@
             android:layout_marginRight="10dp"
             android:labelFor="@id/sArtesaniaL"
             android:text="@string/tArtesania"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:visibility="gone"/>
 
         <Spinner
             android:id="@+id/sArtesaniaL"
@@ -463,7 +490,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/TComercioL"
@@ -474,7 +502,8 @@
             android:layout_marginRight="10dp"
             android:labelFor="@id/sTComercioL"
             android:text="@string/tComercio"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:visibility="gone"/>
 
         <Spinner
             android:id="@+id/sTComercioL"
@@ -482,7 +511,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/turismoL"
@@ -493,7 +523,8 @@
             android:layout_marginRight="10dp"
             android:labelFor="@id/sTurismoL"
             android:text="@string/tTurismo"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:visibility="gone"/>
 
         <Spinner
             android:id="@+id/sTurismoL"
@@ -501,7 +532,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/alimentosL"
@@ -512,7 +544,8 @@
             android:layout_marginRight="10dp"
             android:labelFor="@id/sAlimentosL"
             android:text="@string/tAlimentos"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:visibility="gone"/>
 
         <Spinner
             android:id="@+id/sAlimentosL"
@@ -520,7 +553,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:visibility="gone"/>
 
         <EditText
             android:id="@+id/eAlimentosL"
@@ -543,7 +577,8 @@
             android:layout_marginRight="10dp"
             android:labelFor="@id/sIngresoLaboralL"
             android:text="@string/ingresoLaboralAproximadamente"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:visibility="gone"/>
 
         <Spinner
             android:id="@+id/sIngresoLaboralL"
@@ -551,7 +586,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/ingresoUnidadFamiliarL"
@@ -590,6 +626,16 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/perspectivaLGBTQI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/perspectivaLGBTQI"
+            android:textSize="27sp" />
 
         <TextView
             android:id="@+id/tPregunta1"

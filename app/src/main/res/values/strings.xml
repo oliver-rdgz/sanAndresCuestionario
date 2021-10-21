@@ -1,6 +1,7 @@
 <resources>
     <string name="vacio"></string>
     <string name="app_name">SanAndresCustionario</string>
+    <string name="tituloLGBTQI">LGBTQI+</string>
     <string name="crear_cuestionario">CREAR CUESTIONARIO</string>
     <string name="h_calle">Habitantes de la calle</string>
     <string name="LGBTQI">LGBTQI+</string>
@@ -27,6 +28,7 @@
     <string name="nivelEscolaridad">NIVEL DE ESCOLARIDAD</string>
     <string name="actualmenteTrabajando">¿ACTUALMENTE ESTÁ TRABAJANDO?</string>
     <string name="siEstaTrabajando">Si su respuesta es afirmativa, por favor continué con la encuesta.</string>
+    <string name="estaTrabajandoEnUnaEmpresaL">¿ACTUALMENTE ESTÁ TRABAJANDO EN UNA EMPRESA U ORGANIZACIÓN?</string>
     <string name="eTrabaja">¿EN QUÉ EMPRESA U ORGANIZACIÓN TRABAJA?</string>
     <string name="sinoTrabaja">SI NO TRABAJA EN UNA EMPRESA U ORGANIZACIÓN, ES UD. AUTÓNOMO/EMPREENDEDOR?</string>
     <string name="tArtesania">¿TRABAJA UD. CON ARTESANÍA?</string>
@@ -36,7 +38,7 @@
     <string name="ingresoLaboralAproximadamente">¿CUÁL ES SU INGRESO LABORAL APROXIMADAMENTE (SI LO TIENE)?</string>
     <string name="ingresoLaboralUnidadFamiliar">APROXIMADAMENTE, ¿CUÁL ES EL INGRESO LABORAL DE SU UNIDAD FAMILIAR?</string>
     <string name="orientacionPolitica">ORIENTACIÓN POLÍTICA</string>
-    <string name="perspectivaLGBTQI">LGBTQI+</string>
+    <string name="perspectivaLGBTQI">PERSPECTIVA LGBTQI+</string>
     <string name="lPregunta1">1) Ud posee alguna discapacidad?</string>
     <string name="lPregunta2">2) Perteneces a alguna organización social LGBTQI+?</string>
     <string name="lPregunta3">3) Ud conoce sus derechos como parte de la comunidad LGBTQI+?</string>
