@@ -74,6 +74,12 @@
         <item>No</item>
     </string-array>
 
+    <string-array name="estaTrabajandoEnUnaEmpresaL">
+        <item>Seleccione una opción</item>
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
     <string-array name="trabajaConArtesaniaL">
         <item>Seleccione una opción</item>
         <item>Si</item>
