@@ -725,7 +725,115 @@ public class Genero extends AppCompatActivity {
         estaTrabajando.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                gU.g_actualmenteTrabaja= parent.getItemAtPosition(position).toString();
+                String estaTrabajando = parent.getItemAtPosition(position).toString();
+                gU.g_actualmenteTrabaja= estaTrabajando;
+                if (estaTrabajando.equals("Si"))
+                {
+                    findViewById(R.id.lTrabajandoEmpresaOrganizacionG).setVisibility(View.VISIBLE);
+                    findViewById(R.id.sTrabajandoEmpresaOrganizacionG).setVisibility(View.VISIBLE);
+                    findViewById(R.id.lArtesaniaG).setVisibility(View.VISIBLE);
+                    findViewById(R.id.sArtesaniaG).setVisibility(View.VISIBLE);
+                    findViewById(R.id.lTComercioG).setVisibility(View.VISIBLE);
+                    findViewById(R.id.sTComercioG).setVisibility(View.VISIBLE);
+                    findViewById(R.id.lTTurismoG).setVisibility(View.VISIBLE);
+                    findViewById(R.id.sTTurismoG).setVisibility(View.VISIBLE);
+                    findViewById(R.id.lAlimentosG).setVisibility(View.VISIBLE);
+                    findViewById(R.id.sAlimentosG).setVisibility(View.VISIBLE);
+                }
+                else
+                {
+                    //Ocultando todos los campos relacionados al trabajo
+
+                    findViewById(R.id.lTrabajandoEmpresaOrganizacionG).setVisibility(View.GONE);
+                    Spinner spinner = (Spinner) findViewById(R.id.sTrabajandoEmpresaOrganizacionG);
+                    spinner.setSelection(0);
+                    spinner.setVisibility(View.GONE);
+
+                    findViewById(R.id.lArtesaniaG).setVisibility(View.GONE);
+                    spinner = (Spinner) findViewById(R.id.sArtesaniaG);
+                    spinner.setSelection(0);
+                    spinner.setVisibility(View.GONE);
+
+                    findViewById(R.id.lTComercioG).setVisibility(View.GONE);
+                    spinner = (Spinner) findViewById(R.id.sTComercioG);
+                    spinner.setSelection(0);
+                    spinner.setVisibility(View.GONE);
+
+                    findViewById(R.id.lTTurismoG).setVisibility(View.GONE);
+                    spinner = (Spinner) findViewById(R.id.sTTurismoG);
+                    spinner.setSelection(0);
+                    spinner.setVisibility(View.GONE);
+
+                    findViewById(R.id.lAlimentosG).setVisibility(View.GONE);
+                    spinner = (Spinner) findViewById(R.id.sAlimentosG);
+                    spinner.setSelection(0);
+                    spinner.setVisibility(View.GONE);
+
+                    findViewById(R.id.lTrabajandoEmpresaOrganizacionG).setVisibility(View.GONE);
+                    spinner= (Spinner) findViewById(R.id.sTrabajandoEmpresaOrganizacionG);
+                    spinner.setSelection(0);
+                    spinner.setVisibility(View.GONE);
+
+                    findViewById(R.id.lETrabajaG).setVisibility(View.GONE);
+                    EditText editText = (EditText) findViewById(R.id.eETrabajaG);
+                    editText.setText("");
+                    editText.setVisibility(View.GONE);
+
+                    findViewById(R.id.lSinoTrabajaG).setVisibility(View.GONE);
+                    editText = (EditText) findViewById(R.id.eSinoTrabajaG);
+                    editText.setText("");
+                    editText.setVisibility(View.GONE);
+
+                    editText = (EditText) findViewById(R.id.eAlimentosG);
+                    editText.setText("");
+                    editText.setVisibility(View.GONE);
+
+                    findViewById(R.id.lIngresoLaboralFamiliarG).setVisibility(View.GONE);
+                    spinner= (Spinner) findViewById(R.id.sIngresoLaboraFamiliarlG);
+                    spinner.setSelection(0);
+                    spinner.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                gU.g_actualmenteTrabaja="";
+            }
+        });
+        spinnerEmpresaOrganizacion();
+    }
+
+    private void spinnerEmpresaOrganizacion()
+    {
+        Spinner trabajaEmpresaOrganizacion = (Spinner) findViewById(R.id.sTrabajandoEmpresaOrganizacionG);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.siNo,
+                R.layout.spinner_con_estilos);
+        trabajaEmpresaOrganizacion.setAdapter(adapter);
+        trabajaEmpresaOrganizacion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String estaEmpresaOrganizacion = parent.getItemAtPosition(position).toString();
+                gU.g_TrabajaEnEmpresaOrganizacion= estaEmpresaOrganizacion;
+                if (estaEmpresaOrganizacion.equals("Si"))
+                {
+                    findViewById(R.id.lETrabajaG).setVisibility(View.VISIBLE);
+                    findViewById(R.id.eETrabajaG).setVisibility(View.VISIBLE);
+                    findViewById(R.id.lSinoTrabajaG).setVisibility(View.GONE);
+                    EditText editText = (EditText) findViewById(R.id.eSinoTrabajaG);
+                    editText.setText("");
+                    editText.setVisibility(View.GONE);
+                }
+                else if (estaEmpresaOrganizacion.equals("No"))
+                {
+                    findViewById(R.id.lETrabajaG).setVisibility(View.GONE);
+                    EditText editText = (EditText) findViewById(R.id.eETrabajaG);
+                    editText.setText("");
+                    editText.setVisibility(View.GONE);
+                    findViewById(R.id.lSinoTrabajaG).setVisibility(View.VISIBLE);
+                    findViewById(R.id.eSinoTrabajaG).setVisibility(View.VISIBLE);
+
+                }
+
             }
 
             @Override

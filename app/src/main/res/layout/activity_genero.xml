@@ -464,6 +464,27 @@
             android:minHeight="48dp" />
 
         <TextView
+            android:id="@+id/lTrabajandoEmpresaOrganizacionG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:labelFor="@id/sTrabajandoH"
+            android:visibility="gone"
+            android:text="@string/trabajandoEmpresaOrganizacionH"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sTrabajandoEmpresaOrganizacionG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:minHeight="48dp" />
+
+        <TextView
             android:id="@+id/lETrabajaG"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -472,6 +493,7 @@
             android:layout_marginRight="10dp"
             android:labelFor="@id/eETrabajaG"
             android:text="@string/eTrabaja"
+            android:visibility="gone"
             android:textSize="20sp" />
 
         <EditText
@@ -483,6 +505,7 @@
             android:layout_marginRight="10dp"
             android:ems="10"
             android:inputType="textPersonName"
+            android:visibility="gone"
             android:minHeight="48dp" />
 
         <TextView
@@ -493,6 +516,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:labelFor="@id/eSinoTrabajaG"
+            android:visibility="gone"
             android:text="@string/sinoTrabaja"
             android:textSize="20sp" />
 
@@ -504,6 +528,7 @@
             android:layout_marginRight="10dp"
             android:ems="10"
             android:inputType="textPersonName"
+            android:visibility="gone"
             android:minHeight="48dp" />
 
         <TextView
@@ -514,6 +539,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:labelFor="@id/sArtesaniaG"
+            android:visibility="gone"
             android:text="@string/tArtesania"
             android:textSize="20sp" />
 
@@ -523,6 +549,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:visibility="gone"
             android:minHeight="48dp" />
 
         <TextView
@@ -534,6 +561,7 @@
             android:layout_marginRight="10dp"
             android:labelFor="@id/sTComercioG"
             android:text="@string/tComercio"
+            android:visibility="gone"
             android:textSize="20sp" />
 
         <Spinner
@@ -542,6 +570,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:visibility="gone"
             android:minHeight="48dp" />
 
         <TextView
@@ -553,6 +582,7 @@
             android:layout_marginRight="10dp"
             android:labelFor="@id/sTTurismoG"
             android:text="@string/tTurismo"
+            android:visibility="gone"
             android:textSize="20sp" />
 
         <Spinner
@@ -561,6 +591,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:visibility="gone"
             android:minHeight="48dp" />
 
         <TextView
@@ -572,6 +603,7 @@
             android:layout_marginRight="10dp"
             android:labelFor="@id/sAlimentosG"
             android:text="@string/tAlimentos"
+            android:visibility="gone"
             android:textSize="20sp" />
 
         <Spinner
@@ -580,6 +612,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:visibility="gone"
             android:minHeight="48dp" />
 
         <EditText
@@ -603,6 +636,7 @@
             android:layout_marginRight="10dp"
             android:labelFor="@id/sIngresoLaboralG"
             android:text="@string/ingresoLaboralG"
+            android:visibility="gone"
             android:textSize="20sp" />
 
         <Spinner
@@ -610,6 +644,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:visibility="gone"
             android:layout_marginRight="10dp"
             android:minHeight="48dp" />
 

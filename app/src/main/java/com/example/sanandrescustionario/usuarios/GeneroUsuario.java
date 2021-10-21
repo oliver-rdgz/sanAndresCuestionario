@@ -80,4 +80,6 @@ public class GeneroUsuario {
     public   String  g_mismoTrato="";
     public   String  g_miedoMujer="";
     public   String  g_comentarios="";
+
+    public String g_TrabajaEnEmpresaOrganizacion="";
 }
