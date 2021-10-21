@@ -45,7 +45,7 @@ public class HabitantesCalles {
 
     public boolean esValidoElFormulario()
     {
-        if(!h_nombre.equals("") && !(h_identificacion==0)
+        if(!h_nombre.equals("")
             && !(h_edad==0) && !h_sexo.equals("")
             && !h_estadoCivil.equals("") && !h_genero.equals("")
             && !h_religion.equals("") && !h_grupoEC.equals("")
