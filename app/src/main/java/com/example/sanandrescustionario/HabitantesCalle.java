@@ -182,7 +182,17 @@ public class HabitantesCalle extends AppCompatActivity {
     {
         if(view.getId() == R.id.guardarFormH)
         {
-            mensajeFinalizarCuestionario();
+            objetoHAbitanteCalle();
+            Boolean cuestionarioValido = hc.esValidoElFormulario();
+            if(cuestionarioValido)
+            {
+                mensajeFinalizarCuestionario();
+            }
+            else
+            {
+                Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_LONG).show();
+            }
+            //
         }
     }
 
