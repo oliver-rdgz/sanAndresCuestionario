@@ -95,6 +95,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
 
         String validar = "Seleccione una opción";
 
+        //Validacion de comprobar si un campo que tengo la opción otro o parecida se valida que ese campo otro o digitar otra respuesta no este vacio
         if(generoBoo == true && otroGenero.equals("") || religionBoo == true && otraReligion.equals("") || grupoEtnicoBoo == true && otroGrupoEC.equals("") ||
            tieneHijosBoo == true && cuantosHijos.equals("") || trabajaManevoVentaAliBoo == true && otroTrabajoManejoAlimentos.equals("") ||
            pregunta5Boo == true && casosSufridos.equals("") || pregunta8Boo == true && razonesNoExpresar.equals("")  || pregunta9Boo == true && quienesFamiliares.equals("")
@@ -102,6 +103,8 @@ public class poblacionLGBTIQ extends AppCompatActivity {
             validacionDeotros = true;
         }
 
+
+        //Validacion de los campos normales, es decir los campos que no tengan el campo otro y que no tengan la opción de escribir otra respuesta a la original
         if(nombre.equals("") || identificacion.equals("") || edad.equals("") ||
            procedencia.equals("") || dondeVive.equals("")  || cuantasVivenHogar.equals("") || dondeTrabaja.equals("") || sinoTrabaja.equals("") ||
                 organizacionLGBTQI.equals("") || orientacionSexual.equals("") || reaccionFamiliar.equals("") || situacionesDescritas.equals("") || sanAndresApoyo.equals("")
@@ -136,12 +139,29 @@ public class poblacionLGBTIQ extends AppCompatActivity {
         int cuantosHijosInt = Integer.parseInt(cuantosHijos);
         int cuantasVivenHogarInt = Integer.parseInt(cuantasVivenHogar);
 
+        //Validaciones para guardar la informacion del campo otros en el campo original de la BD
+        if(generoBoo == true){
+            generoSt = otroGenero;
+        }
+
+        if(religionBoo == true){
+            religionSt = otraReligion;
+        }
+
+        if(grupoEtnicoBoo = true){
+            grupoEtnicoSt = otroGrupoEC;
+        }
+
+        if(trabajaManevoVentaAliBoo = true){
+            trabajaVentaManejoAlimentosSt = otroTrabajoManejoAlimentos;
+        }
+
 
         if( validacionNormal == false && validacionDeotros == false){
             dbManager.open();
-            dbManager.GuardarCuestionario(nombre, idInt, edadInt, sexoSt, estadoCivilSt, generoSt, otroGenero, religionSt, otraReligion, grupoEtnicoSt, otroGrupoEC,
+            dbManager.GuardarCuestionario(nombre, idInt, edadInt, sexoSt, estadoCivilSt, generoSt, religionSt, grupoEtnicoSt,
                     procedencia, dondeVive, conQuienViveSt, tieneHijosSt, cuantosHijosInt, cuantasVivenHogarInt, nivelDeEscolaridadSt, estaTrabajandoSt,
-                    dondeTrabaja, sinoTrabaja, trabajaArtesaniaSt, trabajaComercioSt, trabajaTurismoSt, trabajaVentaManejoAlimentosSt, otroTrabajoManejoAlimentos,
+                    dondeTrabaja, sinoTrabaja, trabajaArtesaniaSt, trabajaComercioSt, trabajaTurismoSt, trabajaVentaManejoAlimentosSt,
                     ingresoLaboralAproSt, ingresoUnidadFamiliarSt, orientacionPoliticaSt, pregunta1St, organizacionLGBTQI, pregunta3St, pregunta4St, casosSufridos,
                     orientacionSexual, pregunta7St, pregunta8St, razonesNoExpresar, pregunta9St, quienesFamiliares, reaccionFamiliar, pregunta11St, situacionesDescritas,
                     pregunta13St, pregunta14St, porQueDenunciasResuelven, pregunta15St, sanAndresApoyo, politicasPublicas, comentar);

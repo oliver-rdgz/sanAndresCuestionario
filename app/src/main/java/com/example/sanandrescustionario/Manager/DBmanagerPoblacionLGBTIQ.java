@@ -12,10 +12,8 @@ public class DBmanagerPoblacionLGBTIQ {
     private SQLiteDatabase database;
     private final SQLITECuestionario dbCuestionario;
     private String[] allColumns = {SQLITECuestionario.l_id, SQLITECuestionario.l_nombre, SQLITECuestionario.l_identificacion, SQLITECuestionario.l_edad, SQLITECuestionario.l_sexo,
-            SQLITECuestionario.l_estadoCivil, SQLITECuestionario.l_genero, SQLITECuestionario.l_otro_genero, SQLITECuestionario.l_religion,
-            SQLITECuestionario.l_otra_religion,
+            SQLITECuestionario.l_estadoCivil, SQLITECuestionario.l_genero, SQLITECuestionario.l_religion,
             SQLITECuestionario.l_grupoEC,
-            SQLITECuestionario.l_otro_grupoEC,
             SQLITECuestionario.l_LProcedencia,
             SQLITECuestionario.l_viveActualmente,
             SQLITECuestionario.l_quienVive,
@@ -30,7 +28,6 @@ public class DBmanagerPoblacionLGBTIQ {
             SQLITECuestionario.l_trabajaComercio,
             SQLITECuestionario.l_trabajaTurismo,
             SQLITECuestionario.l_trabajaManejoAlimentos,
-            SQLITECuestionario.l_otroTrabajoManejoAlimentos,
             SQLITECuestionario.l_ingresoLaboral,
             SQLITECuestionario.l_ingresoFamiliar,
             SQLITECuestionario.l_orientacionPolitica,
@@ -68,10 +65,10 @@ public class DBmanagerPoblacionLGBTIQ {
         dbCuestionario.close();
     }
 
-    public long GuardarCuestionario(String nombre, int identificacion, int edad ,  String sexo ,  String estadoCivil ,  String genero , String otroGenero,
-                                  String religion , String otraRelegion, String grupoEC, String otroGrupoEC, String procedencia, String viveActualmente, String quienVive, String tienesHijos,
+    public long GuardarCuestionario(String nombre, int identificacion, int edad ,  String sexo ,  String estadoCivil ,  String genero ,
+                                  String religion, String grupoEC, String procedencia, String viveActualmente, String quienVive, String tienesHijos,
                                     int cuantosHijos, int vivenEnTuHogar, String nivelEscolaridad, String actualmenteTrabaja, String dondeTrabaja, String sinoTrabaja,
-                                  String trabajaArtesania, String trabajaComercio, String trabajaTurismo, String trabajaManejoAlimentos, String otroTrabajoManejoAlimentos, String ingresoLaboral,
+                                  String trabajaArtesania, String trabajaComercio, String trabajaTurismo, String trabajaManejoAlimentos, String ingresoLaboral,
                                   String ingresoFamiliar, String orientacionPolitica, String discapacidad, String organizacionLgbt, String derechosLgbt,
                                   String discriminacionLgbt, String casoSufrido, String orientacionSexual, String intersexual, String noExpresarGenero, String razonesNoExpresar,
                                   String familiaLgbt, String quienes, String reaccionFamiliar, String violenciaLgbt, String situacionDescrita, String actosDiscriminacion,
@@ -84,11 +81,8 @@ public class DBmanagerPoblacionLGBTIQ {
         values.put(SQLITECuestionario.l_sexo, sexo);
         values.put(SQLITECuestionario.l_estadoCivil, estadoCivil);
         values.put(SQLITECuestionario.l_genero, genero);
-        values.put(SQLITECuestionario.l_otro_genero, otroGenero);
         values.put(SQLITECuestionario.l_religion, religion);
-        values.put(SQLITECuestionario.l_otra_religion, otraRelegion);
         values.put(SQLITECuestionario.l_grupoEC, grupoEC);
-        values.put(SQLITECuestionario.l_otro_grupoEC, otroGrupoEC);
         values.put(SQLITECuestionario.l_LProcedencia, procedencia);
         values.put(SQLITECuestionario.l_viveActualmente, viveActualmente);
         values.put(SQLITECuestionario.l_quienVive, quienVive);
@@ -103,7 +97,6 @@ public class DBmanagerPoblacionLGBTIQ {
         values.put(SQLITECuestionario.l_trabajaComercio, trabajaComercio);
         values.put(SQLITECuestionario.l_trabajaTurismo, trabajaTurismo);
         values.put(SQLITECuestionario.l_trabajaManejoAlimentos, trabajaManejoAlimentos);
-        values.put(SQLITECuestionario.l_otroTrabajoManejoAlimentos, otroTrabajoManejoAlimentos);
         values.put(SQLITECuestionario.l_ingresoLaboral, ingresoLaboral);
         values.put(SQLITECuestionario.l_ingresoFamiliar, ingresoFamiliar);
         values.put(SQLITECuestionario.l_orientacionPolitica, orientacionPolitica);
