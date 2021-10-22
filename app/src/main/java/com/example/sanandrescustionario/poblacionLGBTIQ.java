@@ -178,11 +178,8 @@ public class poblacionLGBTIQ extends AppCompatActivity {
                     pregunta13St, pregunta14St, porQueDenunciasResuelven, pregunta15St, sanAndresApoyo, politicasPublicas, comentar);
 
             Toast.makeText(this,"Guardado correctamente", Toast.LENGTH_SHORT).show();
-<<<<<<< HEAD
             Intent intent = new Intent(poblacionLGBTIQ.this, MainActivity.class);
             startActivity(intent);
-=======
->>>>>>> jesusInicio
         }else{
             Toast.makeText(this,"Verifique que ningún campo del formulario este vacío", Toast.LENGTH_SHORT).show();
         }
@@ -902,28 +899,23 @@ public class poblacionLGBTIQ extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == event.KEYCODE_BACK){
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setMessage("¿Desea cancelar la creación del cuestionario?")
-                    .setPositiveButton("Si", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(poblacionLGBTIQ.this, MainActivity.class);
-                            startActivity(intent);
-                        }
-                    })
-                    .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    });
-            builder.show();
-        }
-        return super.onKeyDown(keyCode, event);
-
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("¿Desea cancelar la creación del cuestionario?")
+                .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(poblacionLGBTIQ.this, MainActivity.class);
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        builder.show();
     }
 
     public void mensajeFinalizarCuestionario(View view)

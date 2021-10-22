@@ -78,7 +78,7 @@
     
     <string-array name="orientacionPolitica">
         <item></item>
-        <item>Prefiero no opina</item>
+        <item>Prefiero no opinar</item>
         <item>Derecha</item>
         <item>Centro</item>
         <item>Izquierda</item>
