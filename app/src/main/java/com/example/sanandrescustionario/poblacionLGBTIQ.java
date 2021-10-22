@@ -93,6 +93,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
         boolean validacionNormal = false;
         boolean validacionDeotros = false;
         boolean siEstaTrabajando = false;
+        boolean validarEstaTrabajandoEnEmpresa = false;
 
         String validar = "Seleccione una opción";
 
@@ -107,7 +108,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
 
         //Validacion de los campos normales, es decir los campos que no tengan el campo otro y que no tengan la opción de escribir otra respuesta a la original
         if(nombre.equals("") || identificacion.equals("") || edad.equals("") ||
-           procedencia.equals("") || dondeVive.equals("")  || cuantasVivenHogar.equals("") || dondeTrabaja.equals("") || sinoTrabaja.equals("") ||
+           procedencia.equals("") || dondeVive.equals("")  || cuantasVivenHogar.equals("") ||
                 organizacionLGBTQI.equals("") || orientacionSexual.equals("") || reaccionFamiliar.equals("") || situacionesDescritas.equals("") || sanAndresApoyo.equals("")
                 || politicasPublicas.equals("") || comentar.equals("") || sexoSt.equals(validar) || estadoCivilSt.equals(validar) || generoSt.equals(validar)
                 || religionSt.equals(validar) || grupoEtnicoSt.equals(validar) || conQuienViveSt.equals(validar) || tieneHijosSt.equals(validar) || nivelDeEscolaridadSt.equals(validar) ||
@@ -157,14 +158,26 @@ public class poblacionLGBTIQ extends AppCompatActivity {
         }
 
         //Validar los campos que se muestran al indicar qua la persona si se encuentra trabajando
-        if( trabajandoEnUnaEmpresaSt.equals("Si") ){
-           if( dondeTrabaja.equals("") || sinoTrabaja.equals("") || trabajaArtesaniaSt.equals(validar) || trabajaComercioSt.equals(validar) ||
-                   trabajaTurismoSt.equals(validar) || trabajaVentaManejoAlimentosSt.equals(validar) || ingresoLaboralAproSt.equals(validar) ){
-             siEstaTrabajando = true;
+        if( estaTrabajandoSt.equals("Si") ){
+
+            if(trabajandoEnUnaEmpresaSt.equals("")){
+                validarEstaTrabajandoEnEmpresa = true;
+            }
+
+           if( trabajandoEnUnaEmpresaSt.equals("Si")){
+               if(dondeTrabaja.equals("")  || trabajaArtesaniaSt.equals(validar) || trabajaComercioSt.equals(validar) ||
+                       trabajaTurismoSt.equals(validar) || trabajaVentaManejoAlimentosSt.equals(validar) || ingresoLaboralAproSt.equals(validar) ){
+                   siEstaTrabajando = true;
+               }
+           }else if( trabajandoEnUnaEmpresaSt.equals("No") ){
+               if(sinoTrabaja.equals("") || trabajaArtesaniaSt.equals(validar) || trabajaComercioSt.equals(validar) ||
+                       trabajaTurismoSt.equals(validar) || trabajaVentaManejoAlimentosSt.equals(validar) || ingresoLaboralAproSt.equals(validar)){
+                   siEstaTrabajando = true;
+               }
            }
         }
 
-        if( validacionNormal == false && validacionDeotros == false && siEstaTrabajando == false){
+        if( validacionNormal == false && validacionDeotros == false && siEstaTrabajando == false && validarEstaTrabajandoEnEmpresa == false){
             dbManager.open();
             dbManager.GuardarCuestionario(nombre, idInt, edadInt, sexoSt, estadoCivilSt, generoSt, religionSt, grupoEtnicoSt,
                     procedencia, dondeVive, conQuienViveSt, tieneHijosSt, cuantosHijosInt, cuantasVivenHogarInt, nivelDeEscolaridadSt, estaTrabajandoSt,
