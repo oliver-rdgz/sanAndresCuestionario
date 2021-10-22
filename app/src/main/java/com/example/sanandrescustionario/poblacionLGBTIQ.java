@@ -113,7 +113,7 @@ public class poblacionLGBTIQ extends AppCompatActivity {
         if(nombre.equals("") || identificacion.equals("") || edad.equals("") ||
            procedencia.equals("") || dondeVive.equals("")  || cuantasVivenHogar.equals("") || dondeTrabaja.equals("") || sinoTrabaja.equals("") ||
                 organizacionLGBTQI.equals("") || orientacionSexual.equals("") || reaccionFamiliar.equals("") || situacionesDescritas.equals("") || sanAndresApoyo.equals("")
-                || politicasPublicas.equals("") || comentar.equals("") || sexoSt.equals(validar) || estadoCivilSt.equals(validar) || generoSt.equals(validar)
+                || politicasPublicas.equals("")  || sexoSt.equals(validar) || estadoCivilSt.equals(validar) || generoSt.equals(validar)
                 || religionSt.equals(validar) || grupoEtnicoSt.equals(validar) || conQuienViveSt.equals(validar) || tieneHijosSt.equals(validar) || nivelDeEscolaridadSt.equals(validar) ||
                 estaTrabajandoSt.equals(validar) || ingresoUnidadFamiliarSt.equals(validar) || orientacionPoliticaSt.equals(validar) || pregunta1St.equals(validar) ||
                 pregunta3St.equals(validar) || pregunta4St.equals(validar) || pregunta7St.equals(validar) || pregunta8St.equals(validar) || pregunta9St.equals(validar) ||

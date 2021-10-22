@@ -107,6 +107,7 @@
 
     <string-array name="ingresoLaboralAproximadoL">
         <item>Seleccione una opción</item>
+        <item>No tengo ingresos</item>
         <item>Menos de un salario mínimo</item>
         <item>Un salario mínimo</item>
         <item>De dos a cuatro salarios mínimos</item>

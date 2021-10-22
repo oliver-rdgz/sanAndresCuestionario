@@ -82,4 +82,109 @@ public class GeneroUsuario {
     public   String  g_comentarios="";
 
     public String g_TrabajaEnEmpresaOrganizacion="";
+
+    public boolean esValidoElFormulario()
+    {
+        if(!g_nombre.equals("") && !g_tienesHijos.equals("")
+        && !(g_edad==0) && !g_sexo.equals("")
+        && !g_estadoCivil.equals("") && !g_genero.equals("")
+        && !g_religion.equals("") && !g_grupoEC.equals("")
+        && !g_LProcedencia.equals("") && !g_viveActualmente.equals("")
+        && !g_orientacionPolitica.equals("") && !(g_identificacion==0)
+        && !g_quienVive.equals("") && !(g_vivenTuHogar==-1) && !g_nivelEscolaridad.equals("")
+        && !g_actualmenteTrabaja.equals("") && !g_ingresoFamiliar.equals("")
+        && !g_temaGenero.equals("") && !g_violenciaMujer.equals("")
+        && !g_quePiropo.equals("") && !g_opinionAcoso.equals("")
+        && !g_acosoSexual.equals("") && !g_mujerResponsable.equals("")
+        && !g_asedioSexual.equals("")
+        && !g_actitudesVida.equals("") && !g_mecanismoLegal.equals("")
+        && !g_victimaAcoso.equals("") && !g_violenciaGenero.equals("")
+        && !g_porqueViolenciaGenero.equals("") && !g_experienciaViolenciaGenero.equals("")
+        && !g_votariaMujer.equals("") && !g_desistioDenuncia.equals("")
+        && !g_violenciaFamiliar.equals("") && !g_violenciaPareja.equals("")
+        && !g_mismoTrato.equals("") && !g_miedoMujer.equals(""))
+        {
+            return cuantosHijos();
+        }
+        return false;
+    }
+
+    private boolean cuantosHijos ()
+    {
+        if(g_tienesHijos.equals("Si") && g_cuantosHijos==0)
+        {
+            return false;
+        }
+        else
+        {
+            return estaTrabajando();
+        }
+    }
+
+    private boolean estaTrabajando()
+    {
+        if (g_actualmenteTrabaja.equals("Si"))
+        {
+            if (g_TrabajaEnEmpresaOrganizacion.equals("") || g_ingresoLaboral.equals("")
+                    || g_trabajaArtesania.equals("") || g_trabajaComercio.equals("")
+                    || g_trabajaTurismo.equals("") || g_trabajaManejoAlimentos.equals(""))
+            {
+                return false;
+            }
+            else
+            {
+                if (g_TrabajaEnEmpresaOrganizacion.equals("Si") && g_dondeTrabaja.equals(""))
+                {
+                    return false;
+                }else if (g_TrabajaEnEmpresaOrganizacion.equals("No") && g_sinoTrabaja.equals(""))
+                {
+                    return false;
+                }
+                else
+                {
+                    return violenciaSerMujer();
+                }
+            }
+        }
+        else
+        {
+            return violenciaSerMujer();
+        }
+
+    }
+
+    private boolean violenciaSerMujer ()
+    {
+        if(g_violenciaMujer.equals("Si") && g_situacionViolencia.equals(""))
+        {
+            return false;
+        }
+        else
+        {
+            return victimaAcosoSexual();
+        }
+    }
+
+    private boolean victimaAcosoSexual()
+    {
+        if(g_victimaAcoso.equals("No") && g_victimaPorque.equals(""))
+        {
+            return false;
+        }
+        else
+        {
+            return rolFamiliar();
+        }
+    }
+
+    private boolean rolFamiliar()
+    {
+        if (g_esPadre.equals("No") && g_esMadre.equals("No")
+            && g_esEsposoa.equals("No") && g_esHijoa.equals("No")
+            && g_esHermanoa.equals("No") && g_esOtro.equals("No"))
+        {
+            return false;
+        }
+        return true;
+    }
 }

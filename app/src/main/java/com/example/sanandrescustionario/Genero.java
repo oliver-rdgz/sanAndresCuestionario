@@ -59,40 +59,21 @@ public class Genero extends AppCompatActivity {
         if (findViewById(R.id.eGeneroOG).getVisibility() == View.VISIBLE)
         {
             editText = (EditText) findViewById(R.id.eGeneroOG);
-            if (editText.getText().toString().isEmpty())
-            {
-                gU.g_genero = "Otro";
-            }
-            else
-            {
-                gU.g_genero=editText.getText().toString();
-            }
+            gU.g_genero=editText.getText().toString();
         }
 
         if (findViewById(R.id.eReligionOG).getVisibility() == View.VISIBLE)
         {
             editText = (EditText) findViewById(R.id.eReligionOG);
-            if (editText.getText().toString().isEmpty())
-            {
-                gU.g_religion = "Otra";
-            }
-            else
-            {
-                gU.g_religion=editText.getText().toString();
-            }
+            gU.g_religion=editText.getText().toString();
+
         }
 
         if (findViewById(R.id.eGrupoetnicoG).getVisibility() == View.VISIBLE)
         {
             editText = (EditText) findViewById(R.id.eGrupoetnicoG);
-            if (editText.getText().toString().isEmpty())
-            {
-                gU.g_grupoEC = "Otro";
-            }
-            else
-            {
-                gU.g_grupoEC=editText.getText().toString();
-            }
+            gU.g_grupoEC=editText.getText().toString();
+
         }
         editText = (EditText) findViewById(R.id.eProcedenciaG);
         gU.g_LProcedencia = editText.getText().toString();
@@ -152,14 +133,7 @@ public class Genero extends AppCompatActivity {
         if (findViewById(R.id.eRolCualG).getVisibility()== View.VISIBLE)
         {
             editText = (EditText) findViewById(R.id.eRolCualG);
-            if (editText.getText().toString().isEmpty())
-            {
-                gU.g_esOtro= "Otro";
-            }
-            else
-            {
-                gU.g_esOtro= editText.getText().toString();
-            }
+            gU.g_esOtro= editText.getText().toString();
         }
         else
         {
@@ -169,7 +143,7 @@ public class Genero extends AppCompatActivity {
         editText = (EditText) findViewById(R.id.eCuantasVivenTuHogarG);
         if(editText.getText().toString().isEmpty())
         {
-            gU.g_vivenTuHogar=0;
+            gU.g_vivenTuHogar=-1;
         }
         else
         {
@@ -203,14 +177,7 @@ public class Genero extends AppCompatActivity {
         if (findViewById(R.id.eOpinionPiropoG).getVisibility()== View.VISIBLE)
         {
             editText = (EditText) findViewById(R.id.eOpinionPiropoG);
-            if (editText.getText().toString().isEmpty())
-            {
-                gU.g_quePiropo= "Otro";
-            }
-            else
-            {
-                gU.g_quePiropo= editText.getText().toString();
-            }
+            gU.g_quePiropo= editText.getText().toString();
         }
 
         checkBox=(CheckBox) findViewById(R.id.fComentarioAparienciaG);
@@ -497,7 +464,16 @@ public class Genero extends AppCompatActivity {
     {
         if (view.getId() == R.id.guardarFormG)
         {
-            mensajeFinalizarCuestionario();
+            objetoGeneroUsuario();
+            Boolean cuestionarioValido = gU.esValidoElFormulario();
+            if(cuestionarioValido)
+            {
+                mensajeFinalizarCuestionario();
+            }
+            else
+            {
+                Toast.makeText(this, "Debe llenar todos los campos", Toast.LENGTH_LONG).show();
+            }
         }
     }
 
@@ -508,7 +484,6 @@ public class Genero extends AppCompatActivity {
                 .setPositiveButton("Si", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        objetoGeneroUsuario();
                         managerGenero.open();
                         long id = managerGenero.crearGenero(gU);
                         if (id!=-1){
@@ -739,6 +714,8 @@ public class Genero extends AppCompatActivity {
                     findViewById(R.id.sTTurismoG).setVisibility(View.VISIBLE);
                     findViewById(R.id.lAlimentosG).setVisibility(View.VISIBLE);
                     findViewById(R.id.sAlimentosG).setVisibility(View.VISIBLE);
+                    findViewById(R.id.lIngresoLaboralG).setVisibility(View.VISIBLE);
+                    findViewById(R.id.sIngresoLaboralG).setVisibility(View.VISIBLE);
                 }
                 else
                 {
@@ -788,8 +765,8 @@ public class Genero extends AppCompatActivity {
                     editText.setText("");
                     editText.setVisibility(View.GONE);
 
-                    findViewById(R.id.lIngresoLaboralFamiliarG).setVisibility(View.GONE);
-                    spinner= (Spinner) findViewById(R.id.sIngresoLaboraFamiliarlG);
+                    findViewById(R.id.lIngresoLaboralG).setVisibility(View.GONE);
+                    spinner= (Spinner) findViewById(R.id.sIngresoLaboralG);
                     spinner.setSelection(0);
                     spinner.setVisibility(View.GONE);
                 }
